@@ -1,0 +1,23 @@
+# ▲ Next.js 13 Boilerplate
+
+- [ ] Next.js 13
+- [ ] Tailwind CSS
+- [ ] CSS variables, reset
+- [ ] Next.js Project Structure
+- [ ] Absolute Imports and Module Path Aliases
+- [ ] SEO tags
+- [ ] Utils
+  - [ ] clsx
+  - [ ] tailwind-merge
+  - [ ] constants
+- [ ] Components
+  - [ ] `<Header />`
+  - [ ] `<Footer />`
+  - [ ] `<Container />`
+  - [ ] `<H1 />`
+- [ ] JSDoc
+- [ ] prop-types
+- [ ] Dark Theme
+- [ ] Pages
+- [ ] Recoil State Management
+- [ ] PageSpeed Insights
