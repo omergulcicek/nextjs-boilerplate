@@ -1,6 +1,6 @@
 # ▲ Next.js 13 Boilerplate
 
-- [ ] Next.js 13
+- [x] Next.js 13
 - [ ] Next.js Project Structure
 - [ ] Tailwind CSS
 - [ ] CSS variables, reset
