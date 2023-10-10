@@ -1,9 +1,9 @@
 # ▲ Next.js 13 Boilerplate
 
 - [ ] Next.js 13
+- [ ] Next.js Project Structure
 - [ ] Tailwind CSS
 - [ ] CSS variables, reset
-- [ ] Next.js Project Structure
 - [ ] Absolute Imports and Module Path Aliases
 - [ ] SEO tags
 - [ ] Utils
