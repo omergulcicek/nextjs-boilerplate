@@ -2,7 +2,7 @@
 
 - [x] Next.js 13
 - [ ] Next.js Project Structure
-- [ ] Tailwind CSS
+- [x] Tailwind CSS
 - [ ] CSS variables, reset
 - [ ] Absolute Imports and Module Path Aliases
 - [ ] SEO tags

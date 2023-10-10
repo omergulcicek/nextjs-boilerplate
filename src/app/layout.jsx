@@ -1,10 +1,4 @@
-export default function RootLayout({ children }) {
-  return (
-    <html lang="tr" suppressHydrationWarning>
-      <body suppressHydrationWarning>{children}</body>
-    </html>
-  )
-}
+import "./globals.css"
 
 export const metadata = {
   metadataBase: new URL("https://github.com/omergulcicek/nextjs-boilerplate"),
@@ -23,4 +17,12 @@ export const metadata = {
     initialScale: 1,
     maximumScale: 1,
   },
+}
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="tr" suppressHydrationWarning>
+      <body suppressHydrationWarning>{children}</body>
+    </html>
+  )
 }
