@@ -1,7 +1,7 @@
 import Head from "next/head"
 import { Inter } from "next/font/google"
 
-import { cn } from "./lib/utils"
+import { cn } from "@/utils"
 
 import "./globals.css"
 
