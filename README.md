@@ -4,11 +4,11 @@
 - [ ] Next.js Project Structure
 - [x] Tailwind CSS
 - [ ] CSS variables, reset
-- [ ] Absolute Imports and Module Path Aliases
+- [x] Absolute Imports and Module Path Aliases
 - [ ] SEO tags
-- [ ] Utils
-  - [ ] clsx
-  - [ ] tailwind-merge
+- [x] Utils
+  - [x] clsx
+  - [x] tailwind-merge
   - [ ] constants
 - [ ] Components
   - [ ] `<Header />`
