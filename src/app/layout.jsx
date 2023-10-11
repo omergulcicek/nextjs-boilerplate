@@ -1,8 +1,8 @@
 import Head from "next/head"
 import { Inter } from "next/font/google"
 
+import { Header } from "@/components"
 import { cn } from "@/utils"
-
 import "@/tailwindcss"
 
 const inter = Inter({
@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
         className={cn(inter.className, "flex min-h-screen flex-col")}
         suppressHydrationWarning
       >
-        <header>header</header>
+        <Header />
         <main className="flex-1">{children}</main>
         <footer>footer</footer>
       </body>
