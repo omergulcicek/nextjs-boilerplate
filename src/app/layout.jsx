@@ -34,8 +34,14 @@ export default function RootLayout({ children }) {
       <Head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
-      <body className={inter.className} suppressHydrationWarning>
-        {children}
+      <body
+        className="flex min-h-screen flex-col"
+        //className={inter.className}
+        suppressHydrationWarning
+      >
+        <header>header</header>
+        <main className="flex-1">{children}</main>
+        <footer>footer</footer>
       </body>
     </html>
   )
