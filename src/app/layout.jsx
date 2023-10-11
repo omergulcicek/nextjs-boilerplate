@@ -1,3 +1,5 @@
+import Head from "next/head"
+
 import "./globals.css"
 
 export const metadata = {
@@ -22,6 +24,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="tr" suppressHydrationWarning>
+      <Head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </Head>
       <body suppressHydrationWarning>{children}</body>
     </html>
   )
