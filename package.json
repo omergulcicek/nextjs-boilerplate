@@ -10,7 +10,8 @@
     "next": "^13.5.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwind-merge": "^1.14.0"
+    "tailwind-merge": "^1.14.0",
+    "tailwind-variants": "^0.1.14"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
