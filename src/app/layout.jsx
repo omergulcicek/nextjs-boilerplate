@@ -1,6 +1,8 @@
 import Head from "next/head"
 import { Inter } from "next/font/google"
 
+import { cn } from "./lib/utils"
+
 import "./globals.css"
 
 const inter = Inter({
@@ -35,8 +37,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
       <body
-        className="flex min-h-screen flex-col"
-        //className={inter.className}
+        className={cn(inter.className, "flex min-h-screen flex-col")}
         suppressHydrationWarning
       >
         <header>header</header>
