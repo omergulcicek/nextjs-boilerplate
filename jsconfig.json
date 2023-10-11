@@ -3,6 +3,7 @@
     "baseUrl": "src/app/",
     "paths": {
       "@/*": ["*"],
+      "@/tailwindcss": ["globals.css"],
       "@/components/*": ["components/*"],
       "@/constants": ["lib/constants"],
       "@/utils": ["lib/utils"]

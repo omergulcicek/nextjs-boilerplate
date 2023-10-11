@@ -3,7 +3,7 @@ import { Inter } from "next/font/google"
 
 import { cn } from "@/utils"
 
-import "./globals.css"
+import "@/tailwindcss"
 
 const inter = Inter({
   weight: ["400", "500", "600", "700"],
