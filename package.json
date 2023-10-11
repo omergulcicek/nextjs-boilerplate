@@ -6,9 +6,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "clsx": "^2.0.0",
     "next": "^13.5.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
