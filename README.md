@@ -9,11 +9,11 @@
 - [x] Utils
   - [x] clsx
   - [x] tailwind-merge
-  - [ ] constants
+  - [x] constants
 - [ ] Components
-  - [ ] `<Header />`
-  - [ ] `<Footer />`
-  - [ ] `<Container />`
+  - [x] `<Header />`
+  - [x] `<Footer />`
+  - [x] `<Container />`
   - [ ] `<H1 />`
 - [ ] JSDoc
 - [ ] prop-types

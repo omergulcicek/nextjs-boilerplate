@@ -1,7 +1,7 @@
 import Head from "next/head"
 import { Inter } from "next/font/google"
 
-import { Header } from "@/components"
+import { Header, Footer } from "@/components"
 import { cn } from "@/utils"
 import "@/tailwindcss"
 
@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
       >
         <Header />
         <main className="flex-1">{children}</main>
-        <footer>footer</footer>
+        <Footer />
       </body>
     </html>
   )
