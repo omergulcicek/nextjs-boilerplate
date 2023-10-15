@@ -1,11 +1,12 @@
-import { Button, Container } from "@/components"
+import { Container, Button, Title } from "@/components"
 
 export default function Page() {
   return (
     <>
       <Container>
-        <h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
-        <Button />
+        <Title>Ömer Gülçiçek Ne Yaptı? Şok şok şok...</Title>
+        <hr />
+        <h1>Ömer Gülçiçek Ne Yaptı? Şok şok şok...</h1>
       </Container>
     </>
   )
