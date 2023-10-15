@@ -4,9 +4,7 @@ export default function Page() {
   return (
     <>
       <Container>
-        <Title>Ömer Gülçiçek Ne Yaptı? Şok şok şok...</Title>
-        <hr />
-        <h1>Ömer Gülçiçek Ne Yaptı? Şok şok şok...</h1>
+        <Title>Next.js 13 Boilerplate</Title>
       </Container>
     </>
   )

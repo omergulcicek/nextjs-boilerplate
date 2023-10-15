@@ -18,7 +18,7 @@ export function NavItem({ href = "/", label = "" }) {
   return (
     <Link
       href={href}
-      className="text-sm leading-6 cursor-pointer py-1 text-neutral-900 hover:text-red-600 transition-colors"
+      className="text-sm leading-6 cursor-pointer py-1 hover:text-blue-600 dark:hover:text-blue-600 transition-colors"
     >
       {label}
     </Link>
@@ -31,7 +31,7 @@ export function NavItemExternal({ href = "/", label = "" }) {
       href={href}
       rel="noopener noreferrer"
       target="_blank"
-      className="text-sm leading-6 cursor-pointer py-1 text-neutral-900 hover:text-blue-600 transition-colors relative"
+      className="text-sm leading-6 cursor-pointer py-1 hover:text-blue-600 dark:hover:text-blue-600 transition-colors relative"
     >
       <span>{label}</span>
       <ExternalSvg />
