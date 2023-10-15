@@ -14,7 +14,7 @@
   - [x] `<Header />`
   - [x] `<Footer />`
   - [x] `<Container />`
-  - [ ] `<H1 />`
+  - [ ] `<Title />` (Headings)
 - [ ] JSDoc
 - [ ] prop-types
 - [ ] Dark Theme
