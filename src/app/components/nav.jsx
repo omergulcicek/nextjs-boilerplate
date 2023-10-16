@@ -6,8 +6,12 @@ export default function Nav() {
   return (
     <>
       <nav className="flex items-center gap-6">
-        {links.map(({ external, ...link }) =>
-          external ? <NavItemExternal {...link} /> : <NavItem {...link} />
+        {links.map(({ external, ...link }, index) =>
+          external ? (
+            <NavItemExternal {...link} key={index} />
+          ) : (
+            <NavItem {...link} key={index} />
+          )
         )}
       </nav>
     </>
