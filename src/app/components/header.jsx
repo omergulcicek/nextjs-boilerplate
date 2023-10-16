@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-import { Container, Nav, ThemeSwitch } from "@/components"
+import { Container, Nav } from "@/components"
 
 export default function Header() {
   return (
@@ -17,9 +17,7 @@ export default function Header() {
             <div className="flex items-center">
               <Nav />
 
-              <div className="border-l border-neutral-200 ml-6 pl-6">
-                <ThemeSwitch />
-              </div>
+              <div className="border-l border-neutral-200 ml-6 pl-6"></div>
             </div>
           </div>
         </Container>

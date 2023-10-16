@@ -17,7 +17,7 @@
   - [ ] `<Title />` (Headings)
 - [ ] JSDoc
 - [ ] prop-types
-- [x] Dark Theme
+- [ ] Dark Theme
 - [ ] Pages
 - [ ] Recoil State Management
 - [ ] PageSpeed Insights
