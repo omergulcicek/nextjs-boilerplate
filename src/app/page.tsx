@@ -17,7 +17,7 @@ export default function Home() {
           href="https://github.com/omergulcicek/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-500 hover:underline"
+          className="text-blue-600 hover:underline"
         >
           @omergulcicek
         </Link>
@@ -28,7 +28,7 @@ export default function Home() {
           href="https://github.com/omergulcicek/nextjs-boilerplate/tree/main"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-500 hover:underline"
+          className="text-blue-600 hover:underline"
         >
           nextjs-boilerplate
         </Link>
