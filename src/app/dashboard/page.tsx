@@ -40,7 +40,7 @@ export function Count() {
     <section className="flex w-full flex-col gap-2 pt-6">
       <h2 className="font-medium">Zustand State Managment</h2>
 
-      <div className="flex gap-2">
+      <div className="flex flex-wrap gap-2">
         <Button variant="link" size="icon">
           {count}
         </Button>
