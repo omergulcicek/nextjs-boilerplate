@@ -42,7 +42,7 @@ export function ReactHookForm() {
       >
         <div className="grid w-full items-center gap-1.5">
           <Label htmlFor="name">Name</Label>
-          <Input {...register("name")} />
+          <Input {...register("name")} id="name" />
 
           {errors.name && (
             <span className="text-sm text-red-500">{errors.name.message}</span>
@@ -54,6 +54,7 @@ export function ReactHookForm() {
           <Input
             {...register("age", { valueAsNumber: true, required: false })}
             type="number"
+            id="age"
           />
         </div>
 
