@@ -2,6 +2,7 @@ import { Count } from "@/widgets/count";
 import { DarkTheme } from "@/widgets/dark-theme";
 import { TanStack } from "@/widgets/tan-stack";
 import { ReactHookForm } from "@/widgets/react-hook-form";
+import { StorageHelpers } from "@/widgets/storage-helpers";
 
 export default function Dashboard() {
   return (
@@ -12,6 +13,7 @@ export default function Dashboard() {
       <DarkTheme />
       <TanStack />
       <ReactHookForm />
+      <StorageHelpers />
     </div>
   );
 }
