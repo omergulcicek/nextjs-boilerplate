@@ -3,11 +3,9 @@ import { Skeleton } from "@/ui/skeleton";
 export function UserListSkeletons() {
   return (
     <>
-      <Skeleton className="h-4 w-[250px]" />
-      <Skeleton className="h-4 w-[250px]" />
-      <Skeleton className="h-4 w-[250px]" />
-      <Skeleton className="h-4 w-[250px]" />
-      <Skeleton className="h-4 w-[250px]" />
+      {new Array(10).fill(null).map((_, index) => (
+        <Skeleton className="h-6 w-[250px]" key={index} />
+      ))}
     </>
   );
 }

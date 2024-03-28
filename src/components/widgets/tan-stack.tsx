@@ -16,7 +16,7 @@ export function TanStack() {
   };
 
   return (
-    <section className="flex w-full flex-col gap-2 pt-6">
+    <section className="flex min-h-96 w-full flex-col gap-2 pt-6">
       <h2 className="font-medium">TanStack Query</h2>
 
       <ul className="flex flex-col gap-2">
