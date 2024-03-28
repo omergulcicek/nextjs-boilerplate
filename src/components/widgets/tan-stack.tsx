@@ -1,6 +1,6 @@
 "use client";
 
-import { UserListSkeletons } from "@/skeletons/userListSkeletons";
+import { UserListSkeletons } from "@/components/skeletons/user-list-skeletons";
 
 import { useUserList } from "@/hooks/useUserList";
 
