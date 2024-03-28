@@ -26,4 +26,5 @@ With this template, you get all the awesomeness you need:
 - [Husky](https://typicode.github.io/husky/) for Git Hooks
 - Sitemap.xml and robots.txt with [next-sitemap](https://www.npmjs.com/package/next-sitemap)
 - Metadata files optimized for SEO
+- Storage helpers for Local, Session, Cookies
 - 💯 Maximize lighthouse score
