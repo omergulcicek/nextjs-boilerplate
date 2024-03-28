@@ -10,9 +10,14 @@ import { Label } from "@/ui/label";
 
 const schema = z.object({
   name: z
-    .string({ required_error: "Name is required" })
+    .string()
+    .trim()
+    .min(1, { message: "Required" })
     .min(2, { message: "Must be 2 or more characters long" }),
-  age: z.number(),
+  age: z
+    .number()
+    .positive({ message: "Must be a positive number" })
+    .min(18, { message: "Must be 18 or older" }),
 });
 
 type Schema = z.infer<typeof schema>;
@@ -56,6 +61,10 @@ export function ReactHookForm() {
             type="number"
             id="age"
           />
+
+          {errors.age && (
+            <span className="text-sm text-red-500">{errors.age.message}</span>
+          )}
         </div>
 
         <Button type="submit">Submit</Button>
