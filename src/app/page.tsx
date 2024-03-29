@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Button } from "@/ui/button";
-import { Separator } from "@/ui/separator";
+import { Button, Separator } from "@/ui";
 
 export default function Home() {
   return (

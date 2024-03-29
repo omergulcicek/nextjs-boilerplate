@@ -1,8 +1,8 @@
 "use client";
 
-import { UserListSkeletons } from "@/components/skeletons/user-list-skeletons";
+import { UserListSkeletons } from "@/skeletons";
 
-import { useUserList } from "@/hooks/useUserList";
+import { useUserList } from "@/hooks";
 
 export function TanStack() {
   const {

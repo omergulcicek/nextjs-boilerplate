@@ -1,8 +1,10 @@
-import { Count } from "@/widgets/count";
-import { DarkTheme } from "@/widgets/dark-theme";
-import { TanStack } from "@/widgets/tan-stack";
-import { ReactHookForm } from "@/widgets/react-hook-form";
-import { StorageHelpers } from "@/widgets/storage-helpers";
+import {
+  Count,
+  DarkTheme,
+  ReactHookForm,
+  StorageHelpers,
+  TanStack,
+} from "@/widgets";
 
 export default function Dashboard() {
   return (

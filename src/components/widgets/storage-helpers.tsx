@@ -1,6 +1,7 @@
 "use client";
 
-import { Button } from "@/ui/button";
+import { Button } from "@/ui";
+
 import {
   setLocal,
   getLocal,
@@ -11,7 +12,7 @@ import {
   setCookie,
   getCookie,
   removeCookie,
-} from "@/helpers/storageHelpers";
+} from "@/helpers";
 
 export function StorageHelpers() {
   return (
