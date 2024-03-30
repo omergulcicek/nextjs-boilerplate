@@ -11,7 +11,7 @@ export default function Home() {
         alt="Next.js Logo"
         width={180}
         height={37}
-        loading="lazy"
+        priority={true}
       />
 
       <nav className="flex h-5 items-center space-x-1 text-sm">
