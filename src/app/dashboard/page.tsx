@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import {
   Count,
   DarkTheme,
@@ -5,6 +7,11 @@ import {
   StorageHelpers,
   TanStack,
 } from "@/widgets";
+
+export const metadata: Metadata = {
+  title: "Dashboard",
+  description: "Dashboard page",
+};
 
 export default function Dashboard() {
   return (
