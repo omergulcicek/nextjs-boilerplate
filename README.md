@@ -28,3 +28,35 @@ With this template, you get all the awesomeness you need:
 - Metadata files optimized for SEO
 - Storage helpers for Local, Session, Cookies
 - 💯 Maximize lighthouse score
+
+## Project structure
+
+```shell
+│
+├── public                          # Public assets folder
+├── src
+│   ├── app                         # Next JS App (App Router)
+│   ├── components                  # React components
+│   │   ├── features                # Containing logic operations
+│   │   ├── shared                  # Header, footer, aside components
+│   │   ├── skeletons               # Loading components
+│   │   ├── ui                      # Atomic components
+│   │   └── widgets                 # Advanced components
+│   ├── data                        # Static or mock data
+│   ├── helpers                     # Helper functions
+│   ├── hooks                       # React hooks
+│   ├── providers                   # All providers
+│   ├── services                    # API services
+│   ├── stores                      # Zustand stores
+│   ├── types                       # Type definitions
+│   └── utils                       # Utilities folder
+├── .eslintrc.json                  # ESLint configuration
+├── .prettierrc                     # Prettier configuration
+├── components.json                 # shadcn/ui configuration
+├── next-sitemap.config.js          # next-sitemap configuration
+├── next.config.mjs                 # Next.js configuration
+├── postcss.config.js               # PostCSS configuration
+├── README.md                       # README file
+├── tailwind.config.js              # Tailwind CSS configuration
+└── tsconfig.json                   # TypeScript configuration
+```
