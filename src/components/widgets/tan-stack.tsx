@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/ui";
 import { UserListSkeletons } from "@/skeletons";
 
 import { useUserList } from "@/hooks";
@@ -9,15 +10,22 @@ export function TanStack() {
     data: userListData = [],
     isLoading,
     error,
-  } = useUserList() as {
+    refetch,
+  } = useUserList(false) as {
     data: { id: number; name: string }[];
     isLoading: boolean;
     error: Error;
+    refetch: () => void;
   };
 
   return (
-    <section className="flex min-h-96 w-full flex-col gap-2 pt-6">
-      <h2 className="font-medium">TanStack Query</h2>
+    <section className="flex w-full flex-col gap-2 pt-6">
+      <div className="flex items-center gap-2">
+        <h2 className="font-medium">TanStack Query</h2>
+        <Button onClick={() => refetch()} className="w-auto">
+          Get all users
+        </Button>
+      </div>
 
       <ul className="flex flex-col gap-2">
         {isLoading && <UserListSkeletons />}
