@@ -1,1 +1,1 @@
-export { getUserList } from "./getUserList";
+export { getUsers, addUser } from "./userService";
