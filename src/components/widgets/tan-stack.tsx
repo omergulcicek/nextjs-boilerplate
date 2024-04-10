@@ -3,7 +3,7 @@
 import { Button } from "@/ui";
 import { UserListSkeletons } from "@/skeletons";
 
-import { useUserList } from "@/hooks";
+import { useUsers, useAddUser } from "@/hooks";
 
 export function TanStack() {
   const {
@@ -11,18 +11,20 @@ export function TanStack() {
     isLoading,
     error,
     refetch,
-  } = useUserList(false) as {
+  } = useUsers(false) as {
     data: { id: number; name: string }[];
     isLoading: boolean;
     error: Error;
     refetch: () => void;
   };
 
+  const { mutate: addUserMutate } = useAddUser();
+
   return (
     <section className="flex w-full flex-col gap-2 pt-6">
       <div className="flex items-center gap-2">
         <h2 className="font-medium">TanStack Query</h2>
-        <Button onClick={() => refetch()} className="w-auto">
+        <Button onClick={() => refetch()} className="w-40">
           Get all users
         </Button>
       </div>
@@ -34,6 +36,16 @@ export function TanStack() {
           <li key={id}>{name}</li>
         ))}
       </ul>
+
+      <Button
+        onClick={() => {
+          addUserMutate();
+        }}
+        className="w-40"
+        variant="secondary"
+      >
+        Add new user
+      </Button>
     </section>
   );
 }
