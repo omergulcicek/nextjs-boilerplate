@@ -45,11 +45,11 @@ With this template, you get all the awesomeness you need:
 │   ├── data                        # Static or mock data
 │   ├── helpers                     # Helper functions
 │   ├── hooks                       # React hooks
+│   ├── lib                          # Utilities folder
 │   ├── providers                   # All providers
 │   ├── services                    # API services
 │   ├── stores                      # Zustand stores
-│   ├── types                       # Type definitions
-│   └── utils                       # Utilities folder
+│   └── types                       # Type definitions
 ├── .eslintrc.json                  # ESLint configuration
 ├── .prettierrc                     # Prettier configuration
 ├── components.json                 # shadcn/ui configuration
