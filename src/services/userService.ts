@@ -1,13 +1,14 @@
-import axios from "axios";
-
+import { api } from "@/helpers";
 import { delay } from "@/utils";
 
-export async function getUsers() {
-  return axios
-    .get(`${process.env.NEXT_PUBLIC_USERS_LIST}/users`)
-    .then((res) => res.data);
-}
-
-export async function addUser(newUser: any) {
-  return axios.post(`${process.env.NEXT_PUBLIC_USERS_LIST}/users`, newUser);
-}
+export const userAPI = {
+  get: async (id: number) => {
+    return await api.get(`/users/${id}`).then((res) => res.data);
+  },
+  getAll: async () => {
+    return await api.get(`/users`).then((res) => res.data);
+  },
+  add: async (user: object) => {
+    return await api.post(`/users`, user);
+  },
+};
