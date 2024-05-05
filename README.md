@@ -45,7 +45,7 @@ With this template, you get all the awesomeness you need:
 │   ├── data                        # Static or mock data
 │   ├── helpers                     # Helper functions
 │   ├── hooks                       # React hooks
-│   ├── lib                          # Utilities folder
+│   ├── lib                         # Utilities folder
 │   ├── providers                   # All providers
 │   ├── services                    # API services
 │   ├── stores                      # Zustand stores
