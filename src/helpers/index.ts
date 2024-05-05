@@ -9,3 +9,5 @@ export {
   getCookie,
   removeCookie,
 } from "./storageHelpers";
+
+export { api } from "./apiHelpers";
