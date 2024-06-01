@@ -1,5 +1,7 @@
 "use client";
 
+import { Loader2 } from "lucide-react";
+
 import { Button } from "@/ui";
 import { UserListSkeletons } from "@/skeletons";
 
@@ -18,6 +20,15 @@ export function TanStack() {
     refetch: () => void;
   };
 
+  const buttonContent = isLoading ? (
+    <>
+      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+      <span>Loading...</span>
+    </>
+  ) : (
+    <span>Get all users</span>
+  );
+
   return (
     <section className="flex w-full flex-col gap-2 pt-6">
       <h2 className="font-medium">TanStack Query</h2>
@@ -27,7 +38,7 @@ export function TanStack() {
           className="w-40"
           disabled={!!isLoading}
         >
-          {isLoading ? "Loading..." : "Get all users"}
+          {buttonContent}
         </Button>
 
         <ul className="flex flex-col gap-2">
