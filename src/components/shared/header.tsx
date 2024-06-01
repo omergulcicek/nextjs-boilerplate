@@ -1,10 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
 
+import { Icons } from "@/icons"
+
 export const Header = () => {
 	return (
 		<header className="sticky top-0 z-30 bg-white/80 py-4 shadow-sm backdrop-blur-sm dark:bg-background/80 dark:border-b dark:border-b-slate-800">
-			<div className="container flex max-w-4xl items-center">
+			<div className="container flex max-w-4xl items-center justify-between">
 				<nav className="flex items-center gap-4 text-sm lg:gap-6">
 					<Link href="/">
 						<figure className="dark:bg-white p-2 rounded">

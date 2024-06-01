@@ -1,6 +1,6 @@
 "use client"
 
-import { Loader2 } from "lucide-react"
+import { Icons } from "@/icons"
 
 import { UserListSkeletons } from "@/skeletons"
 import { Button } from "@/ui"
@@ -21,7 +21,7 @@ export function TanStack() {
 
 	const buttonContent = isLoading ? (
 		<>
-			<Loader2 className="mr-2 h-4 w-4 animate-spin" />
+			<Icons.loader className="mr-2 h-4 w-4 animate-spin" />
 			<span>Loading...</span>
 		</>
 	) : (

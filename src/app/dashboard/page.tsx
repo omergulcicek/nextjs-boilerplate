@@ -9,8 +9,7 @@ import {
 } from "@/widgets"
 
 export const metadata: Metadata = {
-	title: "Dashboard",
-	description: "Dashboard page"
+	title: "Dashboard"
 }
 
 export default function Dashboard() {

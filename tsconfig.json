@@ -25,12 +25,14 @@
 			"@/shared": ["./src/components/shared"],
 			"@/skeletons": ["./src/components/skeletons"],
 			"@/providers/*": ["./src/providers/*"],
+			"@/config": ["./src/config"],
 			"@/data": ["./src/data"],
 			"@/helpers": ["./src/helpers"],
 			"@/hooks": ["./src/hooks"],
 			"@/stores": ["./src/stores"],
 			"@/services": ["./src/services"],
-			"@/utils": ["./src/lib/utils"]
+			"@/utils": ["./src/lib/utils"],
+			"@/icons": ["./src/lib/icons"]
 		}
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
