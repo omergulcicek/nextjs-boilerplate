@@ -21,12 +21,12 @@ export default function Home() {
 					Next.js Boilerplate
 				</h1>
 
-				<Balancer>
-					<p className="text-center text-lg font-light text-foreground">
+				<p className="text-center text-lg font-light text-foreground">
+					<Balancer>
 						An open source boilerplate built using Next.js 14, TypeScript, and
 						Tailwind CSS
-					</p>
-				</Balancer>
+					</Balancer>
+				</p>
 
 				<nav className="flex items-center gap-4 py-4">
 					<Link href="/dashboard">
