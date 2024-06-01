@@ -6,7 +6,7 @@ const Brand = () => {
 	return (
 		<>
 			<Link href="/">
-				<Icons.flower />
+				<Icons.flower aria-label="Flower icon" />
 			</Link>
 		</>
 	)
