@@ -2,13 +2,6 @@
 
 import { useTheme } from "next-themes"
 
-import {
-	Button,
-	DropdownMenu,
-	DropdownMenuContent,
-	DropdownMenuItem,
-	DropdownMenuTrigger
-} from "@/ui"
 import { Moon, Sun } from "lucide-react"
 
 import {
@@ -18,16 +11,6 @@ import {
 	DropdownMenuItem,
 	DropdownMenuTrigger
 } from "@/ui"
-import { Moon, Sun } from "lucide-react"
-
-import {
-	Button,
-	DropdownMenu,
-	DropdownMenuContent,
-	DropdownMenuItem,
-	DropdownMenuTrigger
-} from "@/ui"
-import { Moon, Sun } from "lucide-react"
 
 export function DarkTheme() {
 	const { setTheme } = useTheme()

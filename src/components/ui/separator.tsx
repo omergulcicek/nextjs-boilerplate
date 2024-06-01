@@ -5,12 +5,6 @@ import * as React from "react"
 import { cn } from "@/utils"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
 
-import { cn } from "@/utils"
-import * as SeparatorPrimitive from "@radix-ui/react-separator"
-
-import { cn } from "@/utils"
-import * as SeparatorPrimitive from "@radix-ui/react-separator"
-
 const Separator = React.forwardRef<
 	React.ElementRef<typeof SeparatorPrimitive.Root>,
 	React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>

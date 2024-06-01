@@ -1,19 +1,10 @@
 "use client"
 
-import { useUsers } from "@/hooks"
-import { UserListSkeletons } from "@/skeletons"
-import { Button } from "@/ui"
 import { Loader2 } from "lucide-react"
 
-import { useUsers } from "@/hooks"
 import { UserListSkeletons } from "@/skeletons"
 import { Button } from "@/ui"
-import { Loader2 } from "lucide-react"
-
 import { useUsers } from "@/hooks"
-import { UserListSkeletons } from "@/skeletons"
-import { Button } from "@/ui"
-import { Loader2 } from "lucide-react"
 
 export function TanStack() {
 	const {

@@ -2,10 +2,6 @@ import type { Metadata } from "next"
 
 import { Header } from "@/shared"
 
-import { Header } from "@/shared"
-
-import { Header } from "@/shared"
-
 export const metadata: Metadata = {
 	title: "Dashboard"
 }

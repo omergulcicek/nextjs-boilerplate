@@ -1,9 +1,5 @@
 import { Skeleton } from "@/ui"
 
-import { Skeleton } from "@/ui"
-
-import { Skeleton } from "@/ui"
-
 export function UserListSkeletons() {
 	return (
 		<>

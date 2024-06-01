@@ -3,10 +3,6 @@ import Link from "next/link"
 
 import { Button, Separator } from "@/ui"
 
-import { Button, Separator } from "@/ui"
-
-import { Button, Separator } from "@/ui"
-
 export default function Home() {
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-center gap-8">

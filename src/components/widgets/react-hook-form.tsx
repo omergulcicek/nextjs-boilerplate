@@ -2,17 +2,10 @@
 
 import { SubmitHandler, useForm } from "react-hook-form"
 
-import { Button, Input, Label } from "@/ui"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 
 import { Button, Input, Label } from "@/ui"
-import { zodResolver } from "@hookform/resolvers/zod"
-import * as z from "zod"
-
-import { Button, Input, Label } from "@/ui"
-import { zodResolver } from "@hookform/resolvers/zod"
-import * as z from "zod"
 
 const schema = z.object({
 	name: z

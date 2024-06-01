@@ -1,12 +1,6 @@
 import { api } from "@/helpers"
 import { delay } from "@/utils"
 
-import { api } from "@/helpers"
-import { delay } from "@/utils"
-
-import { api } from "@/helpers"
-import { delay } from "@/utils"
-
 export const userAPI = {
 	get: async (id: number) => {
 		return await api.get(`/users/${id}`).then((res) => res.data)

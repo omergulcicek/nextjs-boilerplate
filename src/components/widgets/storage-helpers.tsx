@@ -11,32 +11,7 @@ import {
 	setLocal,
 	setSession
 } from "@/helpers"
-import { Button } from "@/ui"
 
-import {
-	getCookie,
-	getLocal,
-	getSession,
-	removeCookie,
-	removeLocal,
-	removeSession,
-	setCookie,
-	setLocal,
-	setSession
-} from "@/helpers"
-import { Button } from "@/ui"
-
-import {
-	getCookie,
-	getLocal,
-	getSession,
-	removeCookie,
-	removeLocal,
-	removeSession,
-	setCookie,
-	setLocal,
-	setSession
-} from "@/helpers"
 import { Button } from "@/ui"
 
 export function StorageHelpers() {

@@ -8,22 +8,6 @@ import {
 	TanStack
 } from "@/widgets"
 
-import {
-	Count,
-	DarkTheme,
-	ReactHookForm,
-	StorageHelpers,
-	TanStack
-} from "@/widgets"
-
-import {
-	Count,
-	DarkTheme,
-	ReactHookForm,
-	StorageHelpers,
-	TanStack
-} from "@/widgets"
-
 export const metadata: Metadata = {
 	title: "Dashboard",
 	description: "Dashboard page"
