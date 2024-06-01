@@ -6,7 +6,7 @@ import { Button, Separator } from "@/ui"
 export default function Home() {
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-center gap-8">
-			<figure className="bg-white p-4 rounded">
+			<figure className="dark:bg-white p-4 rounded">
 				<Image
 					src="/next.svg"
 					alt="Next.js Logo"
