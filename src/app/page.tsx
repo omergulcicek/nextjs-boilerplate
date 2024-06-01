@@ -6,13 +6,15 @@ import { Button, Separator } from "@/ui"
 export default function Home() {
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-center gap-8">
-			<Image
-				src="/next.svg"
-				alt="Next.js Logo"
-				width={180}
-				height={37}
-				priority={true}
-			/>
+			<figure className="bg-white p-4 rounded">
+				<Image
+					src="/next.svg"
+					alt="Next.js Logo"
+					width={180}
+					height={37}
+					priority={true}
+				/>
+			</figure>
 
 			<nav className="flex h-5 items-center space-x-1 text-sm">
 				<Link
