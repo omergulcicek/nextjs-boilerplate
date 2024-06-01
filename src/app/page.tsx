@@ -30,8 +30,7 @@ export default function Home() {
 
 				<nav className="flex items-center gap-4 py-4">
 					<Link href="/dashboard">
-						<Button size="sm">
-							<Icons.flower className="h-4 w-4 mr-2" aria-label="GitHub" />
+						<Button size="sm" className="text-sm">
 							<span>Get Started</span>
 						</Button>
 					</Link>
