@@ -20,20 +20,24 @@ export function TanStack() {
 
   return (
     <section className="flex w-full flex-col gap-2 pt-6">
-      <div className="flex items-center gap-2">
-        <h2 className="font-medium">TanStack Query</h2>
-        <Button onClick={() => refetch()} className="w-40">
-          Get all users
+      <h2 className="font-medium">TanStack Query</h2>
+      <div className="flex flex-col gap-2">
+        <Button
+          onClick={() => refetch()}
+          className="w-40"
+          disabled={!!isLoading}
+        >
+          {isLoading ? "Loading..." : "Get all users"}
         </Button>
-      </div>
 
-      <ul className="flex flex-col gap-2">
-        {isLoading && <UserListSkeletons />}
-        {error && <li>Error: {error.message}</li>}
-        {userListData.map(({ id, name }) => (
-          <li key={id}>{name}</li>
-        ))}
-      </ul>
+        <ul className="flex flex-col gap-2">
+          {isLoading && <UserListSkeletons />}
+          {error && <li>Error: {error.message}</li>}
+          {userListData.map(({ id, name }) => (
+            <li key={id}>{name}</li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }
