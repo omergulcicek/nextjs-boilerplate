@@ -23,19 +23,6 @@ export const Icons = {
 	),
 	moon: (props?: IconProps) => <Moon {...props} />,
 	sun: (props?: IconProps) => <Sun {...props} />,
-	system: (props?: IconProps) => (
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			width="24"
-			height="24"
-			viewBox="0 0 24 24"
-			fill="currentColor"
-			stroke="none"
-			{...props}
-		>
-			<path d="M17 3.34a10 10 0 1 1 -15 8.66l.005 -.324a10 10 0 0 1 14.995 -8.336m-9 1.732a8 8 0 0 0 4.001 14.928l-.001 -16a8 8 0 0 0 -4 1.072"></path>
-		</svg>
-	),
 	github: (props?: IconProps) => <Github {...props} />,
 	flower: (props?: IconProps) => <Flower {...props} />
 }

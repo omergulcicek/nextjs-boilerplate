@@ -4,39 +4,37 @@ import { useTheme } from "next-themes"
 
 import { Icons } from "@/icons"
 
-import { Button } from "@/ui"
+import {
+	Button,
+	DropdownMenu,
+	DropdownMenuContent,
+	DropdownMenuItem,
+	DropdownMenuTrigger
+} from "@/ui"
 
 export function Theme() {
-	const { theme, setTheme } = useTheme()
-
-	const handleTheme = (theme: string) => {
-		switch (theme) {
-			case "light":
-				setTheme("system")
-				break
-			case "system":
-				setTheme("dark")
-				break
-			default:
-				setTheme("light")
-				break
-		}
-	}
-
-	const themeIcon: { [key: string]: JSX.Element } = {
-		light: <Icons.sun className="size-5" />,
-		dark: <Icons.moon className="size-5" />,
-		system: <Icons.system className="size-5" />
-	}
+	const { setTheme } = useTheme()
 
 	return (
-		<Button
-			variant="ghost"
-			size="icon"
-			className="active:scale-95"
-			onClick={() => handleTheme(theme || "light")}
-		>
-			{themeIcon[theme || "light"]}
-		</Button>
+		<DropdownMenu>
+			<DropdownMenuTrigger className="border-none" asChild>
+				<Button variant="outline" size="icon">
+					<Icons.sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+					<Icons.moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+					<span className="sr-only">Toggle theme</span>
+				</Button>
+			</DropdownMenuTrigger>
+			<DropdownMenuContent align="end">
+				<DropdownMenuItem onClick={() => setTheme("light")}>
+					Light
+				</DropdownMenuItem>
+				<DropdownMenuItem onClick={() => setTheme("dark")}>
+					Dark
+				</DropdownMenuItem>
+				<DropdownMenuItem onClick={() => setTheme("system")}>
+					System
+				</DropdownMenuItem>
+			</DropdownMenuContent>
+		</DropdownMenu>
 	)
 }
