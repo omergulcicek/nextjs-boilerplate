@@ -23,6 +23,7 @@
 		"^@/features",
 		"^@/widgets",
 		"^@/ui",
+		"^@/config",
 		"^@/stores",
 		"^@/hooks",
 		"",

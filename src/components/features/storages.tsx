@@ -14,7 +14,7 @@ import {
 
 import { Button } from "@/ui"
 
-export function StorageHelpers() {
+export function Storages() {
 	return (
 		<section className="flex w-full flex-col gap-2 pt-6">
 			<h2 className="font-medium">Storage Helpers</h2>

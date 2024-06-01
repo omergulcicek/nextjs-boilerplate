@@ -6,7 +6,7 @@ import { UserListSkeletons } from "@/skeletons"
 import { Button } from "@/ui"
 import { useUsers } from "@/hooks"
 
-export function TanStack() {
+export function Query() {
 	const {
 		data: userListData = [],
 		isLoading,

@@ -1,12 +1,6 @@
 import type { Metadata } from "next"
 
-import {
-	Count,
-	DarkTheme,
-	ReactHookForm,
-	StorageHelpers,
-	TanStack
-} from "@/widgets"
+import { DarkTheme, Forms, Query, Storages, Store } from "@/features"
 
 export const metadata: Metadata = {
 	title: "Dashboard"
@@ -14,16 +8,16 @@ export const metadata: Metadata = {
 
 export default function Dashboard() {
 	return (
-		<main>
+		<>
 			<div className="container flex min-h-screen max-w-2xl flex-col items-center gap-8 divide-y pb-96 pt-10">
 				<h1 className="text-2xl font-medium">Dashboard</h1>
 
-				<Count />
+				<Store />
 				<DarkTheme />
-				<TanStack />
-				<ReactHookForm />
-				<StorageHelpers />
+				<Query />
+				<Forms />
+				<Storages />
 			</div>
-		</main>
+		</>
 	)
 }

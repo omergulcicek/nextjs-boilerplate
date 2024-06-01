@@ -5,7 +5,7 @@ import { useShallow } from "zustand/react/shallow"
 import { Button } from "@/ui"
 import { useCountStore } from "@/stores"
 
-export function Count() {
+export function Store() {
 	const [count, increaseCount, decreaseCount, removeAllCount] = useCountStore(
 		useShallow((state) => [
 			state.count,

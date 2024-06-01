@@ -1,37 +1,20 @@
-import Image from "next/image"
-import Link from "next/link"
-
-import { Icons } from "@/icons"
+import { Nav } from "@/shared"
+import { Social, Theme } from "@/widgets"
+import { Brand } from "@/ui"
 
 export const Header = () => {
 	return (
-		<header className="sticky top-0 z-30 bg-white/80 py-4 shadow-sm backdrop-blur-sm dark:bg-background/80 dark:border-b dark:border-b-slate-800">
-			<div className="container flex max-w-4xl items-center justify-between">
-				<nav className="flex items-center gap-4 text-sm lg:gap-6">
-					<Link href="/">
-						<figure className="dark:bg-white p-2 rounded">
-							<Image
-								src="/next.svg"
-								alt="Next.js Logo"
-								width={60}
-								height={37}
-								priority={true}
-							/>
-						</figure>
-					</Link>
-					<Link
-						href="/"
-						className="transition-colors hover:text-foreground/80 text-foreground/60"
-					>
-						Home
-					</Link>
-					<Link
-						href="/dashboard"
-						className="transition-colors hover:text-foreground/80 text-foreground/60"
-					>
-						Dashboard
-					</Link>
-				</nav>
+		<header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+			<div className="container h-14 flex max-w-screen-lg items-center justify-between">
+				<div className="flex gap-4 lg:gap-6 items-center">
+					<Brand />
+					<Nav />
+				</div>
+
+				<div className="flex items-center">
+					<Social />
+					<Theme />
+				</div>
 			</div>
 		</header>
 	)

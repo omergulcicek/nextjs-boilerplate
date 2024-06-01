@@ -1,3 +1,5 @@
+export { Badge } from "./badge"
+export { Brand } from "./brand"
 export { Button } from "./button"
 export {
 	DropdownMenu,

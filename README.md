@@ -42,6 +42,7 @@ With this template, you get all the awesomeness you need:
 │   │   ├── skeletons               # Loading components
 │   │   ├── ui                      # Atomic components
 │   │   └── widgets                 # Advanced components
+│   ├── config                      # Configuration files
 │   ├── data                        # Static or mock data
 │   ├── helpers                     # Helper functions
 │   ├── hooks                       # React hooks

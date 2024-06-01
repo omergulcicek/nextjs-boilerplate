@@ -21,7 +21,7 @@ const schema = z.object({
 
 type Schema = z.infer<typeof schema>
 
-export function ReactHookForm() {
+export function Forms() {
 	const {
 		register,
 		handleSubmit,
