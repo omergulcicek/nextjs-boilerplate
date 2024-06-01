@@ -1,20 +1,24 @@
-import type { Metadata } from "next";
+import type { Metadata } from "next"
 
-import { Header } from "@/shared";
+import { Header } from "@/shared"
+
+import { Header } from "@/shared"
+
+import { Header } from "@/shared"
 
 export const metadata: Metadata = {
-  title: "Dashboard",
-};
+	title: "Dashboard"
+}
 
 export default function Layout({
-  children,
+	children
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode
 }>) {
-  return (
-    <>
-      <Header />
-      {children}
-    </>
-  );
+	return (
+		<>
+			<Header />
+			{children}
+		</>
+	)
 }

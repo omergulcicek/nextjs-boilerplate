@@ -1,3 +1,3 @@
 //#region User hooks
-export { useUsers } from "./useUsers";
+export { useUsers } from "./useUsers"
 //#endregion

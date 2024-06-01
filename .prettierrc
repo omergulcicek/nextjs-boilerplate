@@ -1,3 +1,38 @@
 {
-  "plugins": ["prettier-plugin-tailwindcss"]
+	"singleQuote": false,
+	"semi": false,
+	"useTabs": true,
+	"tabWidth": 2,
+	"printWidth": 80,
+	"trailingComma": "none",
+	"endOfLine": "auto",
+	"arrowParens": "always",
+	"quoteProps": "as-needed",
+	"ObjectCurlySpacing": "always",
+	"explicitTypes": "always",
+	"HTMLWhitespaceSensitivity": "ignore",
+	"importOrder": [
+		"^(react/(.*)$)|^(react$)|^(react-(.*)$)",
+		"^(next/(.*)$)|^(next$)|^(next-(.*)$)",
+		"",
+		"^(zustand/(.*)$)|^(zustand$)",
+		"<THIRD_PARTY_MODULES>",
+		"",
+		"^@/shared",
+		"^@/skeletons",
+		"^@/features",
+		"^@/widgets",
+		"^@/ui",
+		"^@/stores",
+		"^@/hooks",
+		"",
+		"^[./]"
+	],
+	"importOrderSeparation": true,
+	"importOrderSortSpecifiers": true,
+	"importOrderCaseInsensitive": true,
+	"plugins": [
+		"prettier-plugin-tailwindcss",
+		"@ianvs/prettier-plugin-sort-imports"
+	]
 }
