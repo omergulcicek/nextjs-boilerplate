@@ -1,3 +1,4 @@
+import { Provider } from "react-wrap-balancer"
 import type { Metadata } from "next"
 import { ThemeProvider } from "next-themes"
 import { Geist, Geist_Mono } from "next/font/google"
