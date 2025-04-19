@@ -25,11 +25,11 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang="tr">
+		<html lang="tr" className="light" style={{ colorScheme: "light" }}>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
-				<ThemeProvider>{children}</ThemeProvider>
+				<ThemeProvider attribute="class">{children}</ThemeProvider>
 			</body>
 		</html>
 	)
