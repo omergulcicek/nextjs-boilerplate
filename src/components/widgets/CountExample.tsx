@@ -9,11 +9,11 @@ export function CountExample() {
 
 	return (
 		<div className="flex gap-4 items-center">
-			<Button variant="secondary" onClick={decrease}>
+			<Button variant="secondary" size="icon" onClick={decrease}>
 				-
 			</Button>
-			<div>{count}</div>
-			<Button variant="secondary" onClick={increase}>
+			<div className="text-lg text-center min-w-5">{count}</div>
+			<Button variant="secondary" size="icon" onClick={increase}>
 				+
 			</Button>
 		</div>

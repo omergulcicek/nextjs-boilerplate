@@ -12,7 +12,7 @@ export function QueryExample() {
 	if (isPending) return <QuerySkeleton />
 
 	return (
-		<div className="space-y-2 min-h-96">
+		<div className="space-y-2 min-h-72">
 			{posts?.slice(0, 3).map((post: PostType) => (
 				<div key={post.id} className="p-2 rounded-lg border">
 					<h2 className="mb-2 text-base font-semibold">{post.title}</h2>
