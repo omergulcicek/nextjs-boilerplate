@@ -1,5 +1,5 @@
-export const baseUrl =
-	process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000"
+export const baseUrl = process.env.NEXT_PUBLIC_API_URL
+export const jsonPlaceholderUrl = process.env.NEXT_PUBLIC_JSON_PLACEHOLDER_URL
 
 export const CONTENT_TYPES = {
 	JSON: "application/json",

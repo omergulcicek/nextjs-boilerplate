@@ -14,4 +14,4 @@ export interface ApiError {
 
 export type ApiConfig = AxiosRequestConfig
 
-export type ApiResponseType<T> = AxiosResponse<ApiResponse<T>>
+export type ApiResponseType<T> = AxiosResponse<T>

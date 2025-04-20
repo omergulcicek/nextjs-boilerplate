@@ -1,3 +1,2 @@
-export * from "./api.helper"
-export * from "./api.types"
+export * from "./api-helper"
 export * from "./axios-instance"
