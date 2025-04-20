@@ -3,26 +3,14 @@
 import { Controller, useForm } from "react-hook-form"
 import { IMaskInput } from "react-imask"
 
+import { NAME_REGEX } from "@/constants"
 import { zodResolver } from "@hookform/resolvers/zod"
+import { toast } from "sonner"
 import { z } from "zod"
 
-import { NAME_REGEX, PHONE_REGEX } from "@/lib/constants"
+import { formSchema } from "@/schemas"
 
 import { Button, Label } from "@/ui"
-
-const formSchema = z.object({
-	name: z
-		.string({ required_error: "Ad alanı zorunludur" })
-		.min(2, "Ad en az 2 karakter olmalıdır")
-		.regex(NAME_REGEX, "Sadece harf girebilirsiniz"),
-	phone: z
-		.string({ required_error: "Telefon alanı zorunludur" })
-		.min(14, "Geçerli bir telefon numarası giriniz")
-		.regex(
-			PHONE_REGEX,
-			"Telefon numarası 0(5xx) xxx xx xx formatında olmalıdır"
-		)
-})
 
 type FormData = z.infer<typeof formSchema>
 
@@ -32,11 +20,17 @@ export function FormExample() {
 		control,
 		formState: { errors }
 	} = useForm<FormData>({
-		resolver: zodResolver(formSchema)
+		resolver: zodResolver(formSchema),
+		defaultValues: {
+			name: "",
+			phone: ""
+		}
 	})
 
 	const onSubmit = (data: FormData) => {
-		console.log(data)
+		toast(data.name, {
+			description: data.phone
+		})
 	}
 
 	return (

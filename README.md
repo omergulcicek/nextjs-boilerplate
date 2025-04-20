@@ -46,6 +46,7 @@ With this template, you get all the awesomeness you need:
 │   ├── hooks                       # React hooks
 │   ├── lib                         # Utilities and constants
 │   ├── providers                   # All providers
+│   ├── schemas                     # Zod schemas
 │   ├── services                    # API services
 │   ├── stores                      # Zustand stores
 │   └── types                       # Type definitions
