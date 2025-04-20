@@ -124,4 +124,8 @@
 	body {
 		@apply bg-background text-foreground;
 	}
+	
+	[role=button],button {
+    cursor: pointer
+	}
 }

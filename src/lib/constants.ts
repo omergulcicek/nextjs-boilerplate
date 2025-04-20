@@ -12,5 +12,4 @@ export const CONTENT_TYPES = {
 } as const
 
 export const NAME_REGEX = /^[a-zA-ZğüşıöçĞÜŞİÖÇ\s]+$/
-export const PHONE_REGEX =
-	/^0\(5[0-9][0-9]\)\s[0-9][0-9][0-9]\s[0-9][0-9]\s[0-9][0-9]$/
+export const PHONE_REGEX = /^0\(5\d{2}\)\s\d{3}\s\d{2}\s\d{2}$/
