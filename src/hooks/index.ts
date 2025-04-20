@@ -1,1 +1,1 @@
-export { usePosts } from "./use-posts"
+export { usePosts } from "./usePosts"

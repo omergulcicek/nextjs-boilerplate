@@ -59,3 +59,14 @@ With this template, you get all the awesomeness you need:
 ├── tailwind.config.js               # Tailwind CSS configuration
 └── tsconfig.json                    # TypeScript configuration
 ```
+
+## File Naming Conventions
+
+The project follows consistent file naming conventions:
+
+| File Type | Example | Style |
+|------------|-------|------|
+| Component | `LoginForm.tsx` | PascalCase |
+| Hook | `useLogin.ts` | camelCase |
+| Helper, Schema | `form-schema.ts` | kebab-case |
+| Folder | `login-form/` | kebab-case |
