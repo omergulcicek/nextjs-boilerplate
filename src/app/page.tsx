@@ -3,7 +3,7 @@ import Balancer from "react-wrap-balancer"
 import { Camera } from "lucide-react"
 
 import { ThemeToggle } from "@/ui"
-import { CountExample, QueryExample } from "@/widgets"
+import { CountExample, FormExample, QueryExample } from "@/widgets"
 
 export default function Home() {
 	return (
@@ -17,6 +17,7 @@ export default function Home() {
 
 			<CountExample />
 			<QueryExample />
+			<FormExample />
 		</div>
 	)
 }
