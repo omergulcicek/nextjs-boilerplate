@@ -28,13 +28,13 @@
 			"@/providers": ["providers"],
 			"@/config": ["config"],
 			"@/data": ["data"],
-			"@/constants": ["lib/constants.ts"],
 			"@/helpers": ["helpers"],
 			"@/hooks": ["hooks"],
 			"@/stores": ["stores"],
 			"@/services": ["services"],
 			"@/utils": ["lib/utils"],
-			"@/icons": ["lib/icons"]
+			"@/icons": ["lib/icons"],
+			"@/types": ["types"]
 		}
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

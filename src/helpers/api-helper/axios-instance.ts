@@ -1,11 +1,16 @@
-import { apiTimeout, contentTypes, jsonPlaceholderUrl } from "@/constants"
 import axios from "axios"
 
+import {
+	API_TIMEOUT,
+	CONTENT_TYPES,
+	JSON_PLACEHOLDER_URL
+} from "@/lib/constants"
+
 const axiosInstance = axios.create({
-	baseURL: jsonPlaceholderUrl,
-	timeout: apiTimeout,
+	baseURL: JSON_PLACEHOLDER_URL,
+	timeout: API_TIMEOUT,
 	headers: {
-		"Content-Type": contentTypes.json
+		"Content-Type": CONTENT_TYPES.json
 	}
 })
 

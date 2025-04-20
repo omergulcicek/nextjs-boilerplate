@@ -8,9 +8,11 @@ import { CountExample, FormExample, QueryExample } from "@/widgets"
 export default function Home() {
 	return (
 		<div className="container py-8">
-			<h1>Hello World</h1>
-			<ThemeToggle />
-			<Camera color="red" size={48} />
+			<div className="flex gap-4 items-center">
+				<h1>Hello World</h1>
+				<Camera color="red" size={48} />
+				<ThemeToggle />
+			</div>
 			<Balancer>
 				React: A JavaScript library for building user interfaces
 			</Balancer>
