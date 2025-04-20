@@ -1,13 +1,12 @@
-export const baseUrl = process.env.NEXT_PUBLIC_API_URL
 export const jsonPlaceholderUrl = process.env.NEXT_PUBLIC_JSON_PLACEHOLDER_URL
 
-export const CONTENT_TYPES = {
-	JSON: "application/json",
-	FORM_URLENCODED: "application/x-www-form-urlencoded",
-	FORM_DATA: "multipart/form-data",
-	TEXT: "text/plain",
-	HTML: "text/html",
-	XML: "application/xml"
-} as const
+export const apiTimeout = 10000
 
-export const DEFAULT_CONTENT_TYPE = CONTENT_TYPES.JSON
+export const contentTypes = {
+	json: "application/json",
+	formUrlEncoded: "application/x-www-form-urlencoded",
+	formData: "multipart/form-data",
+	text: "text/plain",
+	html: "text/html",
+	xml: "application/xml"
+} as const

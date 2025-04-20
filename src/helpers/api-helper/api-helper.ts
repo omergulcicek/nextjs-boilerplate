@@ -12,11 +12,7 @@ class ApiHelper {
 		config?: ApiConfig
 	): Promise<ApiResponseType<T>> {
 		try {
-			const response = await axiosInstance[method]<ApiResponse<T>>(
-				url,
-				data,
-				config
-			)
+			const response = await axiosInstance[method]<T>(url, data, config)
 			return response
 		} catch (error) {
 			throw this.handleError(error)

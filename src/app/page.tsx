@@ -2,7 +2,6 @@
 
 import Balancer from "react-wrap-balancer"
 
-import { baseUrl } from "@/constants"
 import { Camera } from "lucide-react"
 
 import { ThemeToggle } from "@/ui"
@@ -13,7 +12,6 @@ export default function Home() {
 		<div className="container py-8">
 			<h1>Hello World</h1>
 			<ThemeToggle />
-			<p>{baseUrl}</p>
 			<Camera color="red" size={48} />
 			<Balancer>
 				React: A JavaScript library for building user interfaces

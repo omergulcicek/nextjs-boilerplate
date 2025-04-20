@@ -1,9 +1,11 @@
 import { useQuery } from "@tanstack/react-query"
 
-import { Post, postsService } from "@/services/posts-service"
+import { PostType } from "@/types"
+
+import { postsService } from "@/services/posts-service"
 
 export const usePosts = () => {
-	return useQuery<Post[]>({
+	return useQuery<PostType[]>({
 		queryKey: ["posts"],
 		queryFn: async () => {
 			const response = await postsService.getPosts()
