@@ -1,3 +1,5 @@
+"use client"
+
 import { PostType } from "@/types"
 
 import { usePosts } from "@/hooks"

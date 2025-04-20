@@ -1,4 +1,4 @@
-import { ApiConfig, ApiResponse, ApiResponseType } from "@/types"
+import { ApiConfig, ApiResponseType } from "@/types"
 
 import axiosInstance from "./axios-instance"
 

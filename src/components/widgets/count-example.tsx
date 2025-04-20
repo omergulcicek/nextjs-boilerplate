@@ -1,6 +1,8 @@
+"use client"
+
 import { useCountStore } from "@/stores/count-store"
 
-import { Button } from "../ui/button"
+import { Button } from "@/ui"
 
 export function CountExample() {
 	const { count, decrease, increase } = useCountStore()

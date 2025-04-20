@@ -1,5 +1,3 @@
-"use client"
-
 import Balancer from "react-wrap-balancer"
 
 import { Camera } from "lucide-react"
