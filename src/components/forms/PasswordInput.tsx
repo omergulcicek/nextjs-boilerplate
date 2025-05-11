@@ -1,10 +1,6 @@
 "use client"
 
-import { Control } from "react-hook-form"
-
-import { z } from "zod"
-
-import { formSchema } from "@/schemas"
+import { FormFieldProps } from "@/types"
 
 import {
 	FormControl,
@@ -15,21 +11,14 @@ import {
 	Input
 } from "@/ui"
 
-type FormData = z.infer<typeof formSchema>
-
-interface PasswordInputProps {
-	control: Control<FormData>
-	name: keyof FormData
-	placeholder: string
-	label?: string
-}
-
 export function PasswordInput({
 	control,
+	register,
 	name,
 	label = "",
-	placeholder = ""
-}: PasswordInputProps) {
+	placeholder = "",
+	required = false
+}: FormFieldProps) {
 	return (
 		<FormField
 			control={control}
@@ -38,7 +27,13 @@ export function PasswordInput({
 				<FormItem>
 					{label && <FormLabel>{label}</FormLabel>}
 					<FormControl>
-						<Input type="password" placeholder={placeholder} {...field} />
+						<Input
+							type="password"
+							placeholder={placeholder}
+							required={required}
+							{...field}
+							{...register(name)}
+						/>
 					</FormControl>
 					<FormMessage />
 				</FormItem>

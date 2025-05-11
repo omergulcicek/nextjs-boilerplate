@@ -4,28 +4,31 @@ import { useForm } from "react-hook-form"
 
 import { zodResolver } from "@hookform/resolvers/zod"
 import { toast } from "sonner"
-import { z } from "zod"
+
+import { FormData } from "@/types"
 
 import { formSchema } from "@/schemas"
 
+import { EmailInput } from "@/components/forms/EmailInput"
 import { PasswordInput } from "@/components/forms/PasswordInput"
 import { PhoneInput } from "@/components/forms/PhoneInput"
 import { UsernameInput } from "@/components/forms/UsernameInput"
 import { Button, Form } from "@/ui"
-
-type FormData = z.infer<typeof formSchema>
 
 export function FormExample() {
 	const form = useForm<FormData>({
 		resolver: zodResolver(formSchema),
 		defaultValues: {
 			username: "",
+			email: "",
 			password: "",
 			phone: ""
 		}
 	})
 
 	function onSubmit(data: FormData) {
+		console.log(data)
+
 		toast.success("Form başarıyla gönderildi", {
 			description: `Kullanıcı adı: ${data.username}`
 		})
@@ -37,18 +40,28 @@ export function FormExample() {
 				<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
 					<UsernameInput
 						control={form.control}
+						register={form.register}
 						name="username"
 						placeholder="Kullanıcı adınızı giriniz"
 						label="Kullanıcı Adı"
 					/>
+					<EmailInput
+						control={form.control}
+						register={form.register}
+						name="email"
+						placeholder="Email adresinizi giriniz"
+						label="Email Adresi"
+					/>
 					<PasswordInput
 						control={form.control}
+						register={form.register}
 						name="password"
 						placeholder="Şifrenizi giriniz"
 						label="Şifre"
 					/>
 					<PhoneInput
 						control={form.control}
+						register={form.register}
 						name="phone"
 						placeholder="Telefon numaranızı giriniz"
 						label="Telefon Numarası"

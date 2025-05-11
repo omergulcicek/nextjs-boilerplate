@@ -1,7 +1,5 @@
 "use client"
 
-import { useHookFormMask } from "use-mask-input"
-
 import { FormFieldProps } from "@/types"
 
 import {
@@ -13,7 +11,7 @@ import {
 	Input
 } from "@/ui"
 
-export function PhoneInput({
+export function EmailInput({
 	control,
 	register,
 	name,
@@ -21,8 +19,6 @@ export function PhoneInput({
 	placeholder = "",
 	required = false
 }: FormFieldProps) {
-	const registerWithMask = useHookFormMask(register)
-
 	return (
 		<FormField
 			control={control}
@@ -32,14 +28,11 @@ export function PhoneInput({
 					{label && <FormLabel>{label}</FormLabel>}
 					<FormControl>
 						<Input
-							type="tel"
+							type="email"
 							placeholder={placeholder}
 							required={required}
 							{...field}
-							{...registerWithMask(name, "(999) 999 99 99", {
-								showMaskOnFocus: false,
-								showMaskOnHover: false
-							})}
+							{...register(name)}
 						/>
 					</FormControl>
 					<FormMessage />

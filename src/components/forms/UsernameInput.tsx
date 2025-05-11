@@ -1,10 +1,6 @@
 "use client"
 
-import { Control } from "react-hook-form"
-
-import { z } from "zod"
-
-import { formSchema } from "@/schemas"
+import { FormFieldProps } from "@/types"
 
 import {
 	FormControl,
@@ -15,21 +11,14 @@ import {
 	Input
 } from "@/ui"
 
-type FormData = z.infer<typeof formSchema>
-
-interface UsernameInputProps {
-	control: Control<FormData>
-	name: keyof FormData
-	placeholder: string
-	label?: string
-}
-
 export function UsernameInput({
 	control,
+	register,
 	name,
 	label = "",
-	placeholder = ""
-}: UsernameInputProps) {
+	placeholder = "",
+	required = false
+}: FormFieldProps) {
 	return (
 		<FormField
 			control={control}
@@ -38,7 +27,13 @@ export function UsernameInput({
 				<FormItem>
 					{label && <FormLabel>{label}</FormLabel>}
 					<FormControl>
-						<Input placeholder={placeholder} {...field} />
+						<Input
+							type="text"
+							placeholder={placeholder}
+							required={required}
+							{...field}
+							{...register(name)}
+						/>
 					</FormControl>
 					<FormMessage />
 				</FormItem>
