@@ -12,5 +12,6 @@ export interface FormFieldProps {
 	name: keyof FormData
 	placeholder?: string
 	label?: string
+	required?: boolean
 	disabled?: boolean
 }

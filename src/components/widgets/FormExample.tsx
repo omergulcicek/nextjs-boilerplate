@@ -11,6 +11,7 @@ import { formSchema } from "@/schemas"
 import { EmailInput } from "@/components/forms/EmailInput"
 import { PasswordInput } from "@/components/forms/PasswordInput"
 import { PhoneInput } from "@/components/forms/PhoneInput"
+import { TCKNInput } from "@/components/forms/TCKNInput"
 import { UsernameInput } from "@/components/forms/UsernameInput"
 import { Button, Form } from "@/ui"
 
@@ -21,7 +22,8 @@ export function FormExample() {
 			username: "",
 			email: "",
 			password: "",
-			phone: ""
+			phone: "",
+			tckn: ""
 		},
 		mode: "onChange"
 	})
@@ -61,6 +63,13 @@ export function FormExample() {
 						name="phone"
 						placeholder="Telefon numaranızı giriniz"
 						label="Telefon Numarası"
+					/>
+					<TCKNInput
+						control={form.control}
+						register={form.register}
+						name="tckn"
+						placeholder="Kimlik Numaranızı giriniz"
+						label="Kimlik Numarası"
 					/>
 					<Button
 						type="submit"
