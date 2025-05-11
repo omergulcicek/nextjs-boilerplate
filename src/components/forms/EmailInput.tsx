@@ -16,8 +16,7 @@ export function EmailInput({
 	register,
 	name,
 	label = "",
-	placeholder = "",
-	required = false
+	placeholder = ""
 }: FormFieldProps) {
 	return (
 		<FormField
@@ -30,7 +29,6 @@ export function EmailInput({
 						<Input
 							type="email"
 							placeholder={placeholder}
-							required={required}
 							{...field}
 							{...register(name)}
 						/>

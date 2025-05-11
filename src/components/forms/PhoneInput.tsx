@@ -18,8 +18,7 @@ export function PhoneInput({
 	register,
 	name,
 	label = "",
-	placeholder = "",
-	required = false
+	placeholder = ""
 }: FormFieldProps) {
 	const registerWithMask = useHookFormMask(register)
 
@@ -34,7 +33,6 @@ export function PhoneInput({
 						<Input
 							type="tel"
 							placeholder={placeholder}
-							required={required}
 							{...field}
 							{...registerWithMask(name, "(999) 999 99 99", {
 								showMaskOnFocus: false,

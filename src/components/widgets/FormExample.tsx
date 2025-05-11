@@ -28,10 +28,6 @@ export function FormExample() {
 
 	function onSubmit(data: FormData) {
 		console.log(data)
-
-		toast.success("Form başarıyla gönderildi", {
-			description: `Kullanıcı adı: ${data.username}`
-		})
 	}
 
 	return (

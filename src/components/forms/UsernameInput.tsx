@@ -16,8 +16,7 @@ export function UsernameInput({
 	register,
 	name,
 	label = "",
-	placeholder = "",
-	required = false
+	placeholder = ""
 }: FormFieldProps) {
 	return (
 		<FormField
@@ -30,7 +29,6 @@ export function UsernameInput({
 						<Input
 							type="text"
 							placeholder={placeholder}
-							required={required}
 							{...field}
 							{...register(name)}
 						/>

@@ -16,8 +16,7 @@ export function PasswordInput({
 	register,
 	name,
 	label = "",
-	placeholder = "",
-	required = false
+	placeholder = ""
 }: FormFieldProps) {
 	return (
 		<FormField
@@ -30,7 +29,6 @@ export function PasswordInput({
 						<Input
 							type="password"
 							placeholder={placeholder}
-							required={required}
 							{...field}
 							{...register(name)}
 						/>
