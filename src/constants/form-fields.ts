@@ -1,40 +1,47 @@
 import {
+	AlphaInput,
 	EmailInput,
 	PasswordInput,
 	PhoneInput,
 	TCKNInput,
-	UsernameInput
+	TextInput
 } from "@/components/forms"
 
 export const FORM_FIELDS = [
 	{
-		name: "username",
-		label: "Kullanıcı Adı",
-		placeholder: "Kullanıcı adınızı giriniz",
-		Component: UsernameInput
+		name: "name",
+		label: "Adınız",
+		placeholder: "Sadece harf",
+		Component: AlphaInput
+	},
+	{
+		name: "details",
+		label: "Detaylı bilgi",
+		placeholder: "Harf, sayı, özel karakter",
+		Component: TextInput
 	},
 	{
 		name: "email",
 		label: "Email Adresi",
-		placeholder: "Email adresinizi giriniz",
+		placeholder: "Email formatı",
 		Component: EmailInput
 	},
 	{
 		name: "password",
 		label: "Şifre",
-		placeholder: "Şifrenizi giriniz",
+		placeholder: "",
 		Component: PasswordInput
 	},
 	{
 		name: "phone",
 		label: "Telefon Numarası",
-		placeholder: "Telefon numaranızı giriniz",
+		placeholder: "10 haneli",
 		Component: PhoneInput
 	},
 	{
 		name: "tckn",
 		label: "Kimlik Numarası",
-		placeholder: "Kimlik Numaranızı giriniz",
+		placeholder: "11 haneli ve TCKN formatı",
 		Component: TCKNInput
 	}
 ] as const

@@ -1,9 +1,15 @@
 import { z } from "zod"
 
+import { ALPHA_REGEX } from "@/constants"
+
 import { validateTCKN } from "@/lib/utils"
 
 export const formSchema = z.object({
-	username: z.string().min(3, "Kullanıcı adı en az 3 karakter olmalıdır"),
+	name: z
+		.string()
+		.regex(new RegExp(`^${ALPHA_REGEX.source}*$`), "Sadece harf girebilirsiniz")
+		.min(3, "Adınız en az 3 karakter olmalıdır"),
+	details: z.string().min(3, "Kullanıcı adı en az 3 karakter olmalıdır"),
 	email: z.string().email("Geçerli bir email adresi giriniz"),
 	password: z.string().min(6, "Şifre en az 6 karakter olmalıdır"),
 	phone: z.string().regex(/^\d{10}$/, "Geçerli bir telefon numarası giriniz"),

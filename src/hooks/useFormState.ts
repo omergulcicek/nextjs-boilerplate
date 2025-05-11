@@ -10,7 +10,8 @@ export function useFormState() {
 	return useForm<FormData>({
 		resolver: zodResolver(formSchema),
 		defaultValues: {
-			username: "",
+			name: "",
+			details: "",
 			email: "",
 			password: "",
 			phone: "",

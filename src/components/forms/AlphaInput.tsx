@@ -1,8 +1,7 @@
 "use client"
 
-import { useHookFormMask } from "use-mask-input"
-
 import { FormFieldProps } from "@/types"
+import { ALPHA_REGEX } from "@/constants"
 
 import {
 	FormControl,
@@ -13,15 +12,13 @@ import {
 	Input
 } from "@/ui"
 
-export function TCKNInput({
+export function AlphaInput({
 	control,
 	register,
 	name,
 	label = "",
 	placeholder = ""
 }: FormFieldProps) {
-	const registerWithMask = useHookFormMask(register)
-
 	return (
 		<FormField
 			control={control}
@@ -31,16 +28,15 @@ export function TCKNInput({
 					{label && <FormLabel>{label}</FormLabel>}
 					<FormControl>
 						<Input
-							type="tel"
+							type="text"
 							placeholder={placeholder}
-							maxLength={11}
+							onKeyDown={(e) => {
+								if (!ALPHA_REGEX.test(e.key)) {
+									e.preventDefault()
+								}
+							}}
 							{...field}
-							{...registerWithMask(name, "99999999999", {
-								showMaskOnFocus: false,
-								showMaskOnHover: false,
-								autoUnmask: true,
-								placeholder: ""
-							})}
+							{...register(name)}
 						/>
 					</FormControl>
 					<FormMessage />

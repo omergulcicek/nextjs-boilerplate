@@ -11,7 +11,7 @@ import {
 	Input
 } from "@/ui"
 
-export function UsernameInput({
+export function TextInput({
 	control,
 	register,
 	name,
