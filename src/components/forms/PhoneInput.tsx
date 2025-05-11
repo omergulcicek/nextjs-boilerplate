@@ -37,7 +37,7 @@ export function PhoneInput({
 							{...registerWithMask(name, "(999) 999 99 99", {
 								showMaskOnFocus: false,
 								showMaskOnHover: false,
-								placeholder: ""
+								autoUnmask: true
 							})}
 						/>
 					</FormControl>

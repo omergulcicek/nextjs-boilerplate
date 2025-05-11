@@ -22,7 +22,8 @@ export function FormExample() {
 			email: "",
 			password: "",
 			phone: ""
-		}
+		},
+		mode: "onChange"
 	})
 
 	function onSubmit(data: FormData) {
@@ -61,7 +62,13 @@ export function FormExample() {
 						placeholder="Telefon numaranızı giriniz"
 						label="Telefon Numarası"
 					/>
-					<Button type="submit">Giriş Yap</Button>
+					<Button
+						type="submit"
+						disabled={!form.formState.isValid}
+						className="w-full"
+					>
+						Giriş Yap
+					</Button>
 				</form>
 			</Form>
 		</section>
