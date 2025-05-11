@@ -12,5 +12,7 @@ export const CONTENT_TYPES = {
 	xml: "application/xml"
 } as const
 
-export const NAME_REGEX = /^[a-zA-ZğüşıöçĞÜŞİÖÇ\s]+$/
-export const PHONE_REGEX = /^0\(5\d{2}\)\s\d{3}\s\d{2}\s\d{2}$/
+export const FORM_REGEX = {
+	name: /^[a-zA-ZğüşıöçĞÜŞİÖÇ\s]+$/,
+	phone: /^0\(5\d{2}\)\s\d{3}\s\d{2}\s\d{2}$/
+} as const
