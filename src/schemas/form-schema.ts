@@ -8,5 +8,8 @@ export const formSchema = z.object({
 	}),
 	password: z.string().min(6, {
 		message: "Şifre en az 6 karakter olmalıdır."
+	}),
+	phone: z.string().min(10, {
+		message: "Telefon numarası en az 10 karakter olmalıdır."
 	})
 })

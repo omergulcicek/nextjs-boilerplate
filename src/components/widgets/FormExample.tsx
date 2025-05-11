@@ -9,6 +9,7 @@ import { z } from "zod"
 import { formSchema } from "@/schemas"
 
 import { PasswordInput } from "@/components/forms/PasswordInput"
+import { PhoneInput } from "@/components/forms/PhoneInput"
 import { UsernameInput } from "@/components/forms/UsernameInput"
 import { Button, Form } from "@/ui"
 
@@ -19,7 +20,8 @@ export function FormExample() {
 		resolver: zodResolver(formSchema),
 		defaultValues: {
 			username: "",
-			password: ""
+			password: "",
+			phone: ""
 		}
 	})
 
@@ -44,6 +46,12 @@ export function FormExample() {
 						name="password"
 						placeholder="Şifrenizi giriniz"
 						label="Şifre"
+					/>
+					<PhoneInput
+						control={form.control}
+						name="phone"
+						placeholder="Telefon numaranızı giriniz"
+						label="Telefon Numarası"
 					/>
 					<Button type="submit">Giriş Yap</Button>
 				</form>
