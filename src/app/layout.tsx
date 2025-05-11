@@ -30,12 +30,12 @@ export default function RootLayout({
 	return (
 		<html lang="en" className="light" style={{ colorScheme: "light" }}>
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+				className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
 				suppressHydrationWarning
 			>
 				<Providers>
 					<Header />
-					<main>{children}</main>
+					<main className="flex-1">{children}</main>
 					<Footer />
 				</Providers>
 			</body>
