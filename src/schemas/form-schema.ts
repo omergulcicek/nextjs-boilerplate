@@ -1,16 +1,13 @@
 import { z } from "zod"
 
 export const formSchema = z.object({
-	username: z.string().min(2, {
-		message: "Kullanıcı adı en az 2 karakter olmalıdır."
-	}),
-	email: z.string().email({
-		message: "Geçersiz email adresi."
-	}),
-	password: z.string().min(6, {
-		message: "Şifre en az 6 karakter olmalıdır."
-	}),
-	phone: z.string().min(10, {
-		message: "Telefon numarası en az 10 karakter olmalıdır."
-	})
+	username: z.string().min(3, "Kullanıcı adı en az 3 karakter olmalıdır"),
+	email: z.string().email("Geçerli bir email adresi giriniz"),
+	password: z.string().min(6, "Şifre en az 6 karakter olmalıdır"),
+	phone: z
+		.string()
+		.regex(
+			/^\(\d{3}\) \d{3} \d{2} \d{2}$/,
+			"Geçerli bir telefon numarası giriniz"
+		)
 })
