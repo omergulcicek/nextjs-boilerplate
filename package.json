@@ -7,7 +7,8 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"svgr": "svgr --typescript --icon --title-prop --ref --no-prettier --out-dir src/components/icons src/assets/icons"
 	},
 	"dependencies": {
 		"@hookform/resolvers": "^5.0.1",
@@ -36,6 +37,9 @@
 	"devDependencies": {
 		"@eslint/eslintrc": "^3",
 		"@ianvs/prettier-plugin-sort-imports": "^4.4.1",
+		"@svgr/cli": "^8.1.0",
+		"@svgr/core": "^8.1.0",
+		"@svgr/webpack": "^8.1.0",
 		"@tailwindcss/postcss": "^4",
 		"@types/node": "^20",
 		"@types/react": "^19",
