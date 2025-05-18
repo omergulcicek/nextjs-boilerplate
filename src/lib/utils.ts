@@ -7,6 +7,18 @@ export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs))
 }
 
+export function getCardType(cardNumber: string): CardType | null {
+	const cleanNumber = cardNumber.replace(/[^\d]/g, "")
+
+	for (const [type, regex] of Object.entries(CARD_REGEX)) {
+		if (regex.test(cleanNumber)) {
+			return type as CardType
+		}
+	}
+
+	return null
+}
+
 export const validateTCKN = (tckn: string): boolean => {
 	if (tckn.length !== 11) return false
 
@@ -26,18 +38,6 @@ export const validateTCKN = (tckn: string): boolean => {
 	return parseInt(tckn[9]) === check1 && parseInt(tckn[10]) === check2
 }
 
-export function getCardType(cardNumber: string): CardType | null {
-	const cleanNumber = cardNumber.replace(/[^\d]/g, "")
-
-	for (const [type, regex] of Object.entries(CARD_REGEX)) {
-		if (regex.test(cleanNumber)) {
-			return type as CardType
-		}
-	}
-
-	return null
-}
-
 export function validateCreditCard(cardNumber: string): boolean {
 	const cardType = getCardType(cardNumber)
 
@@ -45,4 +45,10 @@ export function validateCreditCard(cardNumber: string): boolean {
 
 	const cleanNumber = cardNumber.replace(/[^\d]/g, "").trim()
 	return /^[1-6]{1}[0-9]{14,15}$/i.test(cleanNumber)
+}
+
+export function validateURL(url: string): boolean {
+	return /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/i.test(
+		url
+	)
 }

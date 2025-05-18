@@ -2,7 +2,7 @@ import { z } from "zod"
 
 import { ALPHA_REGEX } from "@/constants"
 
-import { validateCreditCard, validateTCKN } from "@/lib/utils"
+import { validateCreditCard, validateTCKN, validateURL } from "@/lib/utils"
 
 export const formSchema = z.object({
 	name: z
@@ -24,5 +24,8 @@ export const formSchema = z.object({
 		.regex(/^\d{16}$/, "Kredi Kartı 16 haneli olmalıdır")
 		.refine((val) => validateCreditCard(val), {
 			message: "Geçersiz Kredi Kartı"
-		})
+		}),
+	url: z.string().refine((val) => validateURL(val), {
+		message: "Geçersiz URL"
+	})
 })

@@ -11,7 +11,8 @@ import {
 	PasswordInput,
 	PhoneInput,
 	TCKNInput,
-	TextInput
+	TextInput,
+	URLInput
 } from "@/components/forms"
 import { Button, Form } from "@/ui"
 
@@ -81,6 +82,14 @@ export function FormExample() {
 						label="Kredi Kartı Numarası"
 						placeholder="16 haneli ve Kredi Kartı formatı"
 						showCardIcon
+					/>
+
+					<URLInput
+						control={form.control}
+						register={form.register}
+						name="url"
+						label="URL"
+						placeholder="https://www.google.com"
 					/>
 
 					<Button
