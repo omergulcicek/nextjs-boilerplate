@@ -80,6 +80,7 @@ export function FormExample() {
 						name="creditCard"
 						label="Kredi Kartı Numarası"
 						placeholder="16 haneli ve Kredi Kartı formatı"
+						showCardIcon
 					/>
 
 					<Button

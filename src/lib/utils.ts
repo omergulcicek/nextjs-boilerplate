@@ -1,6 +1,8 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 
+import { CARD_REGEX, type CardType } from "@/constants/cards"
+
 export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs))
 }
@@ -24,31 +26,23 @@ export const validateTCKN = (tckn: string): boolean => {
 	return parseInt(tckn[9]) === check1 && parseInt(tckn[10]) === check2
 }
 
-export function validateCreditCard(cardNumber: string) {
-	const regexPattern = {
-		MASTERCARD:
-			/^(5[1-5][0-9]{14}|2(?:2(?:2[1-9]|[3-9][0-9])|[3-6][0-9][0-9]|7(?:[01][0-9]|20))[0-9]{12})$/,
-		VISA: /^4[0-9]{12}(?:[0-9]{3})?$/
-	}
+export function getCardType(cardNumber: string): CardType | null {
+	const cleanNumber = cardNumber.replace(/[^\d]/g, "")
 
-	for (const card in regexPattern) {
-		if (
-			cardNumber
-				.replace(/[^\d]/g, "")
-				.match(regexPattern[card as keyof typeof regexPattern])
-		) {
-			console.clear()
-			console.log(`Kart tipi: ${card}`)
-
-			if (cardNumber) {
-				return cardNumber &&
-					/^[1-6]{1}[0-9]{14,15}$/i.test(
-						cardNumber.replace(/[^\d]/g, "").trim()
-					)
-					? true
-					: false
-			}
+	for (const [type, regex] of Object.entries(CARD_REGEX)) {
+		if (regex.test(cleanNumber)) {
+			return type as CardType
 		}
 	}
-	return false
+
+	return null
+}
+
+export function validateCreditCard(cardNumber: string): boolean {
+	const cardType = getCardType(cardNumber)
+
+	if (!cardType) return false
+
+	const cleanNumber = cardNumber.replace(/[^\d]/g, "").trim()
+	return /^[1-6]{1}[0-9]{14,15}$/i.test(cleanNumber)
 }
