@@ -2,7 +2,7 @@ import Link from "next/link"
 
 import { Flower, Github } from "lucide-react"
 
-import { GITHUB_URL } from "@/constants"
+import { APP_CONFIG } from "@/constants"
 
 import { Button } from "@/ui"
 
@@ -18,7 +18,11 @@ export default function Header() {
 						</strong>
 					</div>
 					<div>
-						<Link href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
+						<Link
+							href={APP_CONFIG.GITHUB_URL}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							<Button variant="outline" size="icon">
 								<Github />
 							</Button>

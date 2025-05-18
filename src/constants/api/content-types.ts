@@ -6,3 +6,5 @@ export const CONTENT_TYPES = {
 	html: "text/html",
 	xml: "application/xml"
 } as const
+
+export type ContentType = keyof typeof CONTENT_TYPES
