@@ -9,6 +9,7 @@ import {
 	CreditCardInput,
 	CVVInput,
 	EmailInput,
+	ExpiryDateInput,
 	PasswordInput,
 	PhoneInput,
 	TCKNInput,
@@ -21,7 +22,12 @@ export function FormExample() {
 	const form = useFormState()
 
 	function onSubmit(data: FormData) {
-		console.log(data)
+		console.log({
+			...data,
+			expiryDate: null,
+			expireMonth: data.expiryDate.slice(0, 2),
+			expireYear: data.expiryDate.slice(2)
+		})
 	}
 
 	return (
@@ -85,13 +91,23 @@ export function FormExample() {
 						showCardIcon
 					/>
 
-					<CVVInput
-						control={form.control}
-						register={form.register}
-						name="cvv"
-						label="CVV"
-						placeholder="000"
-					/>
+					<div className="grid grid-cols-2 gap-4 items-start">
+						<ExpiryDateInput
+							control={form.control}
+							register={form.register}
+							name="expiryDate"
+							label="Son kullanım tarihi"
+							placeholder="AA/YY"
+						/>
+
+						<CVVInput
+							control={form.control}
+							register={form.register}
+							name="cvv"
+							label="CVV"
+							placeholder="000"
+						/>
+					</div>
 
 					<URLInput
 						control={form.control}

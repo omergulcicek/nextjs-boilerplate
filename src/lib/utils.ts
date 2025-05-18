@@ -46,3 +46,19 @@ export function validateCreditCard(cardNumber: string): boolean {
 	const cleanNumber = cardNumber.replace(/[^\d]/g, "").trim()
 	return /^[1-6]{1}[0-9]{14,15}$/i.test(cleanNumber)
 }
+
+export const validateExpiryDate = (value: string) => {
+	const [month, year] = [value.slice(0, 2), value.slice(2)]
+	const currentDate = new Date()
+	const currentYear = currentDate.getFullYear() % 100
+	const currentMonth = currentDate.getMonth() + 1
+
+	const expiryYear = parseInt(year)
+	const expiryMonth = parseInt(month)
+
+	if (expiryYear < currentYear) return false
+
+	if (expiryYear === currentYear && expiryMonth < currentMonth) return false
+
+	return true
+}

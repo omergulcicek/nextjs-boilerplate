@@ -4,6 +4,7 @@ export const CARD_REGEX = /^\d{16}$/
 export const CVV_REGEX = /^\d{3}$/
 export const DIGITS_ONLY_REGEX = /[^\d]/g
 export const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+export const EXPIRY_DATE_REGEX = /^(0[1-9]|1[0-2])([0-9]{2})$/
 export const NUMERIC_REGEX = /^\d+$/
 export const PHONE_REGEX = /^\d{10}$/
 export const TCKN_REGEX = /^\d{11}$/

@@ -13,7 +13,7 @@ import {
 	Input
 } from "@/ui"
 
-export function CVVInput({
+export function ExpiryDateInput({
 	control,
 	register,
 	name,
@@ -33,9 +33,9 @@ export function CVVInput({
 						<Input
 							type="tel"
 							placeholder={placeholder}
-							maxLength={3}
+							maxLength={5}
 							{...field}
-							{...registerWithMask(name, "999", {
+							{...registerWithMask(name, "99/99", {
 								showMaskOnFocus: false,
 								showMaskOnHover: false,
 								autoUnmask: true,
