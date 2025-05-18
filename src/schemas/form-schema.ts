@@ -3,6 +3,7 @@ import { z } from "zod"
 import {
 	ALPHA_REGEX,
 	CARD_REGEX,
+	CVV_REGEX,
 	PHONE_REGEX,
 	TCKN_REGEX,
 	URL_REGEX
@@ -31,5 +32,6 @@ export const formSchema = z.object({
 		.refine((val) => validateCreditCard(val), {
 			message: "Geçersiz Kredi Kartı"
 		}),
+	cvv: z.string().regex(CVV_REGEX, "CVV 3 haneli olmalıdır"),
 	url: z.string().regex(URL_REGEX, "Geçerli bir URL giriniz")
 })

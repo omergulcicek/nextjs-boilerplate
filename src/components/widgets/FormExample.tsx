@@ -7,6 +7,7 @@ import { useFormState } from "@/hooks"
 import {
 	AlphaInput,
 	CreditCardInput,
+	CVVInput,
 	EmailInput,
 	PasswordInput,
 	PhoneInput,
@@ -82,6 +83,14 @@ export function FormExample() {
 						label="Kredi kartı numarası"
 						placeholder="16 haneli ve kredi kartı formatı"
 						showCardIcon
+					/>
+
+					<CVVInput
+						control={form.control}
+						register={form.register}
+						name="cvv"
+						label="CVV"
+						placeholder="000"
 					/>
 
 					<URLInput
