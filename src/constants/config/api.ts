@@ -1,3 +1,9 @@
+import type {
+	AxiosInstance,
+	AxiosResponse,
+	InternalAxiosRequestConfig
+} from "axios"
+
 export const API_CONFIG = {
 	BASE_URL: process.env.NEXT_PUBLIC_API_URL,
 	TIMEOUT: 10000,
@@ -7,3 +13,31 @@ export const API_CONFIG = {
 } as const
 
 export type ApiConfig = keyof typeof API_CONFIG
+
+export const setupInterceptors = (instance: AxiosInstance) => {
+	// Request interceptor
+	instance.interceptors.request.use(
+		(config: InternalAxiosRequestConfig) => {
+			const token = localStorage.getItem("token")
+			if (token) {
+				config.headers.set("Authorization", `Bearer ${token}`)
+			}
+			return config
+		},
+		(error) => {
+			return Promise.reject(error)
+		}
+	)
+
+	// Response interceptor
+	instance.interceptors.response.use(
+		(response: AxiosResponse) => {
+			return response
+		},
+		(error) => {
+			if (error.response?.status === 401) {
+			}
+			return Promise.reject(error)
+		}
+	)
+}
