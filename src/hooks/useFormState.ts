@@ -15,7 +15,9 @@ export function useFormState() {
 			email: "",
 			password: "",
 			phone: "",
-			tckn: ""
+			tckn: "",
+			cardNumber: "",
+			url: ""
 		},
 		mode: "onChange"
 	})

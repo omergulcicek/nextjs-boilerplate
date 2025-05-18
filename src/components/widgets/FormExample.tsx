@@ -39,7 +39,7 @@ export function FormExample() {
 						control={form.control}
 						register={form.register}
 						name="email"
-						label="Email Adresi"
+						label="Email adresi"
 						placeholder="Email formatı"
 					/>
 
@@ -55,15 +55,15 @@ export function FormExample() {
 						control={form.control}
 						register={form.register}
 						name="phone"
-						label="Telefon Numarası"
-						placeholder="10 haneli"
+						label="Telefon numarası"
+						placeholder="(555) 555 55 55"
 					/>
 
 					<TCKNInput
 						control={form.control}
 						register={form.register}
 						name="tckn"
-						label="Kimlik Numarası"
+						label="Kimlik numarası"
 						placeholder="11 haneli ve TCKN formatı"
 					/>
 
@@ -78,9 +78,9 @@ export function FormExample() {
 					<CreditCardInput
 						control={form.control}
 						register={form.register}
-						name="creditCard"
-						label="Kredi Kartı Numarası"
-						placeholder="16 haneli ve Kredi Kartı formatı"
+						name="cardNumber"
+						label="Kredi kartı numarası"
+						placeholder="16 haneli ve kredi kartı formatı"
 						showCardIcon
 					/>
 

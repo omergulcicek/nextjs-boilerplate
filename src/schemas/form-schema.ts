@@ -25,7 +25,7 @@ export const formSchema = z.object({
 		.refine((val) => validateTCKN(val), {
 			message: "Geçersiz TCKN"
 		}),
-	creditCard: z
+	cardNumber: z
 		.string()
 		.regex(CARD_REGEX, "Kredi Kartı 16 haneli olmalıdır")
 		.refine((val) => validateCreditCard(val), {

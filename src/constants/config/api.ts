@@ -34,9 +34,26 @@ export const setupInterceptors = (instance: AxiosInstance) => {
 		(response: AxiosResponse) => {
 			return response
 		},
-		(error) => {
+		async (error) => {
+			const originalRequest = error.config
+
 			if (error.response?.status === 401) {
+				localStorage.removeItem("token")
+				// Refresh token
 			}
+
+			if (error.response?.status >= 500 && !originalRequest._retry) {
+				originalRequest._retry = true
+				try {
+					await new Promise((resolve) =>
+						setTimeout(resolve, API_CONFIG.RETRY_DELAY)
+					)
+					return instance(originalRequest)
+				} catch (retryError) {
+					return Promise.reject(retryError)
+				}
+			}
+
 			return Promise.reject(error)
 		}
 	)
