@@ -1,8 +1,14 @@
 import { z } from "zod"
 
-import { ALPHA_REGEX } from "@/constants"
+import {
+	ALPHA_REGEX,
+	CARD_REGEX,
+	PHONE_REGEX,
+	TCKN_REGEX,
+	URL_REGEX
+} from "@/constants"
 
-import { validateCreditCard, validateTCKN, validateURL } from "@/lib/utils"
+import { validateCreditCard, validateTCKN } from "@/lib/utils"
 
 export const formSchema = z.object({
 	name: z
@@ -12,20 +18,18 @@ export const formSchema = z.object({
 	details: z.string().min(3, "Kullanıcı adı en az 3 karakter olmalıdır"),
 	email: z.string().email("Geçerli bir email adresi giriniz"),
 	password: z.string().min(6, "Şifre en az 6 karakter olmalıdır"),
-	phone: z.string().regex(/^\d{10}$/, "Geçerli bir telefon numarası giriniz"),
+	phone: z.string().regex(PHONE_REGEX, "Geçerli bir telefon numarası giriniz"),
 	tckn: z
 		.string()
-		.regex(/^\d{11}$/, "TCKN 11 haneli olmalıdır")
+		.regex(TCKN_REGEX, "TCKN 11 haneli olmalıdır")
 		.refine((val) => validateTCKN(val), {
 			message: "Geçersiz TCKN"
 		}),
 	creditCard: z
 		.string()
-		.regex(/^\d{16}$/, "Kredi Kartı 16 haneli olmalıdır")
+		.regex(CARD_REGEX, "Kredi Kartı 16 haneli olmalıdır")
 		.refine((val) => validateCreditCard(val), {
 			message: "Geçersiz Kredi Kartı"
 		}),
-	url: z.string().refine((val) => validateURL(val), {
-		message: "Geçersiz URL"
-	})
+	url: z.string().regex(URL_REGEX, "Geçerli bir URL giriniz")
 })

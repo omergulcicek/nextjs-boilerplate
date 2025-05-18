@@ -1,16 +1,16 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 
-import { CARD_REGEX, type CardType } from "@/constants/cards"
+import { CARD_TYPE_REGEX, DIGITS_ONLY_REGEX, type CardType } from "@/constants"
 
 export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs))
 }
 
 export function getCardType(cardNumber: string): CardType | null {
-	const cleanNumber = cardNumber.replace(/[^\d]/g, "")
+	const cleanNumber = cardNumber.replace(DIGITS_ONLY_REGEX, "")
 
-	for (const [type, regex] of Object.entries(CARD_REGEX)) {
+	for (const [type, regex] of Object.entries(CARD_TYPE_REGEX)) {
 		if (regex.test(cleanNumber)) {
 			return type as CardType
 		}
@@ -45,10 +45,4 @@ export function validateCreditCard(cardNumber: string): boolean {
 
 	const cleanNumber = cardNumber.replace(/[^\d]/g, "").trim()
 	return /^[1-6]{1}[0-9]{14,15}$/i.test(cleanNumber)
-}
-
-export function validateURL(url: string): boolean {
-	return /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/i.test(
-		url
-	)
 }
