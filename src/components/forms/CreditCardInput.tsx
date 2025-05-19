@@ -43,7 +43,7 @@ export function CreditCardInput({
 									type="tel"
 									placeholder={placeholder}
 									maxLength={19}
-									{...field}
+									value={field.value || ""}
 									{...registerWithMask(name, "9999 9999 9999 9999", {
 										showMaskOnFocus: false,
 										showMaskOnHover: false,

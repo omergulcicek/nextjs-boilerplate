@@ -34,7 +34,7 @@ export function CVVInput({
 							type="tel"
 							placeholder={placeholder}
 							maxLength={3}
-							{...field}
+							value={field.value || ""}
 							{...registerWithMask(name, "999", {
 								showMaskOnFocus: false,
 								showMaskOnHover: false,

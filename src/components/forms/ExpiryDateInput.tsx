@@ -34,7 +34,7 @@ export function ExpiryDateInput({
 							type="tel"
 							placeholder={placeholder}
 							maxLength={5}
-							{...field}
+							value={field.value || ""}
 							{...registerWithMask(name, "99/99", {
 								showMaskOnFocus: false,
 								showMaskOnHover: false,
