@@ -76,4 +76,4 @@ The project follows consistent file naming conventions:
 | Hook | `useLogin.ts` | camelCase |
 | Helper, Schema | `form-schema.ts` | kebab-case |
 | Folder | `login-form/` | kebab-case |
-| Folder | `ALPHA_REGEX` | SNAKE_CASE |
+| Constants | `ALPHA_REGEX` | SNAKE_CASE |
