@@ -1,5 +1,6 @@
 import Link from "next/link"
 
+import { Turkiye } from "@/components/icons"
 import { Button } from "@/ui"
 
 export default function Footer() {
@@ -14,7 +15,10 @@ export default function Footer() {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<Button variant="link">Ömer Gülçiçek</Button>
+						<Button variant="link" size="lg">
+							<Turkiye />
+							<span>Ömer Gülçiçek</span>
+						</Button>
 					</Link>
 				</div>
 			</div>

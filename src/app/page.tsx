@@ -1,7 +1,7 @@
 import Balancer from "react-wrap-balancer"
 import Link from "next/link"
 
-import { Camera, ChevronRight, Github } from "lucide-react"
+import { ChevronRight, Github, Heart, Star } from "lucide-react"
 
 import { APP_CONFIG } from "@/constants/config/app"
 
@@ -149,9 +149,12 @@ export default function Home() {
 									Lucide
 								</Link>
 							</p>
-							<Camera size={32} />
+							<div className="flex gap-2">
+								<Heart size={32} className="fill-red-500" />
+								<Star size={32} className="fill-yellow-300" />
+							</div>
 
-							<div>
+							<div className="flex gap-2">
 								<Mastercard height={48} width={48} />
 								<Visa height={48} width={48} />
 							</div>

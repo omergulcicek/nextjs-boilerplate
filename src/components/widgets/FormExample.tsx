@@ -38,23 +38,23 @@ export function FormExample() {
 						control={form.control}
 						register={form.register}
 						name="name"
-						label="Adınız"
-						placeholder="Sadece harf"
+						label="Your Name"
+						placeholder="Letters only"
 					/>
 
 					<EmailInput
 						control={form.control}
 						register={form.register}
 						name="email"
-						label="Email adresi"
-						placeholder="Email formatı"
+						label="Email Address"
+						placeholder="Email format"
 					/>
 
 					<PasswordInput
 						control={form.control}
 						register={form.register}
 						name="password"
-						label="Şifre"
+						label="Password"
 						placeholder=""
 					/>
 
@@ -62,7 +62,7 @@ export function FormExample() {
 						control={form.control}
 						register={form.register}
 						name="phone"
-						label="Telefon numarası"
+						label="Phone Number"
 						placeholder="(555) 555 55 55"
 					/>
 
@@ -70,24 +70,24 @@ export function FormExample() {
 						control={form.control}
 						register={form.register}
 						name="tckn"
-						label="Kimlik numarası"
-						placeholder="11 haneli ve TCKN formatı"
+						label="ID Number"
+						placeholder="11 digits and ID format"
 					/>
 
 					<TextInput
 						control={form.control}
 						register={form.register}
 						name="details"
-						label="Detaylı bilgi"
-						placeholder="Harf, sayı, özel karakter"
+						label="Detailed Information"
+						placeholder="Letters, numbers, special characters"
 					/>
 
 					<CreditCardInput
 						control={form.control}
 						register={form.register}
 						name="cardNumber"
-						label="Kredi kartı numarası"
-						placeholder="16 haneli ve kredi kartı formatı"
+						label="Credit Card Number"
+						placeholder="16 digits and card format"
 						showCardIcon
 					/>
 
@@ -96,8 +96,8 @@ export function FormExample() {
 							control={form.control}
 							register={form.register}
 							name="expiryDate"
-							label="Son kullanım tarihi"
-							placeholder="AA/YY"
+							label="Expiry Date"
+							placeholder="MM/YY"
 						/>
 
 						<CVVInput
@@ -122,7 +122,7 @@ export function FormExample() {
 						disabled={!form.formState.isValid}
 						className="w-full"
 					>
-						Giriş Yap
+						Sign In
 					</Button>
 				</form>
 			</Form>
