@@ -1,6 +1,6 @@
-import { ApiConfig, ApiResponseType } from "@/types"
+import axiosInstance from "@/helpers/api-helper/axios-instance"
 
-import axiosInstance from "./axios-instance"
+import { ApiConfig, ApiResponseType } from "@/types"
 
 type HttpMethod = "get" | "post" | "put" | "delete"
 

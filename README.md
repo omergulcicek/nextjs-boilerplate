@@ -36,28 +36,34 @@ With this template, you get all the awesomeness you need:
 ├── public                          # Public assets folder
 ├── src
 │   ├── app                         # Next JS App (App Router)
+│   ├── assets                      # Static assets (images, fonts, etc.)
 │   ├── components                  # React components
+│   │   ├── forms                   # Form components
+│   │   ├── icons                   # svg icons
 │   │   ├── shared                  # Header, footer, aside components
 │   │   ├── skeletons               # Loading components
 │   │   ├── ui                      # Atomic components
 │   │   └── widgets                 # Advanced components
+│   ├── constants                   # Project-wide constants
 │   ├── data                        # Static or mock data
-│   ├── helpers                     # Helper functions
-│   ├── hooks                       # React hooks
-│   ├── lib                         # Utilities and constants
-│   ├── providers                   # All providers
-│   ├── schemas                     # Zod schemas
-│   ├── services                    # API services
-│   ├── stores                      # Zustand stores
-│   └── types                       # Type definitions
-├── .gitignore                      # Git ignore file
-├── .prettierrc                     # Prettier configuration
-├── components.json                 # shadcn/ui configuration
-├── next.config.mjs                  # Next.js configuration
-├── postcss.config.js                # PostCSS configuration
+│   ├── helpers                     # Reusable utility functions (e.g., API, formatting, storage)
+│   ├── hooks                       # Reusable custom React hooks
+│   ├── lib                         # Common utility functions
+│   ├── providers                   # Global context providers (theme, data fetching, notifications, i18n)
+│   ├── schemas                     # Validation schemas
+│   ├── services                    # API request functions
+│   ├── stores                      # Global state
+│   └── types                       # TypeScript type definitions
+├── .env                            # Environment variables
+├── .gitignore                      # Git ignore rules
+├── .prettierrc                     # Prettier config
+├── components.json                 # shadcn/ui config
+├── eslint.config.mjs                # ESLint config
+├── next.config.mjs                  # Next.js config
+├── postcss.config.js                # PostCSS config
 ├── README.md                       # README file
-├── tailwind.config.js               # Tailwind CSS configuration
-└── tsconfig.json                    # TypeScript configuration
+├── tailwind.config.js               # Tailwind CSS config
+└── tsconfig.json                    # TypeScript config
 ```
 
 ## File Naming Conventions
@@ -70,3 +76,4 @@ The project follows consistent file naming conventions:
 | Hook | `useLogin.ts` | camelCase |
 | Helper, Schema | `form-schema.ts` | kebab-case |
 | Folder | `login-form/` | kebab-case |
+| Folder | `ALPHA_REGEX` | SNAKE_CASE |

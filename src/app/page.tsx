@@ -5,6 +5,8 @@ import { ChevronRight, Github, Heart, Star } from "lucide-react"
 
 import { APP_CONFIG } from "@/constants/config/app"
 
+import { formatCurrency, formatDate, slugify } from "@/lib/utils"
+
 import { Mastercard, Visa } from "@/components/icons"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -62,6 +64,7 @@ export default function Home() {
 							</TabsTrigger>
 							<TabsTrigger value="theme">Dark Theme</TabsTrigger>
 							<TabsTrigger value="icons">Icons</TabsTrigger>
+							<TabsTrigger value="utils">Utils</TabsTrigger>
 						</TabsList>
 
 						<TabsContent value="form" className="flex flex-col gap-10 p-5">
@@ -158,6 +161,26 @@ export default function Home() {
 								<Mastercard height={48} width={48} />
 								<Visa height={48} width={48} />
 							</div>
+						</TabsContent>
+						<TabsContent value="utils" className="flex flex-col gap-10 p-5">
+							<ul className="list-disc list-inside">
+								<li>
+									<strong>slugify()</strong>: Hello Ömer Gülçiçek! ={" "}
+									{slugify("Hello Ömer Gülçiçek!")}
+								</li>
+								<li>
+									<strong>formatDate()</strong>: 2025-01-01 ={" "}
+									{formatDate(new Date("2025-01-01"), "YYYY-MM-DD")}
+								</li>
+								<li>
+									<strong>formatCurrency()</strong>: 1500 ={" "}
+									<div className="flex gap-2">
+										<span>{formatCurrency(1500, "USD")}</span>
+										<span>{formatCurrency(1500, "EUR")}</span>
+										<span>{formatCurrency(1500, "TRY")}</span>
+									</div>
+								</li>
+							</ul>
 						</TabsContent>
 					</Tabs>
 				</div>
