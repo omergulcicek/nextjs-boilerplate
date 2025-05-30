@@ -169,8 +169,15 @@ export default function Home() {
 									{slugify("Hello Ömer Gülçiçek!")}
 								</li>
 								<li>
-									<strong>formatDate()</strong>: 2025-01-01 ={" "}
-									{formatDate(new Date("2025-01-01"), "YYYY-MM-DD")}
+									<div className="inline-flex gap-5">
+										<div>
+											<strong>formatDate(): </strong> Default ={" "}
+											{formatDate(new Date("1453-05-29"))}
+										</div>
+										<div>
+											d/MM/yy = {formatDate(new Date("1453-05-29"), "dd/MM/yy")}
+										</div>
+									</div>
 								</li>
 								<li>
 									<strong>formatCurrency()</strong>: 1500 ={" "}
