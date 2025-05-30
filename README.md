@@ -80,10 +80,6 @@ The project follows consistent file naming conventions:
 | Folder | `login-form/` | kebab-case |
 | Constants | `ALPHA_REGEX` | SNAKE_CASE |
 
-### Contributors
-
-- [@omergulcicek](https://github.com/omergulcicek)
-
 ## Monitoring & Analytics
 
 ### Error Tracking
@@ -103,3 +99,7 @@ We use [Google Analytics](https://analytics.google.com/) for tracking user behav
 ```env
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 ```
+
+### Contributors
+
+- [@omergulcicek](https://github.com/omergulcicek)
