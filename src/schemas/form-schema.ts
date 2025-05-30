@@ -23,6 +23,7 @@ export const formSchema = z.object({
 		.min(3, "Adınız en az 3 karakter olmalıdır"),
 	details: z.string().min(3, "Kullanıcı adı en az 3 karakter olmalıdır"),
 	email: z.string().email("Geçerli bir email adresi giriniz"),
+	date: z.date(),
 	password: z.string().min(6, "Şifre en az 6 karakter olmalıdır"),
 	phone: z.string().regex(PHONE_REGEX, "Geçerli bir telefon numarası giriniz"),
 	tckn: z
