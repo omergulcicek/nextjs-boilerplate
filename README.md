@@ -19,6 +19,8 @@ With this template, you get all the awesomeness you need:
 - [x] Form handling with [React Hook Form](https://react-hook-form.com/)
 - [x] Validation library with [Zod](https://zod.dev/)
 - [ ] [Storybook](https://storybook.js.org/) for UI development
+- [ ] Error tracking with [Sentry](https://sentry.io/)
+- [ ] Analytics with [Google Analytics](https://analytics.google.com/)
 - [x] Beautiful and consistent icons from [Lucide](https://lucide.dev/)
 - [x] Loading UI using [Skeleton Components](https://ui.shadcn.com/docs/components/skeleton)
 - [x] Dark theme with [next-themes](https://npmjs.com/package/next-themes)
@@ -58,12 +60,12 @@ With this template, you get all the awesomeness you need:
 ├── .gitignore                      # Git ignore rules
 ├── .prettierrc                     # Prettier config
 ├── components.json                 # shadcn/ui config
-├── eslint.config.mjs                # ESLint config
-├── next.config.mjs                  # Next.js config
-├── postcss.config.js                # PostCSS config
+├── eslint.config.mjs               # ESLint config
+├── next.config.mjs                 # Next.js config
+├── postcss.config.js               # PostCSS config
 ├── README.md                       # README file
-├── tailwind.config.js               # Tailwind CSS config
-└── tsconfig.json                    # TypeScript config
+├── tailwind.config.js              # Tailwind CSS config
+└── tsconfig.json                   # TypeScript config
 ```
 
 ## File Naming Conventions
@@ -77,3 +79,27 @@ The project follows consistent file naming conventions:
 | Helper, Schema | `form-schema.ts` | kebab-case |
 | Folder | `login-form/` | kebab-case |
 | Constants | `ALPHA_REGEX` | SNAKE_CASE |
+
+### Contributors
+
+- [@omergulcicek](https://github.com/omergulcicek)
+
+## Monitoring & Analytics
+
+### Error Tracking
+We use [Sentry](https://sentry.io/) for error tracking and performance monitoring. To set up:
+
+1. Create a Sentry account
+2. Add your DSN to `.env`:
+```env
+NEXT_PUBLIC_SENTRY_DSN=your-sentry-dsn
+```
+
+### Analytics
+We use [Google Analytics](https://analytics.google.com/) for tracking user behavior. To set up:
+
+1. Create a Google Analytics account
+2. Add your Measurement ID to `.env`:
+```env
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+```
