@@ -122,6 +122,7 @@
 		@apply border-border outline-ring/50;
 	}
 	body {
+		font-family: var(--font-geist-sans);
 		@apply bg-background text-foreground;
 	}
 	

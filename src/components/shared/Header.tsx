@@ -1,9 +1,10 @@
 import Link from "next/link"
 
-import { Flower, Github } from "lucide-react"
+import { Flower } from "lucide-react"
 
 import { APP_CONFIG } from "@/constants"
 
+import { Github } from "@/components/icons"
 import { Button } from "@/ui"
 
 export default function Header() {
@@ -24,7 +25,7 @@ export default function Header() {
 							rel="noopener noreferrer"
 						>
 							<Button variant="outline" size="icon">
-								<Github />
+								<Github className="fill-black dark:fill-white" />
 							</Button>
 						</Link>
 					</div>

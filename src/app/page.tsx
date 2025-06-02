@@ -1,59 +1,67 @@
 import Balancer from "react-wrap-balancer"
 import Link from "next/link"
 
-import { ChevronRight, Github, Heart, Star } from "lucide-react"
+import { ChevronRight, Heart, Star } from "lucide-react"
 
 import { APP_CONFIG } from "@/constants/config/app"
 
 import { formatCurrency, formatDate, slugify } from "@/lib/utils"
 
-import { Mastercard, Visa } from "@/components/icons"
+import { Github, Mastercard, Visa } from "@/components/icons"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ThemeToggle } from "@/ui"
 import { CountExample, FormExample, QueryExample } from "@/widgets"
 
+import { stackData } from "@/data/stack-data"
+
 export default function Home() {
 	return (
 		<div className="container flex flex-col gap-4 px-20">
-			<div className="flex flex-col gap-2 pt-10">
+			<div className="flex flex-col gap-2 items-start pt-10">
 				<Link
 					href={APP_CONFIG.GITHUB_URL}
 					target="_blank"
 					rel="noopener noreferrer"
 				>
 					<Button variant="link">
-						<Github /> <span>View on GitHub</span> <ChevronRight />
+						<Github className="fill-black dark:fill-white" />
+						<span>View on GitHub</span> <ChevronRight />
 					</Button>
 				</Link>
 
 				<Balancer
 					as="h1"
-					className="text-2xl font-bold leading-tight tracking-tighter sm:text-3xl md:text-4xl lg:leading-[1.1]"
+					className="text-2xl font-medium leading-tight tracking-tighter sm:text-3xl md:text-6xl lg:leading-[1.1]"
 				>
-					Next.js Boilerplate for the Modern Web
+					<span className="text-black/40">Next.js Boilerplate</span> <br />
+					<span>for the Modern Web</span>
 				</Balancer>
 
 				<Balancer
 					as="p"
 					className="max-w-2xl text-base font-light text-foreground sm:text-lg"
 				>
-					An open-source starter built with <strong>Next.js 15.3</strong>,
+					An open-source starter built with <strong>Next.js 15.3</strong>,{" "}
 					<strong>TypeScript</strong>, and <strong>Tailwind CSS</strong>{" "}
 					everything you need to build modern web apps, faster.
 				</Balancer>
 
-				<ul className="mt-5 list-disc list-inside">
-					<li>Next.js v15.3</li>
-					<li>TypeScript</li>
-					<li>Tailwind CSS</li>
-					<li>Shadcn UI</li>
-					<li>TanStack Query</li>
-					<li>Zustand</li>
-					<li>Lucide Icons & SVGR</li>
-				</ul>
+				<div className="grid grid-cols-3 gap-y-8 p-4 mt-6 w-full rounded-lg border shadow-xs lg:grid-cols-9">
+					{stackData.map((item) => (
+						<figure
+							className="flex flex-col gap-3 justify-center items-center"
+							key={item.name}
+						>
+							{item.icon}
+							<figcaption className="flex justify-center items-center text-sm font-medium text-center">
+								{item.name}
+							</figcaption>
+						</figure>
+					))}
+				</div>
 
-				<div className="flex py-5 mt-10 border-y">
+				<div className="flex py-5 w-full">
 					<Tabs defaultValue="form" className="w-full">
 						<TabsList className="gap-2 w-full">
 							<TabsTrigger value="form">Form Elements</TabsTrigger>
