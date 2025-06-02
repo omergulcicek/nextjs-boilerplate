@@ -31,7 +31,9 @@ export function FormExample() {
 	}
 
 	return (
-		<section className="max-w-xs">
+		<section className="flex flex-col gap-4 p-4 rounded-lg border">
+			<h2 className="text-xl font-medium">Form Example</h2>
+
 			<Form {...form}>
 				<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
 					<AlphaInput

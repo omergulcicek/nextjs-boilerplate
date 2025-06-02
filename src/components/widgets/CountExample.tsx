@@ -7,15 +7,17 @@ import { useCountStore } from "@/stores/count-store"
 import { Button } from "@/ui"
 
 export function CountExample() {
-	const { count, decrease, increase } = useCountStore()
+	const { decrease, increase, reset } = useCountStore()
 
 	return (
-		<div className="flex gap-4 items-center">
+		<div className="flex gap-2 items-center">
 			<Button variant="secondary" size="icon" onClick={decrease}>
 				<ChevronDown />
 			</Button>
 
-			<div className="text-lg text-center min-w-5">{count}</div>
+			<Button variant="secondary" size="sm" onClick={reset}>
+				Reset
+			</Button>
 
 			<Button variant="secondary" size="icon" onClick={increase}>
 				<ChevronUp />
