@@ -22,3 +22,5 @@ export {
 } from "./select"
 export { Calendar } from "./calendar"
 export { Popover, PopoverContent, PopoverTrigger } from "./popover"
+export { Tabs, TabsContent, TabsList, TabsTrigger } from "./tabs"
+export { Switch } from "./switch"
