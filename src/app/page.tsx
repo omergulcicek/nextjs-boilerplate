@@ -47,7 +47,7 @@ export default function Home() {
 					everything you need to build modern web apps, faster.
 				</Balancer>
 
-				<div className="grid grid-cols-3 gap-y-8 p-4 mt-6 w-full rounded-lg border shadow-xs lg:grid-cols-9">
+				<div className="grid grid-cols-3 gap-y-8 p-4 my-10 w-full lg:grid-cols-9">
 					{stackData.map((item) => (
 						<figure
 							className="flex flex-col gap-3 justify-center items-center"
@@ -61,7 +61,7 @@ export default function Home() {
 					))}
 				</div>
 
-				<div className="flex py-5 w-full">
+				<div className="flex w-full">
 					<Tabs defaultValue="form" className="w-full">
 						<TabsList className="gap-2 w-full">
 							<TabsTrigger value="form">Form Elements</TabsTrigger>
