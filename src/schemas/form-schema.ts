@@ -19,30 +19,30 @@ import {
 export const formSchema = z.object({
 	name: z
 		.string()
-		.regex(new RegExp(`^${ALPHA_REGEX.source}*$`), "Sadece harf girebilirsiniz")
-		.min(3, "Adınız en az 3 karakter olmalıdır"),
-	details: z.string().min(3, "Kullanıcı adı en az 3 karakter olmalıdır"),
-	email: z.string().email("Geçerli bir email adresi giriniz"),
-	password: z.string().min(6, "Şifre en az 6 karakter olmalıdır"),
-	phone: z.string().regex(PHONE_REGEX, "Geçerli bir telefon numarası giriniz"),
+		.regex(new RegExp(`^${ALPHA_REGEX.source}*$`), "Only letters are allowed")
+		.min(3, "Name must be at least 3 characters"),
+	details: z.string().min(3, "Username must be at least 3 characters"),
+	email: z.string().email("Please enter a valid email address"),
+	password: z.string().min(6, "Password must be at least 6 characters"),
+	phone: z.string().regex(PHONE_REGEX, "Please enter a valid phone number"),
 	tckn: z
 		.string()
-		.regex(TCKN_REGEX, "TCKN 11 haneli olmalıdır")
+		.regex(TCKN_REGEX, "TCKN must be 11 digits")
 		.refine((val) => validateTCKN(val), {
-			message: "Geçersiz TCKN"
+			message: "Invalid TCKN"
 		}),
 	cardNumber: z
 		.string()
-		.regex(CARD_REGEX, "Kredi Kartı 16 haneli olmalıdır")
+		.regex(CARD_REGEX, "Credit card must be 16 digits")
 		.refine((val) => validateCreditCard(val), {
-			message: "Geçersiz Kredi Kartı"
+			message: "Invalid credit card"
 		}),
-	cvv: z.string().regex(CVV_REGEX, "CVV 3 haneli olmalıdır"),
+	cvv: z.string().regex(CVV_REGEX, "CVV must be 3 digits"),
 	expiryDate: z
 		.string()
-		.regex(EXPIRY_DATE_REGEX, "Geçerli bir son kullanım tarihi giriniz (AA/YY)")
+		.regex(EXPIRY_DATE_REGEX, "Please enter a valid expiry date (MM/YY)")
 		.refine((val) => validateExpiryDate(val), {
-			message: "Kartınızın son kullanım tarihi geçmiş"
+			message: "Your card has expired"
 		}),
-	url: z.string().regex(URL_REGEX, "Geçerli bir URL giriniz")
+	url: z.string().regex(URL_REGEX, "Please enter a valid URL")
 })
