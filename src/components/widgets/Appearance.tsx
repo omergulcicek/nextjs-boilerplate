@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { useTranslations } from "next-intl"
 import { useTheme } from "next-themes"
 
 import {
@@ -19,6 +20,7 @@ import { Button, Input, Switch } from "@/ui"
 import { CountExample } from "./CountExample"
 
 export const Appearance = () => {
+	const t = useTranslations("Appearance")
 	const { theme, setTheme } = useTheme()
 	const { count } = useCountStore()
 
@@ -28,13 +30,13 @@ export const Appearance = () => {
 
 	return (
 		<section className="flex flex-col gap-4 p-4 rounded-lg border">
-			<h2 className="text-xl font-medium">Appearance</h2>
+			<h2 className="text-xl font-medium">{t("title")}</h2>
 
 			<ul>
 				<li className="flex gap-2 justify-between items-center py-2">
 					<div className="flex gap-2 items-center">
 						<Moon size={20} />
-						<span className="text-sm">Dark Theme</span>
+						<span className="text-sm">{t("darkTheme")}</span>
 					</div>
 
 					<Switch
@@ -47,7 +49,7 @@ export const Appearance = () => {
 					<div className="flex gap-2 items-center">
 						<Signature size={20} />
 						<Input
-							placeholder="Enter anything..."
+							placeholder={t("inputPlaceholder")}
 							maxLength={15}
 							value={inputValue}
 							onChange={(e) => setInputValue(e.target.value)}
@@ -69,7 +71,7 @@ export const Appearance = () => {
 								)
 							}
 						>
-							Change Date Format
+							{t("changeDateFormat")}
 						</Button>
 					</div>
 
@@ -92,7 +94,7 @@ export const Appearance = () => {
 								)
 							}
 						>
-							Change Currency
+							{t("changeCurrency")}
 						</Button>
 					</div>
 

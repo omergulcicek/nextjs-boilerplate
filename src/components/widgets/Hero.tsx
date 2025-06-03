@@ -1,4 +1,5 @@
 import Balancer from "react-wrap-balancer"
+import { useTranslations } from "next-intl"
 import Link from "next/link"
 
 import { ChevronRight } from "lucide-react"
@@ -9,6 +10,8 @@ import { Github } from "@/components/icons"
 import { Button } from "@/ui"
 
 export const Hero = () => {
+	const t = useTranslations("Hero")
+
 	return (
 		<>
 			<Link
@@ -18,7 +21,7 @@ export const Hero = () => {
 			>
 				<Button variant="link">
 					<Github className="fill-black dark:fill-white" />
-					<span>View on GitHub</span> <ChevronRight />
+					<span>{t("github")}</span> <ChevronRight />
 				</Button>
 			</Link>
 
@@ -26,21 +29,16 @@ export const Hero = () => {
 				as="h1"
 				className="text-2xl font-medium leading-tight tracking-tighter sm:text-3xl md:text-6xl lg:leading-[1.1]"
 			>
-				<span className="text-black/40 dark:text-white/40">
-					Next.js Boilerplate
-				</span>{" "}
+				<span className="text-black/40 dark:text-white/40">{t("title1")}</span>{" "}
 				<br />
-				<span>for the Modern Web</span>
+				<span>{t("title2")}</span>
 			</Balancer>
 
-			<Balancer
+			{/* <Balancer
 				as="p"
 				className="max-w-2xl text-base font-light text-foreground sm:text-lg"
-			>
-				An open-source starter built with <strong>Next.js 15.3</strong>,{" "}
-				<strong>TypeScript</strong>, and <strong>Tailwind CSS</strong>{" "}
-				everything you need to build modern web apps, faster.
-			</Balancer>
+				dangerouslySetInnerHTML={{ __html: t("desc") }}
+			/> */}
 		</>
 	)
 }

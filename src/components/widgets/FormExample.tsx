@@ -1,5 +1,7 @@
 "use client"
 
+import { useTranslations } from "next-intl"
+
 import { FormData } from "@/types"
 
 import { useFormState } from "@/hooks"
@@ -19,6 +21,7 @@ import {
 import { Button, Form } from "@/ui"
 
 export function FormExample() {
+	const t = useTranslations("FormExample")
 	const form = useFormState()
 
 	function onSubmit(data: FormData) {
@@ -32,7 +35,7 @@ export function FormExample() {
 
 	return (
 		<section className="flex flex-col gap-4 p-4 rounded-lg border">
-			<h2 className="text-xl font-medium">Form Example</h2>
+			<h2 className="text-xl font-medium">{t("title")}</h2>
 
 			<Form {...form}>
 				<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -40,23 +43,23 @@ export function FormExample() {
 						control={form.control}
 						register={form.register}
 						name="name"
-						label="Your Name"
-						placeholder="Letters only"
+						label={t("name")}
+						placeholder={t("namePlaceholder")}
 					/>
 
 					<EmailInput
 						control={form.control}
 						register={form.register}
 						name="email"
-						label="Email Address"
-						placeholder="Email format"
+						label={t("email")}
+						placeholder={t("emailPlaceholder")}
 					/>
 
 					<PasswordInput
 						control={form.control}
 						register={form.register}
 						name="password"
-						label="Password"
+						label={t("password")}
 						placeholder=""
 					/>
 
@@ -64,32 +67,32 @@ export function FormExample() {
 						control={form.control}
 						register={form.register}
 						name="phone"
-						label="Phone Number"
-						placeholder="(555) 555 55 55"
+						label={t("phone")}
+						placeholder={t("phonePlaceholder")}
 					/>
 
 					<TCKNInput
 						control={form.control}
 						register={form.register}
 						name="tckn"
-						label="ID Number"
-						placeholder="11 digits and ID format"
+						label={t("tckn")}
+						placeholder={t("tcknPlaceholder")}
 					/>
 
 					<TextInput
 						control={form.control}
 						register={form.register}
 						name="details"
-						label="Detailed Information"
-						placeholder="Letters, numbers, special characters"
+						label={t("details")}
+						placeholder={t("detailsPlaceholder")}
 					/>
 
 					<CreditCardInput
 						control={form.control}
 						register={form.register}
 						name="cardNumber"
-						label="Credit Card Number"
-						placeholder="16 digits and card format"
+						label={t("cardNumber")}
+						placeholder={t("cardNumberPlaceholder")}
 						showCardIcon
 					/>
 
@@ -98,16 +101,16 @@ export function FormExample() {
 							control={form.control}
 							register={form.register}
 							name="expiryDate"
-							label="Expiry Date"
-							placeholder="MM/YY"
+							label={t("expiryDate")}
+							placeholder={t("expiryDatePlaceholder")}
 						/>
 
 						<CVVInput
 							control={form.control}
 							register={form.register}
 							name="cvv"
-							label="CVV"
-							placeholder="000"
+							label={t("cvv")}
+							placeholder={t("cvvPlaceholder")}
 						/>
 					</div>
 
@@ -115,8 +118,8 @@ export function FormExample() {
 						control={form.control}
 						register={form.register}
 						name="url"
-						label="URL"
-						placeholder="https://www.google.com"
+						label={t("url")}
+						placeholder={t("urlPlaceholder")}
 					/>
 
 					<Button
@@ -124,7 +127,7 @@ export function FormExample() {
 						disabled={!form.formState.isValid}
 						className="w-full"
 					>
-						Sign In
+						{t("signIn")}
 					</Button>
 				</form>
 			</Form>
