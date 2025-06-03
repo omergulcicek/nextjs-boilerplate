@@ -1,0 +1,39 @@
+{
+  "Hero": {
+    "github": "View on GitHub",
+    "title1": "Next.js Boilerplate",
+    "title2": "for the Modern Web",
+    "desc": "An open-source starter built with <strong>Next.js 15.3</strong>, <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong> everything you need to build modern web apps, faster."
+  },
+  "Appearance": {
+    "title": "Appearance",
+    "darkTheme": "Dark Theme",
+    "inputPlaceholder": "Enter anything...",
+    "slug": "Slug",
+    "changeDateFormat": "Change Date Format",
+    "changeCurrency": "Change Currency"
+  },
+  "FormExample": {
+    "title": "Form Example",
+    "name": "Your Name",
+    "namePlaceholder": "Letters only",
+    "email": "Email Address",
+    "emailPlaceholder": "Email format",
+    "password": "Password",
+    "phone": "Phone Number",
+    "phonePlaceholder": "(555) 555 55 55",
+    "tckn": "ID Number",
+    "tcknPlaceholder": "11 digits and ID format",
+    "details": "Detailed Information",
+    "detailsPlaceholder": "Letters, numbers, special characters",
+    "cardNumber": "Credit Card Number",
+    "cardNumberPlaceholder": "16 digits and card format",
+    "expiryDate": "Expiry Date",
+    "expiryDatePlaceholder": "MM/YY",
+    "cvv": "CVV",
+    "cvvPlaceholder": "000",
+    "url": "URL",
+    "urlPlaceholder": "https://www.google.com",
+    "signIn": "Sign In"
+  }
+} 
