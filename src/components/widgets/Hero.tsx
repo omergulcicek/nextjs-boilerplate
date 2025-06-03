@@ -29,7 +29,7 @@ export const Hero = () => {
 				as="h1"
 				className="text-2xl font-medium leading-tight tracking-tighter sm:text-3xl md:text-6xl lg:leading-[1.1]"
 			>
-				<span className="text-black/40 dark:text-white/40">{t("title1")}</span>{" "}
+				<span className="text-black/50 dark:text-white/50">{t("title1")}</span>{" "}
 				<br />
 				<span>{t("title2")}</span>
 			</Balancer>

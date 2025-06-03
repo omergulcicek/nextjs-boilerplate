@@ -24,7 +24,7 @@ export default function Header() {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<Button variant="outline" size="icon">
+							<Button variant="outline" size="icon" aria-label="Github">
 								<Github className="fill-black dark:fill-white" />
 							</Button>
 						</Link>

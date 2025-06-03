@@ -42,6 +42,7 @@ export const Appearance = () => {
 					</div>
 
 					<Switch
+						aria-label="Dark Theme"
 						checked={theme === "dark"}
 						onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
 					/>

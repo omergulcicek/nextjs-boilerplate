@@ -14,7 +14,12 @@ export function CountExample() {
 
 	return (
 		<div className="flex gap-2 items-center">
-			<Button variant="secondary" size="icon" onClick={decrease}>
+			<Button
+				variant="secondary"
+				size="icon"
+				onClick={decrease}
+				aria-label="Decrease"
+			>
 				<ChevronDown />
 			</Button>
 
@@ -22,7 +27,12 @@ export function CountExample() {
 				{t("reset")}
 			</Button>
 
-			<Button variant="secondary" size="icon" onClick={increase}>
+			<Button
+				variant="secondary"
+				size="icon"
+				onClick={increase}
+				aria-label="Increase"
+			>
 				<ChevronUp />
 			</Button>
 		</div>
