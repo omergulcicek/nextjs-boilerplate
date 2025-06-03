@@ -5,7 +5,14 @@ import { useTranslations } from "next-intl"
 import { useTheme } from "next-themes"
 
 import {
+	cookieStorageHelper,
+	localStorageHelper,
+	sessionStorageHelper
+} from "@/helpers/store-helper"
+import {
 	CalendarFold,
+	Container,
+	Cookie,
 	DollarSign,
 	Languages,
 	Moon,
@@ -121,6 +128,114 @@ export const Appearance = () => {
 						<CountExample />
 					</div>
 					<span>{count}</span>
+				</li>
+
+				<li className="flex gap-2 justify-between items-center py-2">
+					<div className="flex gap-2 items-center">
+						<Cookie size={20} />
+						<span>Cookie</span>
+					</div>
+					<div className="flex gap-1 items-center">
+						<Button
+							variant="secondary"
+							size="sm"
+							onClick={() => {
+								cookieStorageHelper.set("test", "hello-world-cookie")
+							}}
+						>
+							Set
+						</Button>
+						<Button
+							variant="outline"
+							size="sm"
+							onClick={() => {
+								alert(cookieStorageHelper.get("test"))
+							}}
+						>
+							Show
+						</Button>
+						<Button
+							variant="secondary"
+							size="sm"
+							onClick={() => {
+								cookieStorageHelper.remove("test")
+							}}
+						>
+							Remove
+						</Button>
+					</div>
+				</li>
+
+				<li className="flex gap-2 justify-between items-center py-2">
+					<div className="flex gap-2 items-center">
+						<Container size={20} />
+						<span>Local Storage</span>
+					</div>
+					<div className="flex gap-1 items-center">
+						<Button
+							variant="secondary"
+							size="sm"
+							onClick={() => {
+								localStorageHelper.set("test", "hello-world-local")
+							}}
+						>
+							Set
+						</Button>
+						<Button
+							variant="outline"
+							size="sm"
+							onClick={() => {
+								alert(localStorageHelper.get("test"))
+							}}
+						>
+							Show
+						</Button>
+						<Button
+							variant="secondary"
+							size="sm"
+							onClick={() => {
+								localStorageHelper.remove("test")
+							}}
+						>
+							Remove
+						</Button>
+					</div>
+				</li>
+
+				<li className="flex gap-2 justify-between items-center py-2">
+					<div className="flex gap-2 items-center">
+						<Container size={20} />
+						<span>Session Storage</span>
+					</div>
+					<div className="flex gap-1 items-center">
+						<Button
+							variant="secondary"
+							size="sm"
+							onClick={() => {
+								sessionStorageHelper.set("test", "hello-world-session")
+							}}
+						>
+							Set
+						</Button>
+						<Button
+							variant="outline"
+							size="sm"
+							onClick={() => {
+								alert(sessionStorageHelper.get("test"))
+							}}
+						>
+							Show
+						</Button>
+						<Button
+							variant="secondary"
+							size="sm"
+							onClick={() => {
+								sessionStorageHelper.remove("test")
+							}}
+						>
+							Remove
+						</Button>
+					</div>
 				</li>
 			</ul>
 		</section>
