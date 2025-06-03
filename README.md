@@ -12,6 +12,7 @@ With this template, you get all the awesomeness you need:
 - [x] Styled using [Tailwind CSS](https://tailwindcss.com/)
 - [x] State management with [Zustand](https://zustand-demo.pmnd.rs/)
 - [ ] Authentication with [NextAuth.js](https://next-auth.js.org/)
+- [x] [next-intl](https://next-intl.dev/) for internationalization
 - [x] UI Components built with [shadcn/ui](https://ui.shadcn.com/)
 - [x] Data Fetching, Caching and Mutation with [TanStack Query](https://tanstack.com/query/latest)
 - [x] Linter with [ESLint](https://eslint.org/)
