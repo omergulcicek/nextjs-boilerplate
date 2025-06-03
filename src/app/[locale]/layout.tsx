@@ -7,7 +7,7 @@ import { routing } from "@/i18n/routing"
 
 import { Providers } from "@/providers"
 
-import { Footer, Header } from "@/shared"
+import { Footer } from "@/shared"
 
 import "./../globals.css"
 
@@ -45,7 +45,6 @@ export default async function LocaleLayout({
 			>
 				<NextIntlClientProvider locale={locale}>
 					<Providers>
-						<Header />
 						<main className="flex-1">{children}</main>
 						<Footer />
 					</Providers>
