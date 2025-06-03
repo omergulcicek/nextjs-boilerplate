@@ -17,7 +17,7 @@ export function useFormState(errorMessages: FormErrorMessages) {
 			tckn: "",
 			details: "",
 			cardNumber: "",
-			expirationDate: "",
+			expiryDate: "",
 			cvv: "",
 			url: ""
 		},

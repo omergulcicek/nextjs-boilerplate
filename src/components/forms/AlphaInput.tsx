@@ -1,6 +1,6 @@
 "use client"
 
-import { FormFieldProps } from "@/types"
+import { FormData, FormFieldProps } from "@/types"
 import { ALPHA_REGEX } from "@/constants"
 
 import {
@@ -36,7 +36,7 @@ export function AlphaInput({
 								}
 							}}
 							{...field}
-							{...register(name)}
+							{...register(name as keyof FormData)}
 						/>
 					</FormControl>
 					<FormMessage />

@@ -2,9 +2,9 @@ import { Control, UseFormRegister } from "react-hook-form"
 
 import { z } from "zod"
 
-import { formSchema } from "@/schemas"
+import { createFormSchema } from "@/schemas"
 
-export type FormData = z.infer<typeof formSchema>
+export type FormData = z.infer<ReturnType<typeof createFormSchema>>
 
 export interface FormFieldProps {
 	control: Control<FormData>

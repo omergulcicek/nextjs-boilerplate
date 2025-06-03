@@ -1,6 +1,6 @@
 "use client"
 
-import { FormFieldProps } from "@/types"
+import { FormData, FormFieldProps } from "@/types"
 
 import {
 	FormControl,
@@ -30,7 +30,7 @@ export function EmailInput({
 							type="email"
 							placeholder={placeholder}
 							{...field}
-							{...register(name)}
+							{...register(name as keyof FormData)}
 						/>
 					</FormControl>
 					<FormMessage />
