@@ -11,10 +11,8 @@ const queryClient = new QueryClient()
 export function Providers({ children }: { children: ReactNode }) {
 	return (
 		<ThemeProvider attribute="class">
-			<QueryClientProvider client={queryClient}>
-				{children}
-				<Toaster />
-			</QueryClientProvider>
+			<QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+			<Toaster />
 		</ThemeProvider>
 	)
 }

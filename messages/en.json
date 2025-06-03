@@ -1,4 +1,8 @@
 {
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, tr {🇹🇷 Türkçe} en {🇺🇸 English} other {Unknown}}"
+  },
   "Hero": {
     "github": "View on GitHub",
     "title1": "Next.js Boilerplate",
@@ -8,10 +12,12 @@
   "Appearance": {
     "title": "Appearance",
     "darkTheme": "Dark Theme",
+    "changeLanguage": "Change Language",
     "inputPlaceholder": "Enter anything...",
     "slug": "Slug",
     "changeDateFormat": "Change Date Format",
-    "changeCurrency": "Change Currency"
+    "changeCurrency": "Change Currency",
+    "reset": "Reset"
   },
   "FormExample": {
     "title": "Form Example",
@@ -34,6 +40,22 @@
     "cvvPlaceholder": "000",
     "url": "URL",
     "urlPlaceholder": "https://www.google.com",
-    "signIn": "Sign In"
+    "signIn": "Sign In",
+    "errors": {
+      "nameOnlyLetters": "Only letters are allowed.",
+      "nameMin": "Name must be at least 3 characters.",
+      "detailsMin": "Username must be at least 3 characters.",
+      "email": "Please enter a valid email address.",
+      "passwordMin": "Password must be at least 6 characters.",
+      "phone": "Please enter a valid phone number.",
+      "tcknDigits": "TCKN must be 11 digits.",
+      "tcknInvalid": "Invalid TCKN.",
+      "cardNumberDigits": "Credit card must be 16 digits.",
+      "cardNumberInvalid": "Invalid credit card.",
+      "cvv": "CVV must be 3 digits.",
+      "expiryDate": "Please enter a valid expiry date (MM/YY)",
+      "expiryDateExpired": "Your card has expired.",
+      "url": "Please enter a valid URL."
+    }
   }
 } 

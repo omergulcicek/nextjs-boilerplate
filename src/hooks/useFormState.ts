@@ -4,19 +4,21 @@ import { zodResolver } from "@hookform/resolvers/zod"
 
 import { FormData } from "@/types"
 
-import { formSchema } from "@/schemas"
+import { createFormSchema, FormErrorMessages } from "@/schemas"
 
-export function useFormState() {
+export function useFormState(errorMessages: FormErrorMessages) {
 	return useForm<FormData>({
-		resolver: zodResolver(formSchema),
+		resolver: zodResolver(createFormSchema(errorMessages)),
 		defaultValues: {
 			name: "",
-			details: "",
 			email: "",
 			password: "",
 			phone: "",
 			tckn: "",
+			details: "",
 			cardNumber: "",
+			expirationDate: "",
+			cvv: "",
 			url: ""
 		},
 		mode: "onChange"

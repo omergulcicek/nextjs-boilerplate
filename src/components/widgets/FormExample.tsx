@@ -22,7 +22,25 @@ import { Button, Form } from "@/ui"
 
 export function FormExample() {
 	const t = useTranslations("FormExample")
-	const form = useFormState()
+
+	const errorMessages = {
+		nameOnlyLetters: t("errors.nameOnlyLetters"),
+		nameMin: t("errors.nameMin"),
+		detailsMin: t("errors.detailsMin"),
+		email: t("errors.email"),
+		passwordMin: t("errors.passwordMin"),
+		phone: t("errors.phone"),
+		tcknDigits: t("errors.tcknDigits"),
+		tcknInvalid: t("errors.tcknInvalid"),
+		cardNumberDigits: t("errors.cardNumberDigits"),
+		cardNumberInvalid: t("errors.cardNumberInvalid"),
+		cvv: t("errors.cvv"),
+		expiryDate: t("errors.expiryDate"),
+		expiryDateExpired: t("errors.expiryDateExpired"),
+		url: t("errors.url")
+	}
+
+	const form = useFormState(errorMessages)
 
 	function onSubmit(data: FormData) {
 		console.log({

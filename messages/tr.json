@@ -1,4 +1,8 @@
 {
+  "LocaleSwitcher": {
+    "label": "Dil Değiştir",
+    "locale": "{locale, select, tr {🇹🇷 Türkçe} en {🇺🇸 İngilizce} other {Unknown}}"
+  },
   "Hero": {
     "github": "GitHub'da Görüntüle",
     "title1": "Next.js Başlangıç Paketi",
@@ -8,10 +12,12 @@
   "Appearance": {
     "title": "Görünüm",
     "darkTheme": "Karanlık Tema",
+    "changeLanguage": "Dil Değiştir",
     "inputPlaceholder": "Bir şeyler yaz...",
     "slug": "Slug",
     "changeDateFormat": "Tarih Formatını Değiştir",
-    "changeCurrency": "Para Birimini Değiştir"
+    "changeCurrency": "Para Birimini Değiştir",
+    "reset": "Sıfırla"
   },
   "FormExample": {
     "title": "Form Örneği",
@@ -34,6 +40,22 @@
     "cvvPlaceholder": "000",
     "url": "URL",
     "urlPlaceholder": "https://www.google.com",
-    "signIn": "Giriş Yap"
+    "signIn": "Giriş Yap",
+    "errors": {
+      "nameOnlyLetters": "Sadece harfler kullanılabilir.",
+      "nameMin": "Ad en az 3 karakter olmalı.",
+      "detailsMin": "Kullanıcı adı en az 3 karakter olmalı.",
+      "email": "Geçerli bir e-posta adresi girin.",
+      "passwordMin": "Şifre en az 6 karakter olmalı.",
+      "phone": "Geçerli bir telefon numarası girin.",
+      "tcknDigits": "TCKN 11 haneli olmalı.",
+      "tcknInvalid": "Geçersiz TCKN.",
+      "cardNumberDigits": "Kredi kartı 16 haneli olmalı.",
+      "cardNumberInvalid": "Geçersiz kredi kartı.",
+      "cvv": "CVV 3 haneli olmalı.",
+      "expiryDate": "Geçerli bir son kullanma tarihi girin (AA/YY)",
+      "expiryDateExpired": "Kartınızın süresi dolmuş.",
+      "url": "Geçerli bir URL girin."
+    }
   }
 } 

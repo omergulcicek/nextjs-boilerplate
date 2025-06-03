@@ -7,6 +7,7 @@ import { useTheme } from "next-themes"
 import {
 	CalendarFold,
 	DollarSign,
+	Languages,
 	Moon,
 	Signature,
 	StoreIcon
@@ -18,6 +19,7 @@ import { formatCurrency, formatDate, slugify } from "@/lib/utils"
 import { Button, Input, Switch } from "@/ui"
 
 import { CountExample } from "./CountExample"
+import LocaleSwitcher from "./LocaleSwitcher"
 
 export const Appearance = () => {
 	const t = useTranslations("Appearance")
@@ -43,6 +45,15 @@ export const Appearance = () => {
 						checked={theme === "dark"}
 						onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
 					/>
+				</li>
+
+				<li className="flex gap-2 justify-between items-center py-2">
+					<div className="flex gap-2 items-center">
+						<Languages size={20} />
+						<span className="text-sm">{t("changeLanguage")}</span>
+					</div>
+
+					<LocaleSwitcher />
 				</li>
 
 				<li className="flex gap-2 justify-between items-center py-2">
