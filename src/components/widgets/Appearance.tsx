@@ -19,7 +19,7 @@ import { formatCurrency, formatDate, slugify } from "@/lib/utils"
 import { Button, Input, Switch } from "@/ui"
 
 import { CountExample } from "./CountExample"
-import LocaleSwitcher from "./LocaleSwitcher"
+import { LocaleSwitcher } from "./LocaleSwitcher"
 
 export const Appearance = () => {
 	const t = useTranslations("Appearance")

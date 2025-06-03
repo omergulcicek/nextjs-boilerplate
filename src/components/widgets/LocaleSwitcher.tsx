@@ -16,7 +16,7 @@ import {
 	SelectValue
 } from "@/ui"
 
-export default function LocaleSwitcher() {
+export function LocaleSwitcher() {
 	const router = useRouter()
 	const pathname = usePathname()
 	const params = useParams()
