@@ -1,29 +1,29 @@
 "use client"
 
+import { useForm } from "react-hook-form"
+import { useHookFormMask } from "use-mask-input"
 import { useTranslations } from "next-intl"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { z } from "zod"
 
-import { FormData } from "@/types"
-
-import { useFormState } from "@/hooks"
+import { useFormFields } from "@omergulcicek/forms"
+import { createFormSchema, FormErrorMessages } from "@/schemas"
 
 import {
-	AlphaInput,
-	CreditCardInput,
-	CVVInput,
-	EmailInput,
-	ExpiryDateInput,
-	PasswordInput,
-	PhoneInput,
-	TCKNInput,
-	TextInput,
-	URLInput
-} from "@/components/forms"
-import { Button, Form } from "@/ui"
+	Button,
+	Form,
+	FormControl,
+	FormField,
+	FormItem,
+	FormLabel,
+	FormMessage,
+	Input
+} from "@/ui"
 
 export function FormExample() {
 	const t = useTranslations("FormExample")
 
-	const errorMessages = {
+	const errorMessages: FormErrorMessages = {
 		nameOnlyLetters: t("errors.nameOnlyLetters"),
 		nameMin: t("errors.nameMin"),
 		detailsMin: t("errors.detailsMin"),
@@ -36,19 +36,49 @@ export function FormExample() {
 		cardNumberInvalid: t("errors.cardNumberInvalid"),
 		cvv: t("errors.cvv"),
 		expiryDate: t("errors.expiryDate"),
-		expiryDateExpired: t("errors.expiryDateExpired"),
 		url: t("errors.url")
 	}
 
-	const form = useFormState(errorMessages)
+	const formSchema = createFormSchema(errorMessages)
+	type FormData = z.infer<typeof formSchema>
+
+	const form = useForm<FormData>({
+		resolver: zodResolver(formSchema),
+		defaultValues: {
+			alpha: "",
+			email: "",
+			password: "",
+			phone: "",
+			tckn: "",
+			text: "",
+			cardNumber: "",
+			expiryDate: "",
+			cvv: "",
+			url: ""
+		},
+		mode: "onChange"
+	})
+	const registerWithMask = useHookFormMask(form.register)
+
+	const { alpha, email, password, phone, tckn, text, cardNumber, expiryDate, cvv, url } = useFormFields({
+		fields: [
+			{ name: "alpha", type: "alpha" },
+			{ name: "email", type: "email" },
+			{ name: "password", type: "password" },
+			{ name: "phone", type: "phone" },
+			{ name: "tckn", type: "tckn" },
+			{ name: "text", type: "text" },
+			{ name: "cardNumber", type: "cardNumber" },
+			{ name: "expiryDate", type: "expiryDate" },
+			{ name: "cvv", type: "cvv" },
+			{ name: "url", type: "url" }
+		],
+		registerWithMask,
+		register: form.register
+	})
 
 	function onSubmit(data: FormData) {
-		console.log({
-			...data,
-			expiryDate: null,
-			expireMonth: data.expiryDate.slice(0, 2),
-			expireYear: data.expiryDate.slice(2)
-		})
+		console.log(data)
 	}
 
 	return (
@@ -57,93 +87,193 @@ export function FormExample() {
 
 			<Form {...form}>
 				<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-					<AlphaInput
+					<FormField
 						control={form.control}
-						register={form.register}
-						name="name"
-						label={t("name")}
-						placeholder={t("namePlaceholder")}
+						name="alpha"
+						render={({ field }) => (
+							<FormItem>
+								<FormLabel>{t("name")}</FormLabel>
+								<FormControl>
+									<Input
+										placeholder={t("namePlaceholder")}
+										{...field}
+										{...alpha}
+									/>
+								</FormControl>
+								<FormMessage />
+							</FormItem>
+						)}
 					/>
 
-					<EmailInput
+					<FormField
 						control={form.control}
-						register={form.register}
 						name="email"
-						label={t("email")}
-						placeholder={t("emailPlaceholder")}
+						render={({ field }) => (
+							<FormItem>
+								<FormLabel>{t("email")}</FormLabel>
+								<FormControl>
+									<Input
+										placeholder={t("emailPlaceholder")}
+										{...field}
+										{...email}
+									/>
+								</FormControl>
+								<FormMessage />
+							</FormItem>
+						)}
 					/>
 
-					<PasswordInput
+					<FormField
 						control={form.control}
-						register={form.register}
 						name="password"
-						label={t("password")}
-						placeholder=""
+						render={({ field }) => (
+							<FormItem>
+								<FormLabel>{t("password")}</FormLabel>
+								<FormControl>
+									<Input
+										type="password"
+										placeholder=""
+										{...field}
+										{...password}
+									/>
+								</FormControl>
+								<FormMessage />
+							</FormItem>
+						)}
 					/>
 
-					<PhoneInput
+					<FormField
 						control={form.control}
-						register={form.register}
 						name="phone"
-						label={t("phone")}
-						placeholder={t("phonePlaceholder")}
+						render={({ field }) => (
+							<FormItem>
+								<FormLabel>{t("phone")}</FormLabel>
+								<FormControl>
+									<Input
+										placeholder={t("phonePlaceholder")}
+										{...field}
+										{...phone}
+									/>
+								</FormControl>
+								<FormMessage />
+							</FormItem>
+						)}
 					/>
 
-					<TCKNInput
+					<FormField
 						control={form.control}
-						register={form.register}
 						name="tckn"
-						label={t("tckn")}
-						placeholder={t("tcknPlaceholder")}
+						render={({ field }) => (
+							<FormItem>
+								<FormLabel>{t("tckn")}</FormLabel>
+								<FormControl>
+									<Input
+										placeholder={t("tcknPlaceholder")}
+										{...field}
+										{...tckn}
+									/>
+								</FormControl>
+								<FormMessage />
+							</FormItem>
+						)}
 					/>
 
-					<TextInput
+					<FormField
 						control={form.control}
-						register={form.register}
-						name="details"
-						label={t("details")}
-						placeholder={t("detailsPlaceholder")}
+						name="text"
+						render={({ field }) => (
+							<FormItem>
+								<FormLabel>{t("details")}</FormLabel>
+								<FormControl>
+									<Input
+										placeholder={t("detailsPlaceholder")}
+										{...field}
+										{...text}
+									/>
+								</FormControl>
+								<FormMessage />
+							</FormItem>
+						)}
 					/>
 
-					<CreditCardInput
+					<FormField
 						control={form.control}
-						register={form.register}
 						name="cardNumber"
-						label={t("cardNumber")}
-						placeholder={t("cardNumberPlaceholder")}
-						showCardIcon
+						render={({ field }) => (
+							<FormItem>
+								<FormLabel>{t("cardNumber")}</FormLabel>
+								<FormControl>
+									<Input
+										placeholder={t("cardNumberPlaceholder")}
+										{...field}
+										{...cardNumber}
+									/>
+								</FormControl>
+								<FormMessage />
+							</FormItem>
+						)}
 					/>
 
 					<div className="grid grid-cols-2 gap-4 items-start">
-						<ExpiryDateInput
+						<FormField
 							control={form.control}
-							register={form.register}
 							name="expiryDate"
-							label={t("expiryDate")}
-							placeholder={t("expiryDatePlaceholder")}
+							render={({ field }) => (
+								<FormItem>
+									<FormLabel>{t("expiryDate")}</FormLabel>
+									<FormControl>
+										<Input
+											placeholder={t("expiryDatePlaceholder")}
+											{...field}
+											{...expiryDate}
+										/>
+									</FormControl>
+									<FormMessage />
+								</FormItem>
+							)}
 						/>
 
-						<CVVInput
+						<FormField
 							control={form.control}
-							register={form.register}
 							name="cvv"
-							label={t("cvv")}
-							placeholder={t("cvvPlaceholder")}
+							render={({ field }) => (
+								<FormItem>
+									<FormLabel>{t("cvv")}</FormLabel>
+									<FormControl>
+										<Input
+											placeholder={t("cvvPlaceholder")}
+											{...field}
+											{...cvv}
+										/>
+									</FormControl>
+									<FormMessage />
+								</FormItem>
+							)}
 						/>
 					</div>
 
-					<URLInput
+					<FormField
 						control={form.control}
-						register={form.register}
 						name="url"
-						label={t("url")}
-						placeholder={t("urlPlaceholder")}
+						render={({ field }) => (
+							<FormItem>
+								<FormLabel>{t("url")}</FormLabel>
+								<FormControl>
+									<Input
+										placeholder={t("urlPlaceholder")}
+										{...field}
+										{...url}
+									/>
+								</FormControl>
+								<FormMessage />
+							</FormItem>
+						)}
 					/>
 
-					<Button
-						type="submit"
-						disabled={!form.formState.isValid}
+					<Button 
+						type="submit" 
 						className="w-full"
+						disabled={!form.formState.isValid}
 					>
 						{t("signIn")}
 					</Button>

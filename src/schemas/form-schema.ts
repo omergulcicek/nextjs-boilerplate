@@ -1,21 +1,5 @@
 import { z } from "zod"
 
-import {
-	ALPHA_REGEX,
-	CARD_REGEX,
-	CVV_REGEX,
-	EXPIRY_DATE_REGEX,
-	PHONE_REGEX,
-	TCKN_REGEX,
-	URL_REGEX
-} from "@/constants"
-
-import {
-	validateCreditCard,
-	validateExpiryDate,
-	validateTCKN
-} from "@/lib/utils"
-
 export type FormErrorMessages = {
 	nameOnlyLetters: string
 	nameMin: string
@@ -29,39 +13,35 @@ export type FormErrorMessages = {
 	cardNumberInvalid: string
 	cvv: string
 	expiryDate: string
-	expiryDateExpired: string
 	url: string
 }
 
 export function createFormSchema(messages: FormErrorMessages) {
 	return z.object({
-		name: z
+		alpha: z
 			.string()
-			.regex(new RegExp(`^${ALPHA_REGEX.source}*$`), messages.nameOnlyLetters)
-			.min(3, messages.nameMin),
-		details: z.string().min(3, messages.detailsMin),
+			.min(2, messages.nameMin)
+			.regex(/^[a-zA-ZğüşıöçĞÜŞİÖÇ\s]+$/, messages.nameOnlyLetters),
 		email: z.string().email(messages.email),
 		password: z.string().min(6, messages.passwordMin),
-		phone: z.string().regex(PHONE_REGEX, messages.phone),
+		phone: z.string().min(10, messages.phone),
 		tckn: z
 			.string()
-			.regex(TCKN_REGEX, messages.tcknDigits)
-			.refine((val) => validateTCKN(val), {
-				message: messages.tcknInvalid
-			}),
+			.length(11, messages.tcknDigits)
+			.regex(/^\d{11}$/, messages.tcknInvalid),
+		text: z.string().min(3, messages.detailsMin),
 		cardNumber: z
 			.string()
-			.regex(CARD_REGEX, messages.cardNumberDigits)
-			.refine((val) => validateCreditCard(val), {
-				message: messages.cardNumberInvalid
-			}),
-		cvv: z.string().regex(CVV_REGEX, messages.cvv),
+			.length(16, messages.cardNumberDigits)
+			.regex(/^\d{16}$/, messages.cardNumberInvalid),
 		expiryDate: z
 			.string()
-			.regex(EXPIRY_DATE_REGEX, messages.expiryDate)
-			.refine((val) => validateExpiryDate(val), {
-				message: messages.expiryDateExpired
-			}),
-		url: z.string().regex(URL_REGEX, messages.url)
+			.length(4, messages.expiryDate)
+			.regex(/^(0[1-9]|1[0-2])\d{2}$/, messages.expiryDate),
+		cvv: z
+			.string()
+			.length(3, messages.cvv)
+			.regex(/^\d{3}$/, messages.cvv),
+		url: z.string().url(messages.url)
 	})
-}
+} 
