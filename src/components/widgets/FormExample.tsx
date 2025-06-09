@@ -1,12 +1,13 @@
 "use client"
 
 import { useForm } from "react-hook-form"
-import { useHookFormMask } from "use-mask-input"
 import { useTranslations } from "next-intl"
+
 import { zodResolver } from "@hookform/resolvers/zod"
+import { useFormFields } from "@omergulcicek/forms"
+import { useHookFormMask } from "use-mask-input"
 import { z } from "zod"
 
-import { useFormFields } from "@omergulcicek/forms"
 import { createFormSchema, FormErrorMessages } from "@/schemas"
 
 import {
@@ -60,7 +61,18 @@ export function FormExample() {
 	})
 	const registerWithMask = useHookFormMask(form.register)
 
-	const { alpha, email, password, phone, tckn, text, cardNumber, expiryDate, cvv, url } = useFormFields({
+	const {
+		alpha,
+		email,
+		password,
+		phone,
+		tckn,
+		text,
+		cardNumber,
+		expiryDate,
+		cvv,
+		url
+	} = useFormFields({
 		fields: [
 			{ name: "alpha", type: "alpha" },
 			{ name: "email", type: "email" },
@@ -84,6 +96,7 @@ export function FormExample() {
 	return (
 		<section className="flex flex-col gap-4 p-4 rounded-lg border">
 			<h2 className="text-xl font-medium">{t("title")}</h2>
+			<p className="text-sm text-muted-foreground">{t("desc")}</p>
 
 			<Form {...form}>
 				<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -270,8 +283,8 @@ export function FormExample() {
 						)}
 					/>
 
-					<Button 
-						type="submit" 
+					<Button
+						type="submit"
 						className="w-full"
 						disabled={!form.formState.isValid}
 					>

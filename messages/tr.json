@@ -21,6 +21,7 @@
   },
   "FormExample": {
     "title": "Form Örneği",
+    "desc": "@omergulcicek/forms paketi kullanıyor.",
     "name": "Adınız",
     "namePlaceholder": "Sadece harfler",
     "email": "E-posta Adresi",

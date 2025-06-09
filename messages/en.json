@@ -21,6 +21,7 @@
   },
   "FormExample": {
     "title": "Form Example",
+    "desc": "@omergulcicek/forms package is used.",
     "name": "Your Name",
     "namePlaceholder": "Letters only",
     "email": "Email Address",
