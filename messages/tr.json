@@ -9,6 +9,9 @@
     "title2": "Modern Web için",
     "desc": "Açık kaynaklı bir başlangıç paketi: <strong>Next.js 15.3</strong>, <strong>TypeScript</strong> ve <strong>Tailwind CSS</strong> ile modern web uygulamaları geliştirmek artık daha hızlı."
   },
+  "Stack": {
+    "title": "Teknolojiler"
+  },
   "Appearance": {
     "title": "Görünüm",
     "darkTheme": "Karanlık Tema",

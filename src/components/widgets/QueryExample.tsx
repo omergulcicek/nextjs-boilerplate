@@ -41,7 +41,7 @@ export function QueryExample() {
 	}
 
 	return (
-		<section className="flex flex-col gap-4 p-4 rounded-lg border">
+		<section className="xl:col-span-2 flex flex-col gap-4 p-4 rounded-lg border">
 			<h2 className="text-xl font-medium">TanStack Query</h2>
 			<div className="space-y-2 min-h-72">
 				<Content />

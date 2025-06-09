@@ -30,7 +30,7 @@ With this template, you get all the awesomeness you need:
 - [x] Sitemap.xml and robots.txt
 - [ ] Metadata files optimized for SEO
 - [ ] Storage helpers for Local, Session, Cookies
-- [ ] 💯 Maximize lighthouse score
+- [x] 💯 Maximize lighthouse score
 
 ## Project structure
 
