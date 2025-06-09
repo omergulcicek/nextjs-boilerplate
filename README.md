@@ -18,6 +18,7 @@ With this template, you get all the awesomeness you need:
 - [x] Linter with [ESLint](https://eslint.org/)
 - [x] Code Formatter with [Prettier](https://prettier.io/)
 - [x] Form handling with [React Hook Form](https://react-hook-form.com/)
+- [x] Smart masking and validation with [@omergulcicek/forms](https://www.npmjs.com/package/@omergulcicek/forms)
 - [x] Validation library with [Zod](https://zod.dev/)
 - [ ] [Storybook](https://storybook.js.org/) for UI development
 - [ ] Error tracking with [Sentry](https://sentry.io/)
@@ -42,7 +43,6 @@ With this template, you get all the awesomeness you need:
 │   ├── app                         # Next JS App (App Router)
 │   ├── assets                      # Static assets (images, fonts, etc.)
 │   ├── components                  # React components
-│   │   ├── forms                   # Form components
 │   │   ├── icons                   # svg icons
 │   │   ├── shared                  # Header, footer, aside components
 │   │   ├── skeletons               # Loading components
