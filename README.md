@@ -1,6 +1,6 @@
 # Next.js Boilerplate
 
-An open source boilerplate built using **Next.js 15.3**, **TypeScript**, and **Tailwind CSS**
+Modern **Next.js 15** boilerplate with **TypeScript** & **Tailwind CSS**
 
 ## Features
 
