@@ -22,15 +22,15 @@ export const metadata: Metadata = {
 	description: "Next.js Boilerplate"
 }
 
-interface LocaleLayoutProps {
+interface RootLayoutProps {
 	children: React.ReactNode
 	params: Promise<{ locale: string }>
 }
 
-export default async function LocaleLayout({
+export default async function RootLayout({
 	children,
 	params
-}: LocaleLayoutProps) {
+}: RootLayoutProps) {
 	const { locale } = await params
 
 	if (!hasLocale(routing.locales, locale)) {

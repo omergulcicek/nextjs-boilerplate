@@ -11,7 +11,6 @@ With this template, you get all the awesomeness you need:
 - [x] Type checking [TypeScript](https://www.typescriptlang.org/)
 - [x] Styled using [Tailwind CSS](https://tailwindcss.com/)
 - [x] State management with [Zustand](https://zustand-demo.pmnd.rs/)
-- [ ] Authentication with [NextAuth.js](https://next-auth.js.org/)
 - [x] [next-intl](https://next-intl.dev/) for internationalization
 - [x] UI Components built with [shadcn/ui](https://ui.shadcn.com/)
 - [x] Data Fetching, Caching and Mutation with [TanStack Query](https://tanstack.com/query/latest)
@@ -28,7 +27,7 @@ With this template, you get all the awesomeness you need:
 - [x] Dark theme with [next-themes](https://npmjs.com/package/next-themes)
 - [x] [Absolute Imports](https://nextjs.org/docs/pages/building-your-application/configuring/absolute-imports-and-module-aliases) with `@` prefix
 - [ ] [Husky](https://typicode.github.io/husky/) for Git Hooks
-- [ ] Sitemap.xml and robots.txt with [next-sitemap](https://www.npmjs.com/package/next-sitemap)
+- [x] Sitemap.xml and robots.txt
 - [ ] Metadata files optimized for SEO
 - [ ] Storage helpers for Local, Session, Cookies
 - [ ] 💯 Maximize lighthouse score
