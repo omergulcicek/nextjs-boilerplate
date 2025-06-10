@@ -21,7 +21,7 @@ With this template, you get all the awesomeness you need:
 - [x] Validation library with [Zod](https://zod.dev/)
 - [ ] [Storybook](https://storybook.js.org/) for UI development
 - [ ] Error tracking with [Sentry](https://sentry.io/)
-- [ ] Analytics with [Google Analytics](https://analytics.google.com/)
+- [x] Analytics with [Google Analytics](https://analytics.google.com/)
 - [x] Beautiful and consistent icons from [Lucide](https://lucide.dev/)
 - [x] Loading UI using [Skeleton Components](https://ui.shadcn.com/docs/components/skeleton)
 - [x] Dark theme with [next-themes](https://npmjs.com/package/next-themes)
