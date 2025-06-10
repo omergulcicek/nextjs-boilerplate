@@ -44,4 +44,4 @@ export function createFormSchema(messages: FormErrorMessages) {
 			.regex(/^\d{3}$/, messages.cvv),
 		url: z.string().url(messages.url)
 	})
-} 
+}

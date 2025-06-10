@@ -76,32 +76,36 @@ With this template, you get all the awesomeness you need:
 
 The project follows consistent file naming conventions:
 
-| File Type | Example | Style |
-|------------|-------|------|
-| Component | `LoginForm.tsx` | PascalCase |
-| Hook | `useLogin.ts` | camelCase |
+| File Type      | Example          | Style      |
+| -------------- | ---------------- | ---------- |
+| Component      | `LoginForm.tsx`  | PascalCase |
+| Hook           | `useLogin.ts`    | camelCase  |
 | Helper, Schema | `form-schema.ts` | kebab-case |
-| Folder | `login-form/` | kebab-case |
-| Constants | `ALPHA_REGEX` | SNAKE_CASE |
+| Folder         | `login-form/`    | kebab-case |
+| Constants      | `ALPHA_REGEX`    | SNAKE_CASE |
 
 ## Monitoring & Analytics
 
 🚧 Don’t forget to replace all FIXME tags with proper code before finalizing the changes.
 
 ### Error Tracking
+
 We use [Sentry](https://sentry.io/) for error tracking and performance monitoring. To set up:
 
 1. Create a Sentry account
 2. Add your DSN to `.env`:
+
 ```env
 NEXT_PUBLIC_SENTRY_DSN=your-sentry-dsn
 ```
 
 ### Analytics
+
 We use [Google Analytics](https://analytics.google.com/) for tracking user behavior. To set up:
 
 1. Create a Google Analytics account
 2. Add your ID to `.env`:
+
 ```env
 NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
 ```
