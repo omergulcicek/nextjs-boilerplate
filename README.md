@@ -20,7 +20,7 @@ With this template, you get all the awesomeness you need:
 - [x] Smart masking and validation with [@omergulcicek/forms](https://www.npmjs.com/package/@omergulcicek/forms)
 - [x] Validation library with [Zod](https://zod.dev/)
 - [ ] [Storybook](https://storybook.js.org/) for UI development
-- [ ] Error tracking with [Sentry](https://sentry.io/)
+- [x] Error tracking with [Sentry](https://sentry.io/)
 - [x] Analytics with [Google Analytics](https://analytics.google.com/)
 - [x] Beautiful and consistent icons from [Lucide](https://lucide.dev/)
 - [x] Loading UI using [Skeleton Components](https://ui.shadcn.com/docs/components/skeleton)
@@ -86,6 +86,8 @@ The project follows consistent file naming conventions:
 
 ## Monitoring & Analytics
 
+⚠️ Don’t forget to replace all FIXME tags with proper code before finalizing the changes.
+
 ### Error Tracking
 We use [Sentry](https://sentry.io/) for error tracking and performance monitoring. To set up:
 
@@ -99,9 +101,9 @@ NEXT_PUBLIC_SENTRY_DSN=your-sentry-dsn
 We use [Google Analytics](https://analytics.google.com/) for tracking user behavior. To set up:
 
 1. Create a Google Analytics account
-2. Add your Measurement ID to `.env`:
+2. Add your ID to `.env`:
 ```env
-NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
 ```
 
 ### Contributors
