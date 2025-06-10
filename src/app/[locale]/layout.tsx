@@ -2,8 +2,11 @@ import type { Metadata } from "next"
 import { hasLocale, NextIntlClientProvider } from "next-intl"
 import { Geist, Geist_Mono } from "next/font/google"
 import { notFound } from "next/navigation"
+import { GoogleAnalytics } from "@next/third-parties/google"
 
 import { routing } from "@/i18n/routing"
+
+import { APP_CONFIG } from "@/constants"
 
 import { Providers } from "@/providers"
 
@@ -32,7 +35,6 @@ export default async function RootLayout({
 	params
 }: RootLayoutProps) {
 	const { locale } = await params
-
 	if (!hasLocale(routing.locales, locale)) {
 		notFound()
 	}
@@ -50,6 +52,8 @@ export default async function RootLayout({
 					</Providers>
 				</NextIntlClientProvider>
 			</body>
+
+			{APP_CONFIG.GA_ID && <GoogleAnalytics gaId={APP_CONFIG.GA_ID} />}
 		</html>
 	)
 }

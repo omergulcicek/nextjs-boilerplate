@@ -1,6 +1,7 @@
 export const APP_CONFIG = {
 	GITHUB_URL: process.env.NEXT_PUBLIC_GITHUB_URL || "/",
 	JSON_PLACEHOLDER_URL: process.env.NEXT_PUBLIC_JSON_PLACEHOLDER_URL,
+	GA_ID: process.env.NEXT_PUBLIC_GA_ID,
 	API_TIMEOUT: 10000,
 	APP_NAME: "NextJS Boilerplate",
 	APP_VERSION: "1.0.0",
