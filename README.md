@@ -86,7 +86,7 @@ The project follows consistent file naming conventions:
 
 ## Monitoring & Analytics
 
-⚠️ Don’t forget to replace all FIXME tags with proper code before finalizing the changes.
+🚧 Don’t forget to replace all FIXME tags with proper code before finalizing the changes.
 
 ### Error Tracking
 We use [Sentry](https://sentry.io/) for error tracking and performance monitoring. To set up:
