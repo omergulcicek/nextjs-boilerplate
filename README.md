@@ -19,14 +19,13 @@ With this template, you get all the awesomeness you need:
 - [x] Form handling with [React Hook Form](https://react-hook-form.com/)
 - [x] Smart masking and validation with [@omergulcicek/forms](https://www.npmjs.com/package/@omergulcicek/forms)
 - [x] Validation library with [Zod](https://zod.dev/)
-- [ ] [Storybook](https://storybook.js.org/) for UI development
 - [x] Error tracking with [Sentry](https://sentry.io/)
 - [x] Analytics with [Google Analytics](https://analytics.google.com/)
 - [x] Beautiful and consistent icons from [Lucide](https://lucide.dev/)
 - [x] Loading UI using [Skeleton Components](https://ui.shadcn.com/docs/components/skeleton)
 - [x] Dark theme with [next-themes](https://npmjs.com/package/next-themes)
 - [x] [Absolute Imports](https://nextjs.org/docs/pages/building-your-application/configuring/absolute-imports-and-module-aliases) with `@` prefix
-- [ ] [Husky](https://typicode.github.io/husky/) for Git Hooks
+- [x] [Husky](https://typicode.github.io/husky/) for Git Hooks
 - [x] Sitemap.xml and robots.txt
 - [ ] Metadata files optimized for SEO
 - [ ] Storage helpers for Local, Session, Cookies
@@ -36,6 +35,7 @@ With this template, you get all the awesomeness you need:
 
 ```shell
 │
+├── .husky                          # Husky git hook scripts
 ├── messages                        # i18n messages
 ├── public                          # Public assets folder
 ├── src
