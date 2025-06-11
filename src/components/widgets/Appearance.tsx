@@ -38,7 +38,7 @@ export const Appearance = () => {
 	const [currency, setCurrency] = useState<"USD" | "EUR" | "TRY">("USD")
 
 	return (
-		<section className="xl:col-span-3 flex flex-col gap-4 p-4 rounded-lg border">
+		<section className="flex flex-col gap-4 p-4 rounded-lg border xl:col-span-3">
 			<h2 className="text-xl font-medium">{t("title")}</h2>
 
 			<ul>
@@ -46,6 +46,7 @@ export const Appearance = () => {
 					<div className="flex gap-2 items-center">
 						<Moon size={20} />
 						<span className="text-sm">{t("darkTheme")}</span>
+						<span className="sr-only">{theme}</span>
 					</div>
 
 					<Switch
