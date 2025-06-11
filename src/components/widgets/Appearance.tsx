@@ -38,7 +38,7 @@ export const Appearance = () => {
 	const [currency, setCurrency] = useState<"USD" | "EUR" | "TRY">("USD")
 
 	return (
-		<section className="flex flex-col gap-4 p-4 rounded-lg border xl:col-span-3">
+		<section className="flex flex-col gap-4 p-4 rounded-lg border bg-background xl:col-span-3">
 			<h2 className="text-xl font-medium">{t("title")}</h2>
 
 			<ul>

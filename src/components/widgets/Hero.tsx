@@ -13,32 +13,36 @@ export const Hero = () => {
 	const t = useTranslations("Hero")
 
 	return (
-		<>
-			<Link
-				href={APP_CONFIG.GITHUB_URL}
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<Button variant="link">
-					<Github className="fill-black dark:fill-white" />
-					<span>{t("github")}</span> <ChevronRight />
-				</Button>
-			</Link>
-
+		<section className="flex flex-col gap-6 items-center">
 			<Balancer
 				as="h1"
-				className="text-2xl font-medium leading-tight tracking-tighter sm:text-3xl md:text-6xl lg:leading-[1.1]"
+				className="font-display text-4xl text-center font-semibold tracking-[-0.02em] md:text-7xl"
 			>
-				<span className="text-black/50 dark:text-white/50">{t("title1")}</span>{" "}
-				<br />
+				<span>{t("title1")}</span> <br />
 				<span>{t("title2")}</span>
 			</Balancer>
+			<Balancer as="p" className="text-center text-gray-500 md:text-xl">
+				An opinionated collection of components, hooks, and utilities for your
+				Next.js project.
+			</Balancer>
+			<div>
+				<Link
+					href={APP_CONFIG.GITHUB_URL}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<Button variant="outline">
+						<Github className="fill-black dark:fill-white" />
+						<span>{t("github")}</span> <ChevronRight />
+					</Button>
+				</Link>
+			</div>
 
 			{/* <Balancer
 				as="p"
 				className="max-w-2xl text-base font-light text-foreground sm:text-lg"
 				dangerouslySetInnerHTML={{ __html: t("desc") }}
 			/> */}
-		</>
+		</section>
 	)
 }

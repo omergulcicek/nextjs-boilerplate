@@ -4,7 +4,7 @@
 		"locale": "{locale, select, tr {🇹🇷 Türkçe} en {🇺🇸 İngilizce} other {Unknown}}"
 	},
 	"Hero": {
-		"github": "GitHub'da Görüntüle",
+		"github": "GitHub'da destekle",
 		"title1": "Next.js Başlangıç Paketi",
 		"title2": "Modern Web için",
 		"desc": "Açık kaynaklı bir başlangıç paketi: <strong>Next.js 15.3</strong>, <strong>TypeScript</strong> ve <strong>Tailwind CSS</strong> ile modern web uygulamaları geliştirmek artık daha hızlı."
@@ -61,5 +61,8 @@
 			"expiryDateExpired": "Kartınızın süresi dolmuş.",
 			"url": "Geçerli bir URL girin."
 		}
+	},
+	"Footer": {
+		"projectBy": "Geliştirici "
 	}
 }
