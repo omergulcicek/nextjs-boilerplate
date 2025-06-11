@@ -27,7 +27,7 @@ With this template, you get all the awesomeness you need:
 - [x] [Absolute Imports](https://nextjs.org/docs/pages/building-your-application/configuring/absolute-imports-and-module-aliases) with `@` prefix
 - [x] [Husky](https://typicode.github.io/husky/) for Git Hooks
 - [x] Sitemap.xml and robots.txt
-- [ ] Metadata files optimized for SEO
+- [x] Metadata files optimized for SEO
 - [ ] Storage helpers for Local, Session, Cookies
 - [x] 💯 Maximize lighthouse score
 
@@ -86,7 +86,7 @@ The project follows consistent file naming conventions:
 
 ## Monitoring & Analytics
 
-🚧 Don’t forget to replace all FIXME tags with proper code before finalizing the changes.
+🚧 Don't forget to replace all FIXME tags with proper code before finalizing the changes.
 
 ### Error Tracking
 

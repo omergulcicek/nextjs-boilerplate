@@ -21,8 +21,61 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-	title: "Next.js Boilerplate",
-	description: "Next.js Boilerplate"
+	title: {
+		default: APP_CONFIG.APP_NAME,
+		template: `%s | ${APP_CONFIG.APP_NAME}`
+	},
+	description: APP_CONFIG.APP_DESCRIPTION,
+	keywords: APP_CONFIG.APP_KEYWORDS,
+	authors: [{ name: APP_CONFIG.CREATOR }],
+	creator: APP_CONFIG.CREATOR,
+	metadataBase: new URL(
+		APP_CONFIG.SITE_URL || "https://github.com/omergulcicek/nextjs-boilerplate"
+	),
+	alternates: {
+		canonical: "/",
+		languages: {
+			tr: "/tr",
+			en: "/en"
+		}
+	},
+	openGraph: {
+		type: "website",
+		locale: "tr_TR",
+		url: APP_CONFIG.SITE_URL,
+		title: APP_CONFIG.APP_NAME,
+		description: APP_CONFIG.APP_DESCRIPTION,
+		siteName: APP_CONFIG.APP_NAME,
+		images: [
+			{
+				url: "/opengraph-image.png",
+				width: 1200,
+				height: 630,
+				alt: APP_CONFIG.APP_NAME
+			}
+		]
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: APP_CONFIG.APP_NAME,
+		description: APP_CONFIG.APP_DESCRIPTION,
+		creator: APP_CONFIG.TWITTER_HANDLE,
+		images: ["/twitter-image.png"]
+	},
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			"max-video-preview": -1,
+			"max-image-preview": "large",
+			"max-snippet": -1
+		}
+	},
+	verification: {
+		google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+	}
 }
 
 interface RootLayoutProps {

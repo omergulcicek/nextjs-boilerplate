@@ -7,7 +7,19 @@ export const APP_CONFIG = {
 	APP_NAME: "NextJS Boilerplate",
 	APP_VERSION: "1.0.0",
 	DEFAULT_LANGUAGE: "tr",
-	DEFAULT_THEME: "light"
+	DEFAULT_THEME: "light",
+	SITE_URL: process.env.NEXT_PUBLIC_APP_URL || "",
+	APP_DESCRIPTION:
+		"Modern Next.js 15 boilerplate with TypeScript & Tailwind CSS",
+	APP_KEYWORDS: [
+		"nextjs",
+		"typescript",
+		"tailwind",
+		"boilerplate",
+		"react"
+	] as string[],
+	CREATOR: "@omergulcicek",
+	TWITTER_HANDLE: "@omergulcicek"
 } as const
 
 export type AppConfig = keyof typeof APP_CONFIG
