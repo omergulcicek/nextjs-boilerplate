@@ -1,13 +1,14 @@
-import { Appearance, Hero, QueryExample, Stack } from "@/widgets"
+import { Appearance, Hero, Performance, QueryExample, Stack } from "@/widgets"
 
 export default function Home() {
 	return (
-		<div className="container flex flex-col gap-2 pt-10 lg:p-20">
+		<div className="container flex flex-col gap-2 pt-10">
 			<Hero />
-			<div className="grid gap-10 mt-20 xl:grid-cols-7">
+			<div className="grid grid-cols-2 gap-4 mt-10 md:grid-cols-4 xl:grid-cols-12">
 				<Stack />
-				<Appearance />
+				<Performance />
 				<QueryExample />
+				<Appearance />
 			</div>
 		</div>
 	)

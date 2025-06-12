@@ -10,57 +10,32 @@
 		"desc": "An open-source starter built with <strong>Next.js 15.3</strong>, <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong> everything you need to build modern web apps, faster."
 	},
 	"Stack": {
-		"title": "Stack"
+		"title": "Stack",
+		"description": "Powered by modern tools, delivering a solid and reliable foundation."
+	},
+	"Performance": {
+		"title": "Performance first",
+		"description": "Speeds up your app with optimized fonts and images."
+	},
+	"TanStackQuery": {
+		"title": "TanStack Query",
+		"description": "Powerful asynchronous state management for Next.js"
 	},
 	"Appearance": {
 		"title": "Appearance",
+		"description": "All you need to launch great web apps.",
 		"darkTheme": "Dark Theme",
 		"changeLanguage": "Change Language",
 		"inputPlaceholder": "Enter anything...",
 		"slug": "Slug",
 		"changeDateFormat": "Change Date Format",
 		"changeCurrency": "Change Currency",
-		"reset": "Reset"
-	},
-	"FormExample": {
-		"title": "Form Example",
-		"desc": "@omergulcicek/forms package is used.",
-		"name": "Your Name",
-		"namePlaceholder": "Letters only",
-		"email": "Email Address",
-		"emailPlaceholder": "Email format",
-		"password": "Password",
-		"phone": "Phone Number",
-		"phonePlaceholder": "(555) 555 55 55",
-		"tckn": "ID Number",
-		"tcknPlaceholder": "11 digits and ID format",
-		"details": "Detailed Information",
-		"detailsPlaceholder": "Letters, numbers, special characters",
-		"cardNumber": "Credit Card Number",
-		"cardNumberPlaceholder": "16 digits and card format",
-		"expiryDate": "Expiry Date",
-		"expiryDatePlaceholder": "MM/YY",
-		"cvv": "CVV",
-		"cvvPlaceholder": "000",
-		"url": "URL",
-		"urlPlaceholder": "https://www.google.com",
-		"signIn": "Sign In",
-		"errors": {
-			"nameOnlyLetters": "Only letters are allowed.",
-			"nameMin": "Name must be at least 3 characters.",
-			"detailsMin": "Username must be at least 3 characters.",
-			"email": "Please enter a valid email address.",
-			"passwordMin": "Password must be at least 6 characters.",
-			"phone": "Please enter a valid phone number.",
-			"tcknDigits": "TCKN must be 11 digits.",
-			"tcknInvalid": "Invalid TCKN.",
-			"cardNumberDigits": "Credit card must be 16 digits.",
-			"cardNumberInvalid": "Invalid credit card.",
-			"cvv": "CVV must be 3 digits.",
-			"expiryDate": "Please enter a valid expiry date (MM/YY)",
-			"expiryDateExpired": "Your card has expired.",
-			"url": "Please enter a valid URL."
-		}
+		"mobile": "Mobile",
+		"desktop": "Desktop",
+		"reset": "Reset",
+		"set": "Set",
+		"show": "Show",
+		"remove": "Remove"
 	},
 	"Footer": {
 		"projectBy": "A project by"

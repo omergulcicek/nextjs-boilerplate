@@ -13,7 +13,7 @@ export const Hero = () => {
 	const t = useTranslations("Hero")
 
 	return (
-		<section className="flex flex-col gap-6 items-center">
+		<section className="flex flex-col gap-6 items-center mt-10">
 			<Balancer
 				as="h1"
 				className="font-display text-4xl text-center font-semibold tracking-[-0.02em] md:text-7xl"
@@ -25,24 +25,19 @@ export const Hero = () => {
 				An opinionated collection of components, hooks, and utilities for your
 				Next.js project.
 			</Balancer>
-			<div>
+
+			<div className="flex gap-6">
 				<Link
 					href={APP_CONFIG.GITHUB_URL}
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<Button variant="outline">
-						<Github className="fill-black dark:fill-white" />
+					<Button>
+						<Github className="dark:fill-black fill-white" />
 						<span>{t("github")}</span> <ChevronRight />
 					</Button>
 				</Link>
 			</div>
-
-			{/* <Balancer
-				as="p"
-				className="max-w-2xl text-base font-light text-foreground sm:text-lg"
-				dangerouslySetInnerHTML={{ __html: t("desc") }}
-			/> */}
 		</section>
 	)
 }

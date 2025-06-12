@@ -95,7 +95,7 @@ export default async function RootLayout({
 	return (
 		<html lang={locale} className="light" style={{ colorScheme: "light" }}>
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen w-full bg-gradient-to-br from-red-50 via-white to-teal-50 dark:from-red-950 dark:via-black dark:to-teal-950`}
+				className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen w-full bg-gradient-to-br from-red-100 via-white to-teal-100 dark:from-red-950 dark:via-black dark:to-teal-950`}
 				suppressHydrationWarning
 			>
 				<NextIntlClientProvider locale={locale}>

@@ -10,57 +10,32 @@
 		"desc": "Açık kaynaklı bir başlangıç paketi: <strong>Next.js 15.3</strong>, <strong>TypeScript</strong> ve <strong>Tailwind CSS</strong> ile modern web uygulamaları geliştirmek artık daha hızlı."
 	},
 	"Stack": {
-		"title": "Teknolojiler"
+		"title": "Teknolojiler",
+		"description": "Güncel araçlarla güçlendirilmiş, sağlam ve güvenilir bir temel."
+	},
+	"Performance": {
+		"title": "Performans öncelikli",
+		"description": "Optimizasyonlu yazı tipleri ve görsellerle uygulamanızı hızlandırır."
+	},
+	"TanStackQuery": {
+		"title": "TanStack Query",
+		"description": "Next.js için güçlü asenkron durum yönetimi"
 	},
 	"Appearance": {
 		"title": "Görünüm",
+		"description": "Harika web uygulamaları başlatmanız için gereken her şey.",
 		"darkTheme": "Karanlık Tema",
 		"changeLanguage": "Dil Değiştir",
 		"inputPlaceholder": "Bir şeyler yaz...",
 		"slug": "Slug",
 		"changeDateFormat": "Tarih Formatını Değiştir",
 		"changeCurrency": "Para Birimini Değiştir",
-		"reset": "Sıfırla"
-	},
-	"FormExample": {
-		"title": "Form Örneği",
-		"desc": "@omergulcicek/forms paketi kullanıyor.",
-		"name": "Adınız",
-		"namePlaceholder": "Sadece harfler",
-		"email": "E-posta Adresi",
-		"emailPlaceholder": "E-posta formatı",
-		"password": "Şifre",
-		"phone": "Telefon Numarası",
-		"phonePlaceholder": "(555) 555 55 55",
-		"tckn": "Kimlik Numarası",
-		"tcknPlaceholder": "11 haneli ve kimlik formatı",
-		"details": "Detaylı Bilgi",
-		"detailsPlaceholder": "Harf, rakam, özel karakter",
-		"cardNumber": "Kredi Kartı Numarası",
-		"cardNumberPlaceholder": "16 haneli ve kart formatı",
-		"expiryDate": "Son Kullanma Tarihi",
-		"expiryDatePlaceholder": "AA/YY",
-		"cvv": "CVV",
-		"cvvPlaceholder": "000",
-		"url": "URL",
-		"urlPlaceholder": "https://www.google.com",
-		"signIn": "Giriş Yap",
-		"errors": {
-			"nameOnlyLetters": "Sadece harfler kullanılabilir.",
-			"nameMin": "Ad en az 3 karakter olmalı.",
-			"detailsMin": "Kullanıcı adı en az 3 karakter olmalı.",
-			"email": "Geçerli bir e-posta adresi girin.",
-			"passwordMin": "Şifre en az 6 karakter olmalı.",
-			"phone": "Geçerli bir telefon numarası girin.",
-			"tcknDigits": "TCKN 11 haneli olmalı.",
-			"tcknInvalid": "Geçersiz TCKN.",
-			"cardNumberDigits": "Kredi kartı 16 haneli olmalı.",
-			"cardNumberInvalid": "Geçersiz kredi kartı.",
-			"cvv": "CVV 3 haneli olmalı.",
-			"expiryDate": "Geçerli bir son kullanma tarihi girin (AA/YY)",
-			"expiryDateExpired": "Kartınızın süresi dolmuş.",
-			"url": "Geçerli bir URL girin."
-		}
+		"mobile": "Mobil",
+		"desktop": "Masaüstü",
+		"reset": "Sıfırla",
+		"set": "Tanımla",
+		"show": "Göster",
+		"remove": "Kaldır"
 	},
 	"Footer": {
 		"projectBy": "Geliştirici "

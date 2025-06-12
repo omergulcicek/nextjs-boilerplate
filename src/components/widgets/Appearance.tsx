@@ -17,13 +17,16 @@ import {
 	Languages,
 	Moon,
 	Signature,
-	StoreIcon
+	StoreIcon,
+	TabletSmartphone
 } from "lucide-react"
+import { useMediaQuery } from "usehooks-ts"
 
 import { useCountStore } from "@/stores/count-store"
 import { formatCurrency, formatDate, slugify } from "@/lib/utils"
 
 import { Button, Input, Switch } from "@/ui"
+import { ShowcaseCard } from "@/widgets"
 
 import { CountExample } from "./CountExample"
 import { LocaleSwitcher } from "./LocaleSwitcher"
@@ -32,15 +35,18 @@ export const Appearance = () => {
 	const t = useTranslations("Appearance")
 	const { theme, setTheme } = useTheme()
 	const { count } = useCountStore()
+	const isDesktop = useMediaQuery("(min-width: 768px)")
 
 	const [inputValue, setInputValue] = useState("Ömer Gülçiçek")
 	const [dateFormat, setDateFormat] = useState("dd/MM/yy")
 	const [currency, setCurrency] = useState<"USD" | "EUR" | "TRY">("USD")
 
 	return (
-		<section className="flex flex-col gap-4 p-4 rounded-lg border bg-background xl:col-span-3">
-			<h2 className="text-xl font-medium">{t("title")}</h2>
-
+		<ShowcaseCard
+			title={t("title")}
+			description={t("description")}
+			className="col-span-2 md:col-span-2 xl:col-span-8"
+		>
 			<ul>
 				<li className="flex gap-2 justify-between items-center py-2">
 					<div className="flex gap-2 items-center">
@@ -133,6 +139,14 @@ export const Appearance = () => {
 
 				<li className="flex gap-2 justify-between items-center py-2">
 					<div className="flex gap-2 items-center">
+						<TabletSmartphone size={20} />
+						<span>Responsive hooks</span>
+					</div>
+					<span>{isDesktop ? t("desktop") : t("mobile")}</span>
+				</li>
+
+				<li className="flex gap-2 justify-between items-center py-2">
+					<div className="flex gap-2 items-center">
 						<Cookie size={20} />
 						<span>Cookie</span>
 					</div>
@@ -144,7 +158,7 @@ export const Appearance = () => {
 								cookieStorageHelper.set("test", "hello-world-cookie")
 							}}
 						>
-							Set
+							{t("set")}
 						</Button>
 						<Button
 							variant="outline"
@@ -153,7 +167,7 @@ export const Appearance = () => {
 								alert(cookieStorageHelper.get("test"))
 							}}
 						>
-							Show
+							{t("show")}
 						</Button>
 						<Button
 							variant="secondary"
@@ -162,7 +176,7 @@ export const Appearance = () => {
 								cookieStorageHelper.remove("test")
 							}}
 						>
-							Remove
+							{t("remove")}
 						</Button>
 					</div>
 				</li>
@@ -180,7 +194,7 @@ export const Appearance = () => {
 								localStorageHelper.set("test", "hello-world-local")
 							}}
 						>
-							Set
+							{t("set")}
 						</Button>
 						<Button
 							variant="outline"
@@ -189,7 +203,7 @@ export const Appearance = () => {
 								alert(localStorageHelper.get("test"))
 							}}
 						>
-							Show
+							{t("show")}
 						</Button>
 						<Button
 							variant="secondary"
@@ -198,7 +212,7 @@ export const Appearance = () => {
 								localStorageHelper.remove("test")
 							}}
 						>
-							Remove
+							{t("remove")}
 						</Button>
 					</div>
 				</li>
@@ -216,7 +230,7 @@ export const Appearance = () => {
 								sessionStorageHelper.set("test", "hello-world-session")
 							}}
 						>
-							Set
+							{t("set")}
 						</Button>
 						<Button
 							variant="outline"
@@ -225,7 +239,7 @@ export const Appearance = () => {
 								alert(sessionStorageHelper.get("test"))
 							}}
 						>
-							Show
+							{t("show")}
 						</Button>
 						<Button
 							variant="secondary"
@@ -234,11 +248,11 @@ export const Appearance = () => {
 								sessionStorageHelper.remove("test")
 							}}
 						>
-							Remove
+							{t("remove")}
 						</Button>
 					</div>
 				</li>
 			</ul>
-		</section>
+		</ShowcaseCard>
 	)
 }
