@@ -6,30 +6,31 @@ Modern **Next.js 15** boilerplate with **TypeScript** & **Tailwind CSS**
 
 With this template, you get all the awesomeness you need:
 
-- [x] Advanced Folder Structures
-- [x] [Next.js](https://nextjs.org/) with App Router support
-- [x] Type checking [TypeScript](https://www.typescriptlang.org/)
-- [x] Styled using [Tailwind CSS](https://tailwindcss.com/)
-- [x] State management with [Zustand](https://zustand-demo.pmnd.rs/)
-- [x] [next-intl](https://next-intl.dev/) for internationalization
-- [x] UI Components built with [shadcn/ui](https://ui.shadcn.com/)
-- [x] Data Fetching, Caching and Mutation with [TanStack Query](https://tanstack.com/query/latest)
-- [x] Linter with [ESLint](https://eslint.org/)
-- [x] Code Formatter with [Prettier](https://prettier.io/)
-- [x] Form handling with [React Hook Form](https://react-hook-form.com/)
-- [x] Smart masking and validation with [@omergulcicek/forms](https://www.npmjs.com/package/@omergulcicek/forms)
-- [x] Validation library with [Zod](https://zod.dev/)
-- [x] Error tracking with [Sentry](https://sentry.io/)
-- [x] Analytics with [Google Analytics](https://analytics.google.com/)
-- [x] Beautiful and consistent icons from [Lucide](https://lucide.dev/)
-- [x] Loading UI using [Skeleton Components](https://ui.shadcn.com/docs/components/skeleton)
-- [x] Dark theme with [next-themes](https://npmjs.com/package/next-themes)
-- [x] [Absolute Imports](https://nextjs.org/docs/pages/building-your-application/configuring/absolute-imports-and-module-aliases) with `@` prefix
-- [x] [Husky](https://typicode.github.io/husky/) for Git Hooks
-- [x] Sitemap.xml and robots.txt
-- [x] Metadata files optimized for SEO
-- [ ] Storage helpers for Local, Session, Cookies
-- [x] 💯 Maximize lighthouse score
+- 📂 Advanced Folder Structures
+- ⚡ [Next.js](https://nextjs.org/) with App Router support
+- 💎 Type checking [TypeScript](https://www.typescriptlang.org/)
+- 🎨 Styled using [Tailwind CSS](https://tailwindcss.com/)
+- 📦 State management with [Zustand](https://zustand-demo.pmnd.rs/)
+- 🗺️ [next-intl](https://next-intl.dev/) for internationalization
+- 🧩 UI Components built with [shadcn/ui](https://ui.shadcn.com/)
+- 🔄 Data Fetching, Caching and Mutation with [TanStack Query](https://tanstack.com/query/latest)
+- ⌨️ Form handling with [React Hook Form](https://react-hook-form.com/)
+- 🔴 Validation library with [Zod](https://zod.dev/)
+- 🌸 Smart masking and validation with [@omergulcicek/forms](https://www.npmjs.com/package/@omergulcicek/forms)
+- 🧹 Linter with [ESLint](https://eslint.org/)
+- 💖 Code Formatter with [Prettier](https://prettier.io/)
+- 🎉 [Storybook](https://storybook.js.org/) for UI development
+- 🚨 Error tracking with [Sentry](https://sentry.io/)
+- 📊 Analytics with [Google Analytics](https://analytics.google.com/)
+- ⏳ Loading UI using [Skeleton Components](https://ui.shadcn.com/docs/components/skeleton)
+- 🌓 Dark theme with [next-themes](https://npmjs.com/package/next-themes)
+- 💡 [Absolute Imports](https://nextjs.org/docs/pages/building-your-application/configuring/absolute-imports-and-module-aliases) with `@` prefix
+- ✨ Beautiful and consistent icons from [Lucide](https://lucide.dev/)
+- 🐶 [Husky](https://typicode.github.io/husky/) for Git Hooks
+- 🤖 Sitemap.xml and robots.txt
+- ⚙️ Metadata files optimized for SEO
+- 🍪 Storage helpers for Local, Session, Cookies
+- 💯 Maximize lighthouse score
 
 ## Project structure
 
