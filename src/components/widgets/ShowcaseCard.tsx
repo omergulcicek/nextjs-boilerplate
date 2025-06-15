@@ -16,11 +16,10 @@ export const ShowcaseCard = ({
 	return (
 		<div
 			className={cn(
-				"flex overflow-hidden relative flex-col col-span-1 gap-10 justify-between items-center p-10 rounded-xl border shadow-md bg-background",
+				"flex overflow-hidden relative flex-col col-span-1 gap-10 justify-between items-center p-6 rounded-xl border shadow-md bg-background",
 				className
 			)}
 		>
-			<div className="flex justify-center items-center">{children}</div>
 			<div className="flex flex-col gap-2 mx-auto max-w-lg text-center">
 				<Balancer
 					as="h2"
@@ -35,6 +34,7 @@ export const ShowcaseCard = ({
 					{description}
 				</Balancer>
 			</div>
+			<div className="flex justify-center items-center">{children}</div>
 		</div>
 	)
 }

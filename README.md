@@ -1,6 +1,6 @@
 # Next.js Boilerplate
 
-Modern **Next.js 15** boilerplate with **TypeScript** & **Tailwind CSS**
+Modern **Next.js 15.3** boilerplate with **TypeScript** & **Tailwind CSS**
 
 ## Features
 
