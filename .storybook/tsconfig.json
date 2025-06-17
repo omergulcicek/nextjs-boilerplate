@@ -1,0 +1,15 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true,
+    "types": ["node", "react", "react-dom"]
+  },
+  "include": [
+    "../src/**/*",
+    "../stories/**/*"
+  ],
+  "exclude": [
+    "../node_modules"
+  ]
+} 
