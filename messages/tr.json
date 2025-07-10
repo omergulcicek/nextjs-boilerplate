@@ -1,48 +1,13 @@
 {
-	"LocaleSwitcher": {
-		"label": "Dil Değiştir",
-		"locale": "{locale, select, tr {🇹🇷 Türkçe} en {🇺🇸 İngilizce} other {Unknown}}"
-	},
-	"Hero": {
-		"github": "GitHub'da destekle",
-		"title1": "Next.js Başlangıç Paketi",
-		"title2": "Modern Web için",
-		"desc": "Açık kaynaklı bir başlangıç paketi: <strong>Next.js 15.3</strong>, <strong>TypeScript</strong> ve <strong>Tailwind CSS</strong> ile modern web uygulamaları geliştirmek artık daha hızlı."
-	},
-	"Stack": {
-		"title": "Teknolojiler",
-		"description": "Güncel araçlarla güçlendirilmiş, sağlam ve güvenilir bir temel."
-	},
-	"Performance": {
-		"title": "Performans öncelikli",
-		"description": "Optimizasyonlu yazı tipleri ve görsellerle uygulamanızı hızlandırır."
-	},
-	"TanStackQuery": {
-		"title": "TanStack Query",
-		"description": "Next.js için güçlü asenkron durum yönetimi"
-	},
-	"Appearance": {
-		"title": "Görünüm",
-		"description": "Harika web uygulamaları başlatmanız için gereken her şey.",
-		"darkTheme": "Karanlık Tema",
-		"changeLanguage": "Dil Değiştir",
-		"inputPlaceholder": "Bir şeyler yaz...",
-		"slug": "Slug",
-		"changeDateFormat": "Tarih Formatını Değiştir",
-		"changeCurrency": "Para Birimini Değiştir",
-		"mobile": "Mobil",
-		"desktop": "Masaüstü",
-		"reset": "Sıfırla",
-		"set": "Tanımla",
-		"show": "Göster",
-		"remove": "Kaldır"
-	},
 	"Footer": {
 		"projectBy": "Geliştirici "
 	},
 	"Dashboard": {
-		"title": "Next.js Başlangıç Paketi Dashboard",
-		"subtitle": "Modern web geliştirme için hazır özellikler",
+		"title": "Next.js Başlangıç Paketi",
+		"subtitle": "Next.js projeniz için bileşenler, hooklar ve yardımcı fonksiyonlar",
+		"starOnGithub": "GitHub'da destekle",
+		"deployToVercel": "Vercel'e deploy et",
+		"useTemplate": "Şablonu kullan",
 		"helperFunctions": "Yardımcı Fonksiyonlar",
 		"slugify": "Slugify",
 		"dateFormat": "Tarih Formatı",
@@ -110,7 +75,7 @@
 		"zod": "Zod",
 		"omergulcicekForms": "@omergulcicek/forms",
 		"nextIntl": "next-intl",
-		"trEnSupport": "TR/EN Desteği",
+		"trEnSupport": "EN/TR Desteği",
 		"responsive": "Responsive",
 		"skeletonLoading": "Skeleton Loading",
 		"storybook": "Storybook",
@@ -127,13 +92,9 @@
 		"mit": "MIT",
 		"otherProjects": "Diğer Projeler",
 		"passwordInput": "@omergulcicek/password-input",
-		"passwordInputDesc": "Güvenli şifre girişi",
+		"passwordInputDesc": "Şifreyi göster/gizle butonu",
 		"formsPackage": "@omergulcicek/forms",
 		"formsPackageDesc": "Akıllı form maskeleme",
-		"reactTutorials": "React Eğitimleri",
-		"reactTutorialsDesc": "Kapsamlı React öğrenme kaynakları",
-		"openSource": "Açık Kaynak",
-		"openSourceDesc": "Topluluğa katkıda bulunma",
 		"viewProject": "Projeyi Görüntüle"
 	}
 }

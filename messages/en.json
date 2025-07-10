@@ -1,48 +1,13 @@
 {
-	"LocaleSwitcher": {
-		"label": "Change language",
-		"locale": "{locale, select, tr {🇹🇷 Türkçe} en {🇺🇸 English} other {Unknown}}"
-	},
-	"Hero": {
-		"github": "Star on GitHub",
-		"title1": "Next.js Boilerplate",
-		"title2": "for the Modern Web",
-		"desc": "An open-source starter built with <strong>Next.js 15.3</strong>, <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong> everything you need to build modern web apps, faster."
-	},
-	"Stack": {
-		"title": "Stack",
-		"description": "Powered by modern tools, delivering a solid and reliable foundation."
-	},
-	"Performance": {
-		"title": "Performance first",
-		"description": "Speeds up your app with optimized fonts and images."
-	},
-	"TanStackQuery": {
-		"title": "TanStack Query",
-		"description": "Powerful asynchronous state management for Next.js"
-	},
-	"Appearance": {
-		"title": "Appearance",
-		"description": "All you need to launch great web apps.",
-		"darkTheme": "Dark Theme",
-		"changeLanguage": "Change Language",
-		"inputPlaceholder": "Enter anything...",
-		"slug": "Slug",
-		"changeDateFormat": "Change Date Format",
-		"changeCurrency": "Change Currency",
-		"mobile": "Mobile",
-		"desktop": "Desktop",
-		"reset": "Reset",
-		"set": "Set",
-		"show": "Show",
-		"remove": "Remove"
-	},
 	"Footer": {
 		"projectBy": "A project by"
 	},
 	"Dashboard": {
-		"title": "Next.js Boilerplate Dashboard",
-		"subtitle": "Ready-to-use features for modern web development",
+		"title": "Next.js Boilerplate for the Modern Web",
+		"subtitle": "An opinionated collection of components, hooks, and utilities for your Next.js project",
+		"starOnGithub": "Star on Github",
+		"deployToVercel": "Deploy to Vercel",
+		"useTemplate": "Use Template",
 		"helperFunctions": "Helper Functions",
 		"slugify": "Slugify",
 		"dateFormat": "Date Format",
@@ -110,7 +75,7 @@
 		"zod": "Zod",
 		"omergulcicekForms": "@omergulcicek/forms",
 		"nextIntl": "next-intl",
-		"trEnSupport": "TR/EN Support",
+		"trEnSupport": "EN/TR Support",
 		"responsive": "Responsive",
 		"skeletonLoading": "Skeleton Loading",
 		"storybook": "Storybook",
@@ -127,13 +92,9 @@
 		"mit": "MIT",
 		"otherProjects": "Other Projects",
 		"passwordInput": "@omergulcicek/password-input",
-		"passwordInputDesc": "Secure password input",
+		"passwordInputDesc": "Show/hide toggle to password",
 		"formsPackage": "@omergulcicek/forms",
 		"formsPackageDesc": "Smart form masking",
-		"reactTutorials": "React Tutorials",
-		"reactTutorialsDesc": "Comprehensive React learning resources",
-		"openSource": "Open Source",
-		"openSourceDesc": "Contributing to the community",
 		"viewProject": "View Project"
 	}
 }
