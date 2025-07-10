@@ -1,10 +1,14 @@
 "use client"
 
-import { useState } from "react"
-import { useTranslations } from "next-intl"
+import { useEffect, useState } from "react"
+import { useLocale, useTranslations } from "next-intl"
+import { useTheme } from "next-themes"
 import Image from "next/image"
 import Link from "next/link"
+import { useParams } from "next/navigation"
 
+import { usePathname, useRouter } from "@/i18n/navigation"
+import { routing } from "@/i18n/routing"
 import {
 	AlertCircle,
 	BarChart3,
@@ -45,8 +49,14 @@ import { APP_CONFIG } from "@/constants"
 
 import { formatCurrency, formatDate, slugify } from "@/lib/utils"
 
-import { Button } from "@/ui"
-import { LocaleSwitcher, ThemeToggle } from "@/widgets"
+import {
+	Button,
+	Select,
+	SelectContent,
+	SelectItem,
+	SelectTrigger,
+	SelectValue
+} from "@/ui"
 
 export default function NewDashboard() {
 	const t = useTranslations("Dashboard")
@@ -54,22 +64,100 @@ export default function NewDashboard() {
 	const [dateFormat] = useState("dd/MM/yy")
 	const [currency] = useState<"USD" | "EUR" | "TRY">("USD")
 
+	// Theme and locale hooks
+	const [mounted, setMounted] = useState(false)
+	const { theme, setTheme } = useTheme()
+	const router = useRouter()
+	const pathname = usePathname()
+	const params = useParams()
+	const locale = useLocale()
+
+	useEffect(() => {
+		setMounted(true)
+	}, [])
+
+	if (!mounted) {
+		return null
+	}
+
 	return (
 		<div className="container mx-auto px-4 py-8">
 			{/* Header */}
-			<div className="relative mb-12 text-center">
-				{/* Language & Theme Switchers */}
-				<div className="absolute top-0 right-0 flex items-center gap-3 z-10">
-					<LocaleSwitcher />
-					<ThemeToggle />
+			<div className="relative mb-12">
+				{/* Top Bar with Language & Theme Switchers */}
+				<div className="flex items-center justify-between mb-8">
+					<div className="flex items-center gap-4">
+						{/* Language Selector */}
+						<div className="flex items-center gap-2">
+							<Globe className="w-4 h-4 text-muted-foreground" />
+							<Select
+								defaultValue={locale}
+								onValueChange={(value: string) => {
+									router.replace(
+										// @ts-expect-error -- TypeScript will validate that only known `params`
+										{ pathname, params },
+										{ locale: value }
+									)
+								}}
+							>
+								<SelectTrigger className="w-24">
+									<SelectValue />
+								</SelectTrigger>
+								<SelectContent>
+									{routing.locales.map((cur) => (
+										<SelectItem key={cur} value={cur}>
+											{cur === "tr" ? "Türkçe" : "English"}
+										</SelectItem>
+									))}
+								</SelectContent>
+							</Select>
+						</div>
+
+						{/* Theme Toggle */}
+						<div className="flex items-center gap-2">
+							<Moon className="w-4 h-4 text-muted-foreground" />
+							<Select value={theme} onValueChange={setTheme}>
+								<SelectTrigger className="w-24">
+									<SelectValue />
+								</SelectTrigger>
+								<SelectContent>
+									<SelectItem value="light">Light</SelectItem>
+									<SelectItem value="dark">Dark</SelectItem>
+									<SelectItem value="system">System</SelectItem>
+								</SelectContent>
+							</Select>
+						</div>
+					</div>
+
+					{/* Deploy Buttons */}
+					<div className="flex items-center gap-3">
+						<Button asChild variant="outline" size="sm">
+							<Link
+								href="https://vercel.com/new/clone?repository-url=https://github.com/omergulcicek/nextjs-boilerplate"
+								target="_blank"
+							>
+								<Rocket className="w-4 h-4 mr-2" />
+								Deploy to Vercel
+							</Link>
+						</Button>
+						<Button asChild size="sm">
+							<Link
+								href="https://github.com/omergulcicek/nextjs-boilerplate/generate"
+								target="_blank"
+							>
+								<GitBranch className="w-4 h-4 mr-2" />
+								Use Template
+							</Link>
+						</Button>
+					</div>
 				</div>
 
 				{/* Enhanced Header */}
-				<div className="relative">
-					<h1 className="text-xl md:text-xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+				<div className="text-center py-6">
+					<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-black dark:text-white">
 						{t("title")}
 					</h1>
-					<p className="text-sm md:text-sm text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+					<p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
 						{t("subtitle")}
 					</p>
 				</div>
