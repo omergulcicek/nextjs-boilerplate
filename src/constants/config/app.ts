@@ -19,7 +19,8 @@ export const APP_CONFIG = {
 		"react"
 	] as string[],
 	CREATOR: "@omergulcicek",
-	TWITTER_HANDLE: "@omergulcicek"
+	TWITTER_HANDLE: "@omergulcicek",
+	PERSONAL_WEBSITE: "https://omergulcicek.com"
 } as const
 
 export type AppConfig = keyof typeof APP_CONFIG
