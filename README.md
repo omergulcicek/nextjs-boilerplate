@@ -2,6 +2,8 @@
 
 Modern **Next.js 15.3** boilerplate with **TypeScript** & **Tailwind CSS**
 
+Live Demo: https://nextjs15-boilerplate.vercel.app/en
+
 ## Features
 
 With this template, you get all the awesomeness you need:
