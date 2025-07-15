@@ -39,10 +39,12 @@
 		"^@/shared",
 		"^@/ui",
 		"^@/widgets",
+		"^@/features",
 		"^@/skeletons",
 		"",
-		"^@/data",
+		"^@/icons",
 		"^@/img",
+		"^@/data",
 		"",
 		"^[./]"
 	],

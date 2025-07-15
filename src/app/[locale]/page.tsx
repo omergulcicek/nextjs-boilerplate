@@ -33,7 +33,10 @@ import {
 
 import { APP_CONFIG } from "@/constants"
 
-import { formatCurrency, formatDate, slugify } from "@/lib/utils"
+import { formatCurrency, formatDate, slugify } from "@/utils"
+
+import { Button } from "@/ui"
+import { Hero } from "@/features"
 
 import {
 	Eslint,
@@ -49,9 +52,7 @@ import {
 	Typescript,
 	Zod,
 	Zustand
-} from "@/components/icons"
-import { Hero } from "@/components/widgets"
-import { Button } from "@/ui"
+} from "@/icons"
 
 export default function NewDashboard() {
 	const t = useTranslations("Dashboard")
@@ -335,7 +336,7 @@ export default function NewDashboard() {
 				<div className="order-2 lg:order-1 p-6 bg-gradient-to-br from-amber-50 to-orange-100 dark:from-amber-950 dark:to-orange-900 rounded-2xl border">
 					<div className="flex items-center gap-3 mb-6">
 						<Wrench className="w-6 h-6 text-orange-700 dark:text-orange-300" />
-						<h2 className="text-xl font-semibold">Helpers & Storage</h2>
+						<h2 className="text-xl font-semibold">{t("helperFunctions")}</h2>
 					</div>
 					<div className="space-y-3">
 						<div className="flex items-center gap-3 p-3 bg-white/50 dark:bg-black/20 rounded-lg">
@@ -369,7 +370,7 @@ export default function NewDashboard() {
 						<div className="flex items-center gap-3 p-3 bg-white/50 dark:bg-black/20 rounded-lg">
 							<Database className="w-5 h-5 text-orange-700 dark:text-orange-300" />
 							<div className="flex-1">
-								<p className="text-sm font-medium">Storage Helpers</p>
+								<p className="text-sm font-medium">{t("storageHelpers")}</p>
 								<p className="text-xs text-muted-foreground">
 									Local, Session & Cookie storage
 								</p>

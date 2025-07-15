@@ -22,8 +22,10 @@
 		"paths": {
 			"@/*": ["./*"],
 			"@/ui": ["components/ui"],
+			"@/features": ["components/features"],
 			"@/widgets": ["components/widgets"],
 			"@/shared": ["components/shared"],
+			"@/icons": ["components/icons"],
 			"@/skeletons": ["components/skeletons"],
 			"@/providers": ["providers"],
 			"@/config": ["config"],
@@ -35,7 +37,6 @@
 			"@/stores": ["stores"],
 			"@/services": ["services"],
 			"@/utils": ["lib/utils"],
-			"@/icons": ["lib/icons"],
 			"@/types": ["types"]
 		}
 	},

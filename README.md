@@ -46,10 +46,11 @@ With this template, you get all the awesomeness you need:
 │   ├── assets                      # Static assets (images, fonts, etc.)
 │   ├── components                  # React components
 │   │   ├── icons                   # svg icons
+│   │   ├── features                # Components with hooks and calculations
 │   │   ├── shared                  # Header, footer, aside components
 │   │   ├── skeletons               # Loading components
 │   │   ├── ui                      # Atomic components
-│   │   └── widgets                 # Advanced components
+│   │   └── widgets                 # Advanced UI components
 │   ├── constants                   # Project-wide constants
 │   ├── data                        # Static or mock data
 │   ├── helpers                     # Reusable utility functions (e.g., API, formatting, storage)
