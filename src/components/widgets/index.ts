@@ -1,4 +1,6 @@
-export { EnhancedHeader } from "./EnhancedHeader"
 export { LanguageSelector } from "./LanguageSelector"
 export { ThemeToggle } from "./ThemeToggle"
-export { DeployButtons } from "./DeployButtons"
+export { Title } from "./Title"
+export { Stack } from "./Stack"
+export { Actions } from "./Actions"
+export { Header } from "./Header"

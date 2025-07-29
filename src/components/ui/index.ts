@@ -19,8 +19,13 @@ export {
 	SelectTrigger,
 	SelectValue
 } from "./select"
-export { Calendar } from "./calendar"
 export { Popover, PopoverContent, PopoverTrigger } from "./popover"
 export { Tabs, TabsContent, TabsList, TabsTrigger } from "./tabs"
 export { Switch } from "./switch"
 export { Avatar, AvatarImage, AvatarFallback } from "./avatar"
+export {
+	Tooltip,
+	TooltipTrigger,
+	TooltipContent,
+	TooltipProvider
+} from "./tooltip"

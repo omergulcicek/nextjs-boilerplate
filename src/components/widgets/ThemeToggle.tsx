@@ -1,5 +1,6 @@
 "use client"
 
+import { useTranslations } from "next-intl"
 import { useTheme } from "next-themes"
 
 import { Moon } from "lucide-react"
@@ -14,6 +15,7 @@ import {
 
 export function ThemeToggle() {
 	const { theme, setTheme } = useTheme()
+	const t = useTranslations("theme")
 
 	return (
 		<div className="flex items-center gap-2">
@@ -23,9 +25,9 @@ export function ThemeToggle() {
 					<SelectValue />
 				</SelectTrigger>
 				<SelectContent>
-					<SelectItem value="light">Light</SelectItem>
-					<SelectItem value="dark">Dark</SelectItem>
-					<SelectItem value="system">System</SelectItem>
+					<SelectItem value="light">{t("light")}</SelectItem>
+					<SelectItem value="dark">{t("dark")}</SelectItem>
+					<SelectItem value="system">{t("system")}</SelectItem>
 				</SelectContent>
 			</Select>
 		</div>

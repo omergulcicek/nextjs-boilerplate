@@ -23,7 +23,7 @@ const SvgShadcnUi = (
 		<path fill="none" d="M0 0h256v256H0z" />
 		<path
 			fill="none"
-			stroke="#fff"
+			stroke="currentColor"
 			strokeLinecap="round"
 			strokeWidth={25}
 			d="m208 128-80 80m64-168L40 192"

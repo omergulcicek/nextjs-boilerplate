@@ -1,50 +1,45 @@
 import {
-	Lucide,
-	Nextjs,
 	ReactHookForm,
+	ReactIcon,
 	ShadcnUi,
 	Tailwind,
 	Tanstack,
 	Typescript,
 	Zod,
 	Zustand
-} from "@/components/icons"
+} from "@/icons"
 
 export const stackData = [
 	{
-		name: "Next.js",
-		icon: <Nextjs height={32} width={32} />
+		icon: ReactIcon,
+		text: "React"
 	},
 	{
-		name: "TypeScript",
-		icon: <Typescript height={32} width={32} />
+		icon: Typescript,
+		text: "TypeScript"
 	},
 	{
-		name: "Tailwind CSS",
-		icon: <Tailwind height={32} width={32} />
+		icon: Tailwind,
+		text: "Tailwind CSS"
 	},
 	{
-		name: "shadcn/ui",
-		icon: <ShadcnUi height={32} width={32} className="bg-black" />
+		icon: Zustand,
+		text: "Zustand"
 	},
 	{
-		name: "TanStack Query",
-		icon: <Tanstack height={32} width={32} />
+		icon: Tanstack,
+		text: "TanStack Query"
 	},
 	{
-		name: "Zustand",
-		icon: <Zustand height={32} width={32} />
+		icon: ShadcnUi,
+		text: "Shadcn/UI"
 	},
 	{
-		name: "React Hook Form",
-		icon: <ReactHookForm height={32} width={32} />
+		icon: ReactHookForm,
+		text: "React Hook Form"
 	},
 	{
-		name: "Zod",
-		icon: <Zod height={32} width={32} />
-	},
-	{
-		name: "Lucide",
-		icon: <Lucide height={32} width={32} />
+		icon: Zod,
+		text: "Zod"
 	}
 ]
