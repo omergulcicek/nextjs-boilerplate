@@ -23,7 +23,7 @@ export function Title() {
 			</Balancer>
 
 			<Balancer as="div">
-				<p className="text-center text-base px-3">
+				<p className="text-center text-base px-3 max-w-3xl">
 					{t.rich("description", {
 						react: (chunks) => (
 							<strong className="font-semibold">{chunks}</strong>
